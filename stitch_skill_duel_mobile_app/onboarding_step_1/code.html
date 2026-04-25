@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Skill Duel Onboarding</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#fc536d",
+                        "on-surface": "#f7dcdd",
+                        "on-surface-variant": "#e2bebf",
+                        "tertiary-container": "#25a46d",
+                        "secondary-fixed-dim": "#bfc2ff",
+                        "on-primary-fixed": "#40000e",
+                        "on-error-container": "#ffdad6",
+                        "error": "#ffb4ab",
+                        "outline": "#a9898a",
+                        "primary-fixed-dim": "#ffb2b7",
+                        "on-primary-container": "#5b0017",
+                        "inverse-primary": "#b71d3f",
+                        "on-secondary-container": "#afb3f8",
+                        "background": "#1d1011",
+                        "error-container": "#93000a",
+                        "surface-container-lowest": "#170b0c",
+                        "surface-container": "#2b1c1d",
+                        "on-primary-fixed-variant": "#91002b",
+                        "on-secondary-fixed": "#0f1250",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed": "#002111",
+                        "surface-variant": "#413031",
+                        "secondary-container": "#3f4380",
+                        "outline-variant": "#5a4042",
+                        "on-secondary-fixed-variant": "#3d417e",
+                        "on-secondary": "#262a66",
+                        "secondary": "#bfc2ff",
+                        "surface-tint": "#ffb2b7",
+                        "surface-container-high": "#362627",
+                        "on-background": "#f7dcdd",
+                        "on-tertiary": "#003921",
+                        "surface": "#1d1011",
+                        "tertiary-fixed": "#84f9ba",
+                        "secondary-fixed": "#e0e0ff",
+                        "on-primary": "#67001c",
+                        "on-tertiary-container": "#00311c",
+                        "primary-fixed": "#ffdadb",
+                        "inverse-surface": "#f7dcdd",
+                        "tertiary-fixed-dim": "#67dc9f",
+                        "surface-bright": "#463536",
+                        "tertiary": "#67dc9f",
+                        "surface-container-low": "#261819",
+                        "primary": "#ffb2b7",
+                        "surface-container-highest": "#413031",
+                        "on-tertiary-fixed-variant": "#005232",
+                        "surface-dim": "#1d1011",
+                        "inverse-on-surface": "#3d2c2d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "gutter": "16px",
+                        "stack-md": "16px",
+                        "container-padding": "24px",
+                        "stack-lg": "32px",
+                        "stack-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "stats": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "h3": ["Inter"],
+                        "h2": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "stats": ["20px", {"lineHeight": "1", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #1A1A2E;
+        }
+        .glow-backdrop {
+            background: radial-gradient(circle, rgba(233, 69, 96, 0.4) 0%, rgba(233, 69, 96, 0) 70%);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(74, 78, 140, 0.3);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased text-on-surface overflow-hidden">
+<!-- Top Navigation Bar (Shared Component Logic) -->
+<header class="flex justify-between items-center w-full px-6 h-16 bg-slate-900/50 fixed top-0 z-50 border-b border-indigo-900/30">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-rose-500 text-2xl" data-icon="sports_esports">sports_esports</span>
+<span class="font-inter font-black tracking-widest uppercase text-rose-500 text-xl">SKILL DUEL</span>
+</div>
+<button class="font-inter font-black tracking-tighter uppercase text-slate-500 hover:scale-105 transition-transform duration-200">
+            SKIP
+        </button>
+</header>
+<main class="relative h-screen w-full flex flex-col">
+<!-- Top 55%: Visual Hero Section -->
+<section class="h-[486px] flex items-center justify-center relative overflow-hidden">
+<!-- Glowing circular backdrop -->
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-80 h-80 rounded-full glow-backdrop animate-pulse"></div>
+<div class="w-64 h-64 rounded-full bg-[#E94560]/20 absolute blur-3xl"></div>
+</div>
+<!-- Hero Icon -->
+<div class="relative z-10 flex items-center justify-center">
+<div class="w-48 h-48 rounded-full border-2 border-[#E94560]/30 flex items-center justify-center bg-slate-900/40 backdrop-blur-sm shadow-[0_0_40px_rgba(233,69,96,0.3)]">
+<span class="material-symbols-outlined text-white text-[120px]" data-icon="sports_soccer" data-weight="fill" style="font-variation-settings: 'FILL' 1;">sports_soccer</span>
+</div>
+<!-- Floating decorative gaming elements -->
+<div class="absolute -top-10 -right-10 glass-panel p-3 rounded-xl rotate-12">
+<span class="material-symbols-outlined text-[#E94560]" data-icon="chess">chess</span>
+</div>
+<div class="absolute -bottom-8 -left-8 glass-panel p-3 rounded-xl -rotate-12">
+<span class="material-symbols-outlined text-[#E94560]" data-icon="videogame_asset">videogame_asset</span>
+</div>
+</div>
+</section>
+<!-- Middle: Content Section -->
+<section class="flex-grow px-8 flex flex-col items-center justify-start text-center space-y-4 pt-4">
+<h1 class="text-[28px] font-h1 text-white leading-tight">Pick Your Battleground</h1>
+<p class="text-[15px] font-body-md text-[#A0A0B0] max-w-[280px]">
+                Football, Chess, COD, Gaming — choose your category and enter the arena.
+            </p>
+</section>
+<!-- Bottom: Controls & Actions -->
+<section class="pb-12 px-container-padding flex flex-col items-center">
+<!-- Pagination Dots -->
+<div class="flex gap-stack-sm mb-stack-lg">
+<div class="w-2.5 h-2.5 rounded-full bg-[#E94560] shadow-[0_0_8px_rgba(233,69,96,0.6)]"></div>
+<div class="w-2.5 h-2.5 rounded-full border border-white"></div>
+<div class="w-2.5 h-2.5 rounded-full border border-white"></div>
+</div>
+<!-- Primary Action -->
+<button class="w-full h-14 bg-[#E94560] text-white font-inter font-bold text-lg rounded-xl shadow-[0_4px_20px_rgba(233,69,96,0.4)] active:scale-95 transition-all hover:scale-[1.02] duration-200 uppercase tracking-widest">
+                Get Started
+            </button>
+<!-- Footer Link -->
+<div class="mt-stack-lg">
+<button class="text-[#A0A0B0] text-sm font-medium hover:text-white transition-colors">
+                    I already have an account — <span class="text-rose-500 font-bold">Log In</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Visual Polish: Grainy Texture Overlay -->
+<div class="fixed inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay">
+<img alt="" class="w-full h-full object-cover" data-alt="subtle fine grain texture for a technical cinematic look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnSL77pAY72g0IgVZ7wOlQatHiSC5GE4HUh0STSo9T25GcXv9xpg9k7KHF53alVZ-ikn6Un3fAeumWycE-KVDfIukV1RHRLBoBIApYv14jGwe6KjWhnF0pfaxXFnapxsxxg8Yz2NrwRvLcFDoQEuVKmcKHwn4UgVFX9xDMWJ6OobMfuCLTLfP0DxYFiiT6fA010Et3oMrs9VEdlzegwcPnczYOpHfYQShQuPqvlAudjHgF3x1_28inOx4Y9cqIEkdZ69xoBmUO1J9S"/>
+</div>
+<!-- Decorative Corner Accents -->
+<div class="fixed top-20 left-4 w-1 h-12 bg-indigo-500/20 rounded-full"></div>
+<div class="fixed bottom-32 right-4 w-1 h-12 bg-rose-500/20 rounded-full"></div>
+</body></html>

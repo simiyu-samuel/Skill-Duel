@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SKILL DUEL - PRO PROFILE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#bfc2ff",
+                      "tertiary-container": "#25a46d",
+                      "tertiary-fixed": "#84f9ba",
+                      "surface-variant": "#413031",
+                      "primary": "#ffb2b7",
+                      "on-primary": "#67001c",
+                      "on-error-container": "#ffdad6",
+                      "tertiary": "#67dc9f",
+                      "surface-container": "#2b1c1d",
+                      "surface": "#1d1011",
+                      "secondary-fixed": "#e0e0ff",
+                      "on-tertiary-fixed": "#002111",
+                      "error-container": "#93000a",
+                      "on-primary-fixed-variant": "#91002b",
+                      "surface-container-high": "#362627",
+                      "surface-bright": "#463536",
+                      "outline-variant": "#5a4042",
+                      "on-tertiary": "#003921",
+                      "secondary-container": "#3f4380",
+                      "surface-container-lowest": "#170b0c",
+                      "on-surface": "#f7dcdd",
+                      "outline": "#a9898a",
+                      "on-secondary-container": "#afb3f8",
+                      "primary-container": "#fc536d",
+                      "inverse-surface": "#f7dcdd",
+                      "primary-fixed-dim": "#ffb2b7",
+                      "on-surface-variant": "#e2bebf",
+                      "on-secondary-fixed-variant": "#3d417e",
+                      "inverse-on-surface": "#3d2c2d",
+                      "on-secondary-fixed": "#002111",
+                      "surface-tint": "#ffb2b7",
+                      "on-tertiary-fixed-variant": "#005232",
+                      "surface-container-highest": "#413031",
+                      "primary-fixed": "#ffdadb",
+                      "inverse-primary": "#b71d3f",
+                      "secondary": "#bfc2ff",
+                      "on-secondary": "#262a66",
+                      "surface-container-low": "#261819",
+                      "surface-dim": "#1d1011",
+                      "on-tertiary-container": "#00311c",
+                      "on-background": "#f7dcdd",
+                      "tertiary-fixed-dim": "#67dc9f",
+                      "on-primary-fixed": "#40000e",
+                      "background": "#1d1011",
+                      "on-primary-container": "#5b0017",
+                      "on-error": "#690005",
+                      "error": "#ffb4ab"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-lg": "32px",
+                      "stack-sm": "8px",
+                      "container-padding": "24px",
+                      "stack-md": "16px",
+                      "gutter": "16px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "stats": ["Inter"],
+                      "h2": ["Inter"],
+                      "h1": ["Inter"],
+                      "body-md": ["Inter"],
+                      "label-caps": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "h3": ["Inter"]
+              },
+              "fontSize": {
+                      "stats": ["20px", {"lineHeight": "1", "fontWeight": "700"}],
+                      "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            background-color: #1A1A2E;
+            color: #f7dcdd;
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-card {
+            background: #16213E;
+            border: 1px solid rgba(74, 78, 140, 0.3);
+        }
+        .accent-glow {
+            box-shadow: 0 0 15px rgba(233, 69, 96, 0.4);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .custom-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="bg-[#16213E] dark:bg-slate-900 border-b border-[#4A4E8C]/30 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex justify-between items-center w-full px-6 h-16 sticky top-0 z-50">
+<div class="flex items-center">
+<button class="active:scale-95 duration-200 hover:scale-105 transition-transform text-slate-400">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+</div>
+<h1 class="font-inter font-black uppercase tracking-widest text-[#E94560] dark:text-rose-500 text-lg">PRO PROFILE</h1>
+<div class="flex items-center">
+<button class="active:scale-95 duration-200 hover:scale-105 transition-transform text-slate-400">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+</header>
+<main class="px-container-padding pt-stack-md space-y-stack-lg max-w-md mx-auto">
+<!-- Profile Header Card -->
+<section class="glass-card rounded-xl p-6 flex flex-col items-center">
+<div class="relative mb-4">
+<div class="w-20 h-20 rounded-full border-2 border-[#E94560] p-1 accent-glow">
+<img alt="Profile" class="w-full h-full rounded-full object-cover" data-alt="Close-up portrait of a cool competitive gamer with neon lighting highlights on their face, high-end professional gaming aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArh8EKoiIbZbBs7Ez0i_7-g21jU_CCDX6JJ8vPtFV_tFSjA4AN3AS5F96US5LmdrarKOIYaWpemyzCl0NHBEL7LeMGFhFoZhGw0uXqd2Q7DQU2T4V0AYWwSQofaCuYGHxEye2T6f9nnLNTSXU4RR848kdXZSDcarm7mYTVtvYlYipSqsQPSDVI30rUlpi14bOvcCek44_LsOYXOm8ffBhfOWbR8Bu3A2fqZKRSgkYQHYPaq-xhxAbwTMBbvQmYN6P-zJAQMYUzKflw"/>
+</div>
+<div class="absolute bottom-0 right-0 w-4 h-4 bg-rose-500 border-2 border-[#16213E] rounded-full"></div>
+</div>
+<h2 class="font-h3 text-h3 text-white mb-1">@kofi_duel</h2>
+<p class="font-label-caps text-label-caps text-slate-500">Member since Jan 2026</p>
+</section>
+<!-- Stats Row -->
+<section class="grid grid-cols-3 gap-gutter">
+<div class="glass-card rounded-lg p-3 text-center">
+<p class="font-label-caps text-[10px] text-slate-400 mb-1">Total Duels</p>
+<p class="font-stats text-stats text-white">142</p>
+</div>
+<div class="glass-card rounded-lg p-3 text-center border-t-4 border-[#E94560]">
+<p class="font-label-caps text-[10px] text-slate-400 mb-1">Win Rate</p>
+<p class="font-stats text-stats text-[#E94560]">64%</p>
+</div>
+<div class="glass-card rounded-lg p-3 text-center">
+<p class="font-label-caps text-[10px] text-slate-400 mb-1">Best Streak</p>
+<p class="font-stats text-stats text-white">11</p>
+</div>
+</section>
+<!-- ELO by Category -->
+<section class="space-y-stack-sm">
+<h3 class="font-label-caps text-label-caps text-slate-400 mb-4">ELO BY CATEGORY</h3>
+<div class="space-y-4">
+<!-- Football -->
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400" data-icon="sports_soccer">sports_soccer</span>
+<span class="font-body-md text-white font-bold">Football</span>
+</div>
+<span class="font-stats text-white text-body-md">1,842</span>
+</div>
+<div class="h-1 w-full bg-[#0F172A] rounded-full overflow-hidden">
+<div class="h-full bg-emerald-500 w-[85%]"></div>
+</div>
+</div>
+<!-- Chess -->
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400" data-icon="chess">chess</span>
+<span class="font-body-md text-white font-bold">Chess</span>
+</div>
+<span class="font-stats text-white text-body-md">2,105</span>
+</div>
+<div class="h-1 w-full bg-[#0F172A] rounded-full overflow-hidden">
+<div class="h-full bg-amber-500 w-[92%]"></div>
+</div>
+</div>
+<!-- COD -->
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400" data-icon="target">target</span>
+<span class="font-body-md text-white font-bold">COD</span>
+</div>
+<span class="font-stats text-white text-body-md">1,240</span>
+</div>
+<div class="h-1 w-full bg-[#0F172A] rounded-full overflow-hidden">
+<div class="h-full bg-rose-500 w-[60%]"></div>
+</div>
+</div>
+<!-- Gaming -->
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400" data-icon="sports_esports">sports_esports</span>
+<span class="font-body-md text-white font-bold">Gaming</span>
+</div>
+<span class="font-stats text-white text-body-md">1,580</span>
+</div>
+<div class="h-1 w-full bg-[#0F172A] rounded-full overflow-hidden">
+<div class="h-full bg-indigo-500 w-[75%]"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Duels -->
+<section class="space-y-stack-sm">
+<h3 class="font-label-caps text-label-caps text-slate-400 mb-4">RECENT DUELS</h3>
+<div class="space-y-3">
+<!-- Duel 1 -->
+<div class="glass-card p-3 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img alt="Opponent" class="w-10 h-10 rounded-full border border-slate-700" data-alt="Circular avatar profile of a male gamer with intense focus, dark background with blue ambient light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZKjlskdI6qkZAgqeQetoEQqBBy512dddOBg1I0Zsz9iza7lOY_nMANd2iiOfVcy_UkJXqsqeL4_LuP-f_mWaxP6I2Z-L1xAticWRTQ2XlwAxLbXSNLSq-ERINsuW7es6oMcAZfKiJWFC4HTwjcRPW13KhzNEvzXHuKayX0cXRFUt9Jgm2VHWiifYiYuWlgclPtQaaLTJKpC1-rfntuL5h0DmQxd3Ymieh9YE0T84WQIbGOymMcI9tdJ_sdpW7VGfO0p7S2Y4jvk0t"/>
+<div>
+<p class="font-body-md font-bold text-white leading-none">Viper_Striker</p>
+<p class="text-[10px] text-slate-500 mt-1 uppercase font-bold tracking-tighter">Football</p>
+</div>
+</div>
+<div class="text-right">
+<div class="flex items-center gap-2 justify-end">
+<span class="text-[10px] font-black px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400">W</span>
+<span class="font-stats text-sm text-emerald-400">+24</span>
+</div>
+<p class="text-[10px] text-slate-500 mt-1">2h ago</p>
+</div>
+</div>
+<!-- Duel 2 -->
+<div class="glass-card p-3 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img alt="Opponent" class="w-10 h-10 rounded-full border border-slate-700" data-alt="Circular avatar profile of a female gamer, soft magenta studio lighting, tech-forward aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdeM5RQ68mt2ImmQJ4IzHQ-YXBZ2qvjHILQnV3CHuCjJ5fJq3YKnhF6CA5lrk89xTEXQcQgMDUkG6kfW25qPwA5IhFhR9QNxuHMs87G4QB4NjjxOruxrjWu0JtlQrRAZPs5IwzMNvlpu5phoF6qGzeMr4Myrs9Fb3fcmSuYtHL9Jy_Osmev5gbIDkGfNo5LfQuTGzX35qXH0mfRU3AWTA_mR-zSxXWg3BXswrHNy_u_zgBF16li1A_QUntqlSXxLRC48JEf41Rllkk"/>
+<div>
+<p class="font-body-md font-bold text-white leading-none">Cyber_Queen</p>
+<p class="text-[10px] text-slate-500 mt-1 uppercase font-bold tracking-tighter">Chess</p>
+</div>
+</div>
+<div class="text-right">
+<div class="flex items-center gap-2 justify-end">
+<span class="text-[10px] font-black px-1.5 py-0.5 rounded bg-rose-500/20 text-rose-500">L</span>
+<span class="font-stats text-sm text-rose-500">-18</span>
+</div>
+<p class="text-[10px] text-slate-500 mt-1">5h ago</p>
+</div>
+</div>
+<!-- Duel 3 -->
+<div class="glass-card p-3 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img alt="Opponent" class="w-10 h-10 rounded-full border border-slate-700" data-alt="Circular avatar profile of a young gamer, high contrast shadows, green matrix-style backlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa01quQHpbnqajZQ6OJi_BD1MRmhWOuBodtV-Oan1LFZlLnxIhwj2_niuHclrQ7wWKTw0Qw9jKSUznWiIa64vArVKLl0th3eofeNcRdGaBionJvSbD1ydyDmB4i69suF4BoLs6kn0WC-BA9WMCzCKEld46aUrrB4GHK8rWOqLUh3BT907NjMof2-FYC9vjKqhMsVvwNO0X41Au9LiF2pbgMMy6te1ZCLAtq2W93VMZtorCxCRIkKVth-VDrkk68MnPB7iHtPE4EFHR"/>
+<div>
+<p class="font-body-md font-bold text-white leading-none">Noob_Slayer</p>
+<p class="text-[10px] text-slate-500 mt-1 uppercase font-bold tracking-tighter">COD</p>
+</div>
+</div>
+<div class="text-right">
+<div class="flex items-center gap-2 justify-end">
+<span class="text-[10px] font-black px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400">W</span>
+<span class="font-stats text-sm text-emerald-400">+12</span>
+</div>
+<p class="text-[10px] text-slate-500 mt-1">Yesterday</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Achievements -->
+<section class="space-y-stack-sm">
+<h3 class="font-label-caps text-label-caps text-slate-400 mb-4">ACHIEVEMENTS</h3>
+<div class="flex gap-4 overflow-x-auto custom-scrollbar pb-2">
+<!-- Earned -->
+<div class="flex-shrink-0 w-16 h-16 rounded-xl bg-gradient-to-br from-[#E94560] to-rose-900 p-[1px]">
+<div class="w-full h-full bg-[#16213E] rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-[#E94560]" data-icon="military_tech" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+</div>
+<div class="flex-shrink-0 w-16 h-16 rounded-xl bg-gradient-to-br from-amber-400 to-amber-700 p-[1px]">
+<div class="w-full h-full bg-[#16213E] rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-amber-500" data-icon="stars" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+</div>
+<div class="flex-shrink-0 w-16 h-16 rounded-xl bg-gradient-to-br from-indigo-400 to-indigo-700 p-[1px]">
+<div class="w-full h-full bg-[#16213E] rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-indigo-400" data-icon="workspace_premium" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+</div>
+<!-- Locked -->
+<div class="flex-shrink-0 w-16 h-16 rounded-xl bg-slate-800 p-[1px]">
+<div class="w-full h-full bg-[#0F172A] rounded-xl flex items-center justify-center relative">
+<span class="material-symbols-outlined text-slate-700" data-icon="trophy">trophy</span>
+<span class="material-symbols-outlined absolute text-[12px] text-slate-400" data-icon="lock">lock</span>
+</div>
+</div>
+<div class="flex-shrink-0 w-16 h-16 rounded-xl bg-slate-800 p-[1px]">
+<div class="w-full h-full bg-[#0F172A] rounded-xl flex items-center justify-center relative">
+<span class="material-symbols-outlined text-slate-700" data-icon="diamond">diamond</span>
+<span class="material-symbols-outlined absolute text-[12px] text-slate-400" data-icon="lock">lock</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-20 px-4 pb-2 bg-[#16213E]/95 dark:bg-slate-900/95 backdrop-blur-md z-50 border-t border-[#4A4E8C]/30 shadow-[0_-4px_20px_rgba(233,69,96,0.15)]">
+<button class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-500 hover:text-rose-400 transition-colors active:scale-90 duration-150">
+<span class="material-symbols-outlined" data-icon="swords">swords</span>
+<span class="font-inter text-[10px] font-bold uppercase tracking-tighter mt-1">Battle</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-500 hover:text-rose-400 transition-colors active:scale-90 duration-150">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="font-inter text-[10px] font-bold uppercase tracking-tighter mt-1">Rank</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-500 hover:text-rose-400 transition-colors active:scale-90 duration-150">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-inter text-[10px] font-bold uppercase tracking-tighter mt-1">Shop</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#E94560] dark:text-rose-500 drop-shadow-[0_0_8px_rgba(233,69,96,0.6)] active:scale-90 duration-150">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-inter text-[10px] font-bold uppercase tracking-tighter mt-1">Profile</span>
+</button>
+</nav>
+</body></html>

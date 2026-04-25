@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#fc536d",
+                        "surface-container": "#2b1c1d",
+                        "inverse-surface": "#f7dcdd",
+                        "tertiary-container": "#25a46d",
+                        "surface-container-high": "#362627",
+                        "on-surface-variant": "#e2bebf",
+                        "on-tertiary-fixed-variant": "#005232",
+                        "on-primary-fixed-variant": "#91002b",
+                        "tertiary-fixed": "#84f9ba",
+                        "outline-variant": "#5a4042",
+                        "surface": "#1d1011",
+                        "on-secondary-fixed": "#0f1250",
+                        "on-primary-container": "#5b0017",
+                        "on-secondary-fixed-variant": "#3d417e",
+                        "secondary-container": "#3f4380",
+                        "on-tertiary-fixed": "#002111",
+                        "on-surface": "#f7dcdd",
+                        "on-error-container": "#ffdad6",
+                        "surface-variant": "#413031",
+                        "on-tertiary": "#003921",
+                        "on-primary": "#67001c",
+                        "secondary": "#bfc2ff",
+                        "on-secondary": "#262a66",
+                        "inverse-primary": "#b71d3f",
+                        "on-error": "#690005",
+                        "tertiary": "#67dc9f",
+                        "surface-bright": "#463536",
+                        "on-tertiary-container": "#00311c",
+                        "tertiary-fixed-dim": "#67dc9f",
+                        "surface-tint": "#ffb2b7",
+                        "primary-fixed-dim": "#ffb2b7",
+                        "surface-dim": "#1d1011",
+                        "surface-container-low": "#261819",
+                        "secondary-fixed-dim": "#bfc2ff",
+                        "primary-fixed": "#ffdadb",
+                        "error-container": "#93000a",
+                        "secondary-fixed": "#e0e0ff",
+                        "background": "#1d1011",
+                        "surface-container-lowest": "#170b0c",
+                        "error": "#ffb4ab",
+                        "on-background": "#f7dcdd",
+                        "inverse-on-surface": "#3d2c2d",
+                        "on-secondary-container": "#afb3f8",
+                        "outline": "#a9898a",
+                        "primary": "#ffb2b7",
+                        "on-primary-fixed": "#40000e",
+                        "surface-container-highest": "#413031"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "unit": "8px",
+                        "stack-md": "16px",
+                        "stack-lg": "32px",
+                        "stack-sm": "8px",
+                        "container-padding": "24px"
+                    },
+                    "fontFamily": {
+                        "h2": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h1": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "stats": ["Inter"],
+                        "h3": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "stats": ["20px", {"lineHeight": "1", "fontWeight": "700"}],
+                        "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .premium-glow {
+            text-shadow: 0 0 20px rgba(233, 69, 96, 0.8), 0 0 40px rgba(233, 69, 96, 0.4);
+        }
+        .glass-metal {
+            background: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%);
+            border: 1px solid rgba(74, 78, 140, 0.3);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container min-h-screen">
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-slate-950/80 backdrop-blur-md border-b border-white/10">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-rose-500 cursor-pointer">arrow_back</span>
+<h1 class="font-h3 text-white uppercase tracking-wider font-bold">Share Your Result</h1>
+</div>
+<button class="text-rose-500 font-label-caps hover:text-rose-400 transition-colors active:scale-95 duration-150">
+            Save Image
+        </button>
+</header>
+<main class="pt-24 pb-32 px-container-padding max-w-[1200px] mx-auto flex flex-col items-center">
+<div class="relative w-full max-w-md aspect-[4/5] glass-metal rounded-[24px] overflow-hidden shadow-2xl shadow-rose-500/10 mb-stack-lg group">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 pointer-events-none"></div>
+<div class="relative h-full w-full p-8 flex flex-col items-center justify-between z-10">
+<div class="w-full flex justify-between items-center opacity-60">
+<span class="font-label-caps text-white tracking-[0.2em]">SKILL DUEL ⚔️</span>
+<span class="material-symbols-outlined text-white text-sm">verified</span>
+</div>
+<div class="flex flex-col items-center w-full">
+<span class="font-h1 text-white premium-glow mb-2 italic">VICTORY</span>
+<div class="flex items-center gap-6 py-6 w-full justify-center">
+<span class="text-[64px] font-black text-white leading-none">8</span>
+<span class="text-rose-500 font-label-caps text-xl opacity-80 mt-2">vs</span>
+<span class="text-[64px] font-black text-white leading-none opacity-60">6</span>
+</div>
+<div class="flex gap-12 mt-4">
+<div class="flex flex-col items-center gap-2">
+<div class="w-16 h-16 rounded-full border-2 border-rose-500 p-0.5 overflow-hidden">
+<img alt="Player Avatar" class="w-full h-full object-cover bg-slate-800" data-alt="Portrait of a young stylish man with a headset and futuristic gaming attire in a profile avatar format" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDePrYU02O1PX1wLwaYsaRMqSgQH8K9iqzTXsDtVNpAE68JuEnI_4UVYH40Q-nNHvBKSyTYbz1M6F08bb2R1ibwbU77a7ID_fGiy2nh20VBdrXT8QIc1ioYVv5PjOxUww2_xwmjxwF1QHj4sPR4Ldzos7zrRJSuI8ZeVLaCqPjvwelGzb8lacva8EpAwTX-ua-gQ3gjPvkp6C1hS-bBeAMGdUtspTMkBaa2MNXdaHuYY7d2eKt2zjGe0j7Lr4i72jhMRAXPFepvHR-m"/>
+</div>
+<span class="font-label-caps text-white text-[10px]">@kofi_duel</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-16 h-16 rounded-full border-2 border-white/20 p-0.5 overflow-hidden">
+<img alt="Rival Avatar" class="w-full h-full object-cover bg-slate-800" data-alt="Stylized gaming avatar of a competitive player with neon highlights and intense expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4yrKk6KONvOwnzqpc1adKRTwy1BGEcblZ9szO-4Y8ceh0BqCsBU8ozSKGnzWf8ibUULDmMMDI-2PIr0FTh3iBSDKW-o_ozKsIZ7VVKqEzf_WMSUYmpnkQUeDlsmwKaQiO_pZJRnBGsSp1biLHGxesV1sJXsTlG96jH8emTA20OR1YpshGntYbmWwAUU9FcI-uF9fPiLfCa0QuMm2vN1v2boLrUgDsufZODj56-Oa5zzKRNqpF--iE0PsxTMn8gpUdxlUxWmzqyqRe"/>
+</div>
+<span class="font-label-caps text-white/60 text-[10px]">@rival_88</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-center gap-4 w-full">
+<div class="flex items-center gap-4">
+<span class="bg-amber-500/20 text-amber-500 px-4 py-1 rounded-full font-label-caps text-[10px] border border-amber-500/30">
+                            Football · Medium
+                        </span>
+<span class="text-tertiary font-stats">
+                            +24 ELO <span class="text-white/40 ml-1">→ 1,264</span>
+</span>
+</div>
+<div class="w-full h-[1px] bg-white/10 my-2"></div>
+<p class="text-slate-400 font-body-md italic text-sm text-center">
+                        Can you beat me? skillduel.app/@kofi_duel
+                    </p>
+</div>
+</div>
+</div>
+<section class="w-full max-w-md flex flex-col gap-stack-md">
+<span class="font-label-caps text-slate-500 text-center">Share to:</span>
+<div class="flex justify-between items-center gap-4 px-2">
+<button class="w-16 h-16 rounded-full bg-[#25D366] flex items-center justify-center hover:scale-110 transition-transform active:scale-95 shadow-lg shadow-green-900/20">
+<img alt="WhatsApp" class="w-8 h-8 brightness-0 invert" data-alt="Official WhatsApp logo icon in white on a green circular background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbld4tMavgiSygvsk8F0hrm6MqoWjmJrLod0uT8gyT06F1WeP_TGbRB-gRF9e3Jy6VqRS7u1EOXOpUYa6dCEBLnd9kdbCFANKyHUonfA-oG1d1HD-eJcK1Pwj3x_onpOAHpt_pSE2Gdl1BG86qUDs6ZYlduCaqhUHjauTFYEdAYlu_c3oao4gNCVVWS7vdHk7sXnQ7rfQDLdVqx1GdxtYtXV7S-cIxNSYnzmjvAGAd6PE2obRY6TLYW1xDfHg0PLNSZlgSAGoRTmqG"/>
+</button>
+<button class="w-16 h-16 rounded-full bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] flex items-center justify-center hover:scale-110 transition-transform active:scale-95 shadow-lg shadow-pink-900/20">
+<img alt="Instagram" class="w-8 h-8 brightness-0 invert" data-alt="Minimalist Instagram camera icon in white over a vibrant pink-yellow-purple gradient circle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMKHQsH3IYIht8pMaz1c6iZsvwGYWgWhd8VE9jBhvbQFG0bF45wM00fm7MZYpHQS1ydv9a-2ermzsSMlchlaDMR2QtyjNlViJs9b80Q5dONslLtxirj3jaXLQI5LGl6vDKCpnzrB68HzZtGP-41u0DzrUCB5kljLCVpDIyZr-0y9HwVfWb_zEGGonWN_CzkH2FdSQylxKZlTVisyfe9z-gf0Pxq0TaEQXIrvgE2qix6_6wV5f0f_tmqcR_03mZvSTxxt6798gY1as7"/>
+</button>
+<button class="w-16 h-16 rounded-full bg-black flex items-center justify-center hover:scale-110 transition-transform active:scale-95 border border-white/10">
+<img alt="X" class="w-7 h-7 invert" data-alt="Modern geometric X logo in white on a solid black circular button" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCstZjwL5SkGRHxE84faMrGA6U1XvObG21PwNrYjZ52tqYIZNPfzOnubB2ke92K9sJ-iJj9H54G2qyC1ZHCkofRwlqK7HMAh38qt_NceAhJVS-mTvwnFbkq3JbfnPzdDxctYFdYKYQhUEHJFGZ5IONnNpdqRdTg4VnAm3V9gFpxOcBJcuO5qeEKxMFsTjJgcKnSi15A3Oy3EHQqSPtWFscACNv6-35l3D2haUbG4gSELG9Ip0HmMRRJE5Mg8PWSZuEiR3DYCNwJsMMK"/>
+</button>
+<button class="w-16 h-16 rounded-full bg-slate-800 flex items-center justify-center hover:scale-110 transition-transform active:scale-95 border border-white/5">
+<span class="material-symbols-outlined text-white">more_horiz</span>
+</button>
+</div>
+<button class="w-full mt-4 h-14 rounded-xl border border-rose-500 text-rose-500 font-stats uppercase tracking-widest hover:bg-rose-500/10 transition-all active:scale-[0.98]">
+                Copy Link
+            </button>
+</section>
+</main>
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-slate-900/90 backdrop-blur-lg border-t border-white/10 shadow-[0_-4px_20px_rgba(233,69,96,0.15)]">
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">sports_esports</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter mt-1">Arena</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter mt-1">Leaderboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-rose-500 shadow-[0_0_15px_rgba(233,69,96,0.3)] bg-white/5 rounded-xl py-1 px-3 transition-all" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter mt-1">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

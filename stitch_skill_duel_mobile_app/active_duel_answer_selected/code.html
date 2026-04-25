@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Skill Duel - Answer Selected</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#a9898a",
+                        "primary-container": "#fc536d",
+                        "inverse-primary": "#b71d3f",
+                        "on-error": "#690005",
+                        "secondary-fixed-dim": "#bfc2ff",
+                        "tertiary-container": "#25a46d",
+                        "on-primary-fixed-variant": "#91002b",
+                        "secondary-container": "#3f4380",
+                        "on-primary-container": "#5b0017",
+                        "primary": "#ffb2b7",
+                        "outline-variant": "#5a4042",
+                        "on-surface-variant": "#e2bebf",
+                        "inverse-surface": "#f7dcdd",
+                        "surface-dim": "#1d1011",
+                        "on-tertiary": "#003921",
+                        "background": "#1d1011",
+                        "surface-container-highest": "#413031",
+                        "surface-container": "#2b1c1d",
+                        "on-secondary": "#262a66",
+                        "secondary": "#bfc2ff",
+                        "secondary-fixed": "#e0e0ff",
+                        "on-secondary-fixed": "#0f1250",
+                        "on-background": "#f7dcdd",
+                        "surface": "#1d1011",
+                        "on-secondary-container": "#afb3f8",
+                        "on-error-container": "#ffdad6",
+                        "tertiary": "#67dc9f",
+                        "surface-bright": "#463536",
+                        "tertiary-fixed-dim": "#67dc9f",
+                        "on-primary": "#67001c",
+                        "surface-tint": "#ffb2b7",
+                        "on-tertiary-container": "#00311c",
+                        "on-secondary-fixed-variant": "#3d417e",
+                        "surface-variant": "#413031",
+                        "surface-container-lowest": "#170b0c",
+                        "primary-fixed": "#ffdadb",
+                        "inverse-on-surface": "#3d2c2d",
+                        "on-tertiary-fixed-variant": "#005232",
+                        "tertiary-fixed": "#84f9ba",
+                        "surface-container-high": "#362627",
+                        "primary-fixed-dim": "#ffb2b7",
+                        "error-container": "#93000a",
+                        "on-tertiary-fixed": "#002111",
+                        "surface-container-low": "#261819",
+                        "on-primary-fixed": "#40000e",
+                        "error": "#ffb4ab",
+                        "on-surface": "#f7dcdd"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "stack-md": "16px",
+                        "gutter": "16px",
+                        "unit": "8px",
+                        "stack-sm": "8px",
+                        "container-padding": "24px"
+                    },
+                    "fontFamily": {
+                        "stats": ["Inter"],
+                        "body-md": ["Inter"],
+                        "h3": ["Inter"],
+                        "h2": ["Inter"],
+                        "h1": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "stats": ["20px", {"lineHeight": "1", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-metal {
+            background: linear-gradient(135deg, rgba(22, 33, 62, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+            border: 1px solid rgba(74, 78, 140, 0.3);
+        }
+        .bloom-primary {
+            box-shadow: 0 0 15px rgba(233, 69, 96, 0.4);
+        }
+        .timer-stroke {
+            stroke-dasharray: 100;
+            stroke-dashoffset: 85;
+            transition: stroke-dashoffset 1s linear;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-dim text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container min-h-screen">
+<!-- Top Navigation Shell -->
+<header class="bg-slate-950/80 backdrop-blur-xl border-b border-indigo-900/30 shadow-[0_4px_20px_rgba(0,0,0,0.5)] fixed top-0 w-full z-50">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-[1200px] mx-auto">
+<div class="flex items-center gap-stack-sm">
+<img alt="Rival Avatar" class="w-10 h-10 rounded-full border-2 border-secondary/30" data-alt="close-up portrait of a digital avatar male gamer with neon blue headphones and sharp facial features" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaWZqmI8G4QsaFOCWyen8zZObOBMMY7m3S2FcNJcU1UuqkXdtFtnwQiG8rBiDE8j5U3lO7pLkavCc4rpBwKssJe1DrnuuUi-D1sR2XG3sYNxqCXk0-pDY28txrkttPRTHx_ALEpQt2M7Q0NeZPCdrsMqzb5V-Kkpky44wXxe3XSVSioo2Iq3Wj1828w7R7yoTZ0vXNaw019sjhFBeFV1sHvK01PdAt1sj34EkOQSkJFf4C-g15Df38OKDE0gJcbUPUwQz6jipAGeFH"/>
+<div class="flex flex-col">
+<span class="font-stats text-body-md text-on-surface">@rival_88</span>
+<span class="font-label-caps text-label-caps text-secondary">ELO 1,190</span>
+</div>
+</div>
+<div class="flex flex-col items-center">
+<span class="bg-primary-container/20 text-primary-container px-3 py-1 rounded-full font-label-caps text-[10px] border border-primary-container/30 uppercase tracking-widest">Football</span>
+</div>
+<div class="flex items-center gap-stack-sm flex-row-reverse">
+<img alt="User Avatar" class="w-10 h-10 rounded-full border-2 border-primary-container/50 bloom-primary" data-alt="digital avatar of a professional esports player with sleek dark hair and glowing red accent details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVJKf38e8LH67hfYWgQoDhB730sHwlriyQ4ZvkjE_QHNZSlEWCM_G1bwsJ5gxBfM7A3xZfX2Tqe22_xPMcho1GEMO1jBRvOBdSm16ZUMHzOhqXnkl7e7OQONIvQC1pfsF_JZBBJfgU2TUhTbk9C9R6TYmFRJbgDkdUKQF9w5xN5tV-lK-hXFqN0OWspN6D86viqUhUHC-0Mw1GFNNRZ162g4W7WklBnq0ObX88QBTq-V5GUEoNGDzGEA7wXjXZsMhDyAn3yMEleRHa"/>
+<div class="flex flex-col items-end">
+<span class="font-stats text-body-md text-on-surface">YOU</span>
+<span class="font-label-caps text-label-caps text-primary-container">ELO 1,240</span>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-20 px-gutter max-w-[1200px] mx-auto min-h-screen flex flex-col items-center">
+<!-- Progress System -->
+<div class="w-full max-w-2xl mt-stack-md">
+<div class="flex justify-between mb-2">
+<span class="font-label-caps text-secondary">ROUND 4/10</span>
+<span class="font-label-caps text-primary-container">ACCURACY 75%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[40%] shadow-[0_0_8px_#E94560]"></div>
+</div>
+</div>
+<!-- Timer Section -->
+<div class="mt-stack-lg relative flex flex-col items-center">
+<div class="w-20 h-20 flex items-center justify-center">
+<svg class="absolute w-full h-full transform -rotate-90">
+<circle class="text-surface-container-highest" cx="40" cy="40" fill="transparent" r="36" stroke="currentColor" stroke-width="4"></circle>
+<circle class="timer-stroke" cx="40" cy="40" fill="transparent" r="36" stroke="#fc536d" stroke-dasharray="226" stroke-dashoffset="190" stroke-width="4"></circle>
+</svg>
+<div class="flex flex-col items-center">
+<span class="font-label-caps text-[10px] text-on-error tracking-tighter">NEXT IN</span>
+<span class="font-stats text-stats leading-none text-primary-container">3</span>
+</div>
+</div>
+</div>
+<!-- Question Canvas -->
+<div class="w-full max-w-2xl mt-stack-lg glass-metal p-stack-lg rounded-xl border-t-4 border-t-primary-container">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-secondary text-sm">quiz</span>
+<span class="font-label-caps text-secondary text-[10px]">ULTRA-RARE QUESTION</span>
+</div>
+<h2 class="font-h2 text-h3 md:text-h2 text-on-surface">
+                Which player has scored the most goals in a single Premier League season?
+            </h2>
+</div>
+<!-- Answer Matrix -->
+<div class="w-full max-w-2xl mt-stack-md grid grid-cols-1 gap-stack-sm">
+<!-- Option A -->
+<button class="flex items-center gap-stack-md p-stack-md bg-surface-container rounded-xl border border-indigo-900/30 opacity-70 group transition-all">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center font-stats text-secondary group-hover:text-on-surface">A</div>
+<span class="font-body-md text-on-surface-variant">Erling Haaland</span>
+</button>
+<!-- Option B (Selected) -->
+<button class="flex items-center gap-stack-md p-stack-md bg-primary-container rounded-xl border border-primary-container shadow-[0_0_20px_rgba(233,69,96,0.3)] scale-[1.02] transition-all relative overflow-hidden">
+<div class="absolute inset-0 bg-white/10 pointer-events-none"></div>
+<div class="w-10 h-10 rounded-full bg-white flex items-center justify-center font-stats text-primary-container">B</div>
+<span class="font-body-md text-white font-bold">Mohamed Salah</span>
+<span class="ml-auto material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</button>
+<!-- Option C -->
+<button class="flex items-center gap-stack-md p-stack-md bg-surface-container rounded-xl border border-indigo-900/30 opacity-70 group transition-all">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center font-stats text-secondary group-hover:text-on-surface">C</div>
+<span class="font-body-md text-on-surface-variant">Alan Shearer</span>
+</button>
+<!-- Option D -->
+<button class="flex items-center gap-stack-md p-stack-md bg-surface-container rounded-xl border border-indigo-900/30 opacity-70 group transition-all">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center font-stats text-secondary group-hover:text-on-surface">D</div>
+<span class="font-body-md text-on-surface-variant">Andy Cole</span>
+</button>
+</div>
+<!-- Submitting Status -->
+<div class="mt-stack-lg flex items-center gap-2">
+<span class="font-label-caps text-outline text-[11px] uppercase tracking-[0.2em]">Submitting</span>
+<div class="flex gap-1">
+<div class="w-1 h-1 bg-outline rounded-full animate-bounce"></div>
+<div class="w-1 h-1 bg-outline rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+<div class="w-1 h-1 bg-outline rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Shell (Suppressed context check: Primary gameplay loop active) -->
+<nav class="bg-slate-950/90 backdrop-blur-lg fixed bottom-0 left-0 w-full flex justify-around items-center h-16 px-4 z-50 border-t border-indigo-900/30 shadow-[0_-4px_20px_rgba(233,69,96,0.15)]">
+<button class="flex flex-col items-center justify-center text-slate-500 hover:text-rose-400 transition-colors">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold uppercase tracking-widest mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-rose-500 drop-shadow-[0_0_8px_rgba(233,69,96,0.6)] scale-110">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">sports_esports</span>
+<span class="text-[10px] font-bold uppercase tracking-widest mt-1">Arena</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-500 hover:text-rose-400 transition-colors">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="text-[10px] font-bold uppercase tracking-widest mt-1">Ranks</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-500 hover:text-rose-400 transition-colors">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase tracking-widest mt-1">Profile</span>
+</button>
+</nav>
+</body></html>

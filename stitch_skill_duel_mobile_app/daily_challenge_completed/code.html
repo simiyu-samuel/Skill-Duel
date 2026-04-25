@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Daily Challenge - Skill Duel</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;family=JetBrains+Mono:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#bfc2ff",
+                    "primary": "#ffb2b7",
+                    "background": "#1d1011",
+                    "on-primary-fixed-variant": "#91002b",
+                    "surface-dim": "#1d1011",
+                    "surface-container-low": "#261819",
+                    "surface": "#1d1011",
+                    "primary-container": "#fc536d",
+                    "on-primary-container": "#5b0017",
+                    "tertiary-fixed": "#84f9ba",
+                    "secondary-fixed-dim": "#bfc2ff",
+                    "on-primary-fixed": "#40000e",
+                    "on-background": "#f7dcdd",
+                    "surface-container": "#2b1c1d",
+                    "tertiary-container": "#25a46d",
+                    "on-secondary-fixed-variant": "#3d417e",
+                    "primary-fixed-dim": "#ffb2b7",
+                    "on-surface-variant": "#e2bebf",
+                    "surface-bright": "#463536",
+                    "on-tertiary-fixed-variant": "#005232",
+                    "on-error-container": "#ffdad6",
+                    "on-tertiary": "#003921",
+                    "error": "#ffb4ab",
+                    "on-secondary-fixed": "#0f1250",
+                    "outline": "#a9898a",
+                    "tertiary": "#67dc9f",
+                    "tertiary-fixed-dim": "#67dc9f",
+                    "on-secondary-container": "#afb3f8",
+                    "surface-container-highest": "#413031",
+                    "surface-tint": "#ffb2b7",
+                    "on-tertiary-fixed": "#002111",
+                    "on-tertiary-container": "#00311c",
+                    "error-container": "#93000a",
+                    "on-secondary": "#262a66",
+                    "secondary-fixed": "#e0e0ff",
+                    "surface-variant": "#413031",
+                    "on-primary": "#67001c",
+                    "inverse-primary": "#b71d3f",
+                    "surface-container-high": "#362627",
+                    "surface-container-lowest": "#170b0c",
+                    "primary-fixed": "#ffdadb",
+                    "inverse-on-surface": "#3d2c2d",
+                    "secondary-container": "#3f4380",
+                    "inverse-surface": "#f7dcdd",
+                    "outline-variant": "#5a4042",
+                    "on-surface": "#f7dcdd",
+                    "on-error": "#690005"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-padding": "24px",
+                    "unit": "8px",
+                    "stack-sm": "8px",
+                    "stack-md": "16px",
+                    "gutter": "16px",
+                    "stack-lg": "32px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Inter"],
+                    "h3": ["Inter"],
+                    "h1": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "stats": ["Inter"],
+                    "h2": ["Inter"],
+                    "mono": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "stats": ["20px", {"lineHeight": "1", "fontWeight": "700"}],
+                    "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #1A1A2E; /* Brand Anchor Overrides */
+            color: #f7dcdd;
+            font-family: 'Inter', sans-serif;
+        }
+        .gaming-surface {
+            background-color: #16213E;
+            border: 1px solid rgba(74, 78, 140, 0.3);
+        }
+        .glow-accent {
+            box-shadow: 0 0 15px rgba(233, 69, 96, 0.2);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="bg-slate-950/80 backdrop-blur-md border-b border-indigo-400/30 shadow-[0_0_15px_rgba(233,69,96,0.2)] flex items-center justify-between px-6 py-4 w-full sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<button class="hover:bg-indigo-400/10 hover:scale-105 transition-transform active:scale-95 flex items-center justify-center p-2 rounded-full">
+<span class="material-symbols-outlined text-rose-500">arrow_back</span>
+</button>
+<h1 class="text-xl font-black text-white italic tracking-tighter font-inter">Daily Challenge</h1>
+</div>
+<div class="flex items-center gap-2">
+<div class="h-2 w-2 rounded-full bg-[#E94560] animate-pulse"></div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">COMPLETED</span>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-container-padding pt-stack-lg space-y-stack-lg">
+<!-- Hero Card: Challenge Complete -->
+<section class="gaming-surface rounded-xl p-stack-lg flex flex-col items-center text-center space-y-stack-md relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-tertiary-container/10 to-transparent pointer-events-none"></div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-[72px] text-tertiary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<h2 class="font-h2 text-h2 text-white mt-4">Challenge Complete!</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">You scored 8/10 today. Come back tomorrow!</p>
+</div>
+</section>
+<!-- Results Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Score Card -->
+<div class="gaming-surface rounded-xl p-6 flex flex-col items-center justify-center space-y-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant">YOUR SCORE</span>
+<span class="font-h2 text-h2 text-white">8/10</span>
+<div class="w-full bg-slate-900 h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary-container h-full w-[80%]"></div>
+</div>
+</div>
+<!-- Rank Card -->
+<div class="gaming-surface rounded-xl p-6 flex flex-col items-center justify-center space-y-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant">YOUR RANK TODAY</span>
+<div class="flex items-baseline gap-1">
+<span class="font-h2 text-h2 text-white">#142</span>
+<span class="text-sm text-on-surface-variant">/ 1,842</span>
+</div>
+</div>
+<!-- ELO Card -->
+<div class="gaming-surface rounded-xl p-6 flex flex-col items-center justify-center space-y-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant">ELO CHANGE</span>
+<div class="flex items-center gap-2 text-tertiary">
+<span class="material-symbols-outlined">trending_up</span>
+<span class="font-h2 text-h2">+12 ELO</span>
+</div>
+</div>
+<!-- Percentile Card -->
+<div class="gaming-surface rounded-xl p-6 flex flex-col items-center justify-center space-y-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant">PERCENTILE</span>
+<span class="font-h2 text-h2 text-tertiary">Top 8%</span>
+<p class="text-[10px] font-label-caps text-tertiary">Better than 92% of players</p>
+</div>
+</section>
+<!-- Unlocked Leaderboard -->
+<section class="space-y-stack-md">
+<h3 class="font-h3 text-h3 text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">leaderboard</span>
+                Daily Leaderboard
+            </h3>
+<div class="gaming-surface rounded-xl overflow-hidden">
+<table class="w-full text-left">
+<thead class="bg-slate-900/50">
+<tr>
+<th class="px-6 py-3 font-label-caps text-label-caps text-on-surface-variant">RANK</th>
+<th class="px-6 py-3 font-label-caps text-label-caps text-on-surface-variant">PLAYER</th>
+<th class="px-6 py-3 font-label-caps text-label-caps text-on-surface-variant text-right">SCORE</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-indigo-400/10">
+<tr class="hover:bg-indigo-400/5 transition-colors">
+<td class="px-6 py-4 font-stats text-stats text-secondary">#1</td>
+<td class="px-6 py-4 flex items-center gap-3">
+<img class="w-8 h-8 rounded-full border border-secondary" data-alt="Avatar of a top ranked gaming player with neon highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT30WvvXdcmrdEyWIZnVMKpKfl3fdZDnr4cGnfKyH78-vAKtCZpY6HTJyn8lgbWR3YgZ0NlNPAZt3VtYq5pfLOdiX_9Dr6mxZOKD0EPGpYVu4K909VNlp_gswuDo6pywL7mHATsuSXBY_pobX7riIAGPiVaPZQObzM0i-WfMPtQnuqI0RJ4asWHNIYtN4SWeVZz4aXlOx8B-K58gY5EGBV1iqGlgTHDjOQhWgx_AewV6Wn-EZUwo8793PFGhn8ckI4wGEG58Pv0Sgk"/>
+<span class="font-body-md text-white font-bold">ViperStriker_99</span>
+</td>
+<td class="px-6 py-4 font-stats text-stats text-white text-right">10/10</td>
+</tr>
+<tr class="hover:bg-indigo-400/5 transition-colors">
+<td class="px-6 py-4 font-stats text-stats text-secondary">#2</td>
+<td class="px-6 py-4 flex items-center gap-3">
+<img class="w-8 h-8 rounded-full border border-slate-700" data-alt="Cyberpunk style digital avatar of a female gamer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw8fbhHop3S8UbixgucqeDy8m8Wm7ax_3qM86-gydXTNWxXdUYmdRgjieJ_d4T-bO8-hpkNTpvUg_sWQBJNeRxyL2AVMN43Qldavf90ytSUe5e7kP0Rjb7Qe5IL1zEedPM6XDPha0mLksa4Grt2Hr3VCxsh3mWiosVZwQ0EAXQehABJcBPeaEQKbQRuYhSYeJMXdW5hdHNrVnLX3DiT3zHfT58_q8-Yc3ngR6mNYCVIbuO32_eDJa5Xkuu9Mo_iGhQAtollPutYPd_"/>
+<span class="font-body-md text-white">GhostReflex</span>
+</td>
+<td class="px-6 py-4 font-stats text-stats text-white text-right">10/10</td>
+</tr>
+<tr class="hover:bg-indigo-400/5 transition-colors">
+<td class="px-6 py-4 font-stats text-stats text-secondary">#3</td>
+<td class="px-6 py-4 flex items-center gap-3">
+<img class="w-8 h-8 rounded-full border border-slate-700" data-alt="Stylized geometric avatar for a pro esports competitor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkVOzz4sDZvnuAaqLpl0ZTPrMMHCoj_4i8EeM1cwxmyyQy7EHLEtfM9h1WFg95FTdIhNOSeIL8IzBgoMq0e4E7bEPYs2xRBzkAZWsJ398a1YJ8zE5-5k_KOg2hj0hfETvukAJIIzliYiFZSS6osxP4gCuTpLdmjRL4jeDtyBCNR9vX2suRNpE_ftxHC0CmtYfS7yFFKTmNow96mysO-KuRo-jjeS_Eu0pKQjoAfdfPLxqnrQ6jLU33g2JYWhDtAogzTbqUCSbQPfp7"/>
+<span class="font-body-md text-white">NeonShadow</span>
+</td>
+<td class="px-6 py-4 font-stats text-stats text-white text-right">9/10</td>
+</tr>
+<!-- User's Highlighted Row -->
+<tr class="bg-rose-500/10 border-l-[4px] border-[#E94560]">
+<td class="px-6 py-4 font-stats text-stats text-[#E94560]">#142</td>
+<td class="px-6 py-4 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-[#E94560] flex items-center justify-center text-white font-bold">ME</div>
+<span class="font-body-md text-white font-bold">SkillMaster_You</span>
+</td>
+<td class="px-6 py-4 font-stats text-stats text-[#E94560] text-right">8/10</td>
+</tr>
+</tbody>
+</table>
+<div class="p-4 text-center bg-slate-900/30">
+<button class="font-label-caps text-label-caps text-on-surface-variant hover:text-white transition-colors">View All Participants</button>
+</div>
+</div>
+</section>
+<!-- Countdown -->
+<section class="flex flex-col items-center justify-center space-y-2 py-8">
+<span class="font-label-caps text-label-caps text-on-surface-variant">NEXT CHALLENGE IN</span>
+<div class="font-mono text-3xl font-bold text-[#F59E0B] tracking-widest bg-[#F59E0B]/10 px-6 py-2 rounded-lg border border-[#F59E0B]/30">
+                06:41:33
+            </div>
+</section>
+<!-- Actions -->
+<section class="space-y-stack-md flex flex-col items-center pb-stack-lg">
+<button class="w-full py-4 rounded-xl border-2 border-[#E94560] text-[#E94560] font-bold font-h3 hover:bg-[#E94560] hover:text-white transition-all transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">share</span>
+                Share My Result
+            </button>
+<a class="text-on-surface-variant hover:text-white font-body-md transition-colors underline underline-offset-4 decoration-slate-700" href="#">View Answer Review</a>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-slate-900/90 backdrop-blur-xl border-t border-indigo-400/20 shadow-[0_-4px_20px_rgba(0,0,0,0.5)] rounded-t-2xl">
+<div class="flex flex-col items-center justify-center text-indigo-300/60 hover:text-rose-400 transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-inter font-bold uppercase tracking-widest">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-rose-500 bg-rose-500/10 rounded-xl px-3 py-1 shadow-[inset_0_0_8px_rgba(233,69,96,0.3)] active:scale-90 duration-200">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="text-[10px] font-inter font-bold uppercase tracking-widest">Leagues</span>
+</div>
+<div class="flex flex-col items-center justify-center text-indigo-300/60 hover:text-rose-400 transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined">workspace_premium</span>
+<span class="text-[10px] font-inter font-bold uppercase tracking-widest">Events</span>
+</div>
+<div class="flex flex-col items-center justify-center text-indigo-300/60 hover:text-rose-400 transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-inter font-bold uppercase tracking-widest">Profile</span>
+</div>
+</nav>
+</body></html>

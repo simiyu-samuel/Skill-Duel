@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom Spotlight Masking */
+        .tutorial-overlay {
+            background-color: rgba(0, 0, 0, 0.75);
+            mask-image: radial-gradient(circle 60px at 50% 120px, transparent 99%, black 100%),
+                        inset(240px 24px 300px 24px round 16px);
+            -webkit-mask-image: radial-gradient(circle 60px at 50% 120px, transparent 99%, black 100%);
+        }
+        /* Re-implementing masks via clip-path for more precision if needed, but here we use layered divs for the "cutout" effect */
+        .spotlight-timer {
+            box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.75);
+            outline: 4px solid #ffb2b7;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#690005",
+                        "background": "#1d1011",
+                        "on-secondary": "#262a66",
+                        "surface-bright": "#463536",
+                        "surface": "#1d1011",
+                        "tertiary-container": "#25a46d",
+                        "on-primary-fixed-variant": "#91002b",
+                        "on-background": "#f7dcdd",
+                        "on-tertiary-fixed-variant": "#005232",
+                        "on-secondary-container": "#afb3f8",
+                        "secondary": "#bfc2ff",
+                        "primary-fixed-dim": "#ffb2b7",
+                        "surface-container-highest": "#413031",
+                        "secondary-fixed-dim": "#bfc2ff",
+                        "on-tertiary-fixed": "#002111",
+                        "on-surface-variant": "#e2bebf",
+                        "surface-container": "#2b1c1d",
+                        "surface-tint": "#ffb2b7",
+                        "on-tertiary-container": "#00311c",
+                        "on-primary-container": "#5b0017",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed": "#e0e0ff",
+                        "primary-container": "#fc536d",
+                        "outline-variant": "#5a4042",
+                        "primary-fixed": "#ffdadb",
+                        "on-secondary-fixed": "#0f1250",
+                        "surface-container-low": "#261819",
+                        "outline": "#a9898a",
+                        "on-secondary-fixed-variant": "#3d417e",
+                        "tertiary-fixed": "#84f9ba",
+                        "on-surface": "#f7dcdd",
+                        "inverse-on-surface": "#3d2c2d",
+                        "surface-container-high": "#362627",
+                        "on-tertiary": "#003921",
+                        "primary": "#ffb2b7",
+                        "surface-container-lowest": "#170b0c",
+                        "surface-variant": "#413031",
+                        "tertiary-fixed-dim": "#67dc9f",
+                        "on-primary-fixed": "#40000e",
+                        "tertiary": "#67dc9f",
+                        "error-container": "#93000a",
+                        "secondary-container": "#3f4380",
+                        "inverse-primary": "#b71d3f",
+                        "inverse-surface": "#f7dcdd",
+                        "surface-dim": "#1d1011",
+                        "on-primary": "#67001c",
+                        "error": "#ffb4ab"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "stack-sm": "8px",
+                        "container-padding": "24px",
+                        "stack-md": "16px",
+                        "gutter": "16px",
+                        "stack-lg": "32px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "stats": ["Inter"],
+                        "h3": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "h2": ["Inter"],
+                        "h1": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "stats": ["20px", {"lineHeight": "1", "fontWeight": "700"}],
+                        "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md overflow-hidden">
+<!-- Background: Active Question Screen (Simulated) -->
+<div class="relative min-h-screen w-full bg-[#1A1A2E] flex flex-col p-6">
+<!-- Top App Bar Mock -->
+<header class="bg-slate-950/80 backdrop-blur-md flex justify-between items-center w-full px-6 py-4 fixed top-0 left-0 border-b border-indigo-900/30 z-0">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-rose-500">arrow_back</span>
+<h1 class="font-inter font-black uppercase tracking-widest text-rose-500">TUTORIAL MODE</h1>
+</div>
+<span class="material-symbols-outlined text-slate-400">help</span>
+</header>
+<!-- Game Content -->
+<div class="mt-20 flex flex-col items-center gap-stack-lg">
+<!-- Timer Display -->
+<div class="w-24 h-24 rounded-full border-4 border-rose-500 flex items-center justify-center relative shadow-[0_0_20px_rgba(233,69,96,0.4)]">
+<span class="font-stats text-4xl text-white italic">18</span>
+</div>
+<!-- Question Card -->
+<div class="w-full max-w-md bg-surface-container rounded-xl p-6 border border-outline-variant/30">
+<p class="font-h3 text-on-surface mb-6">Which of these is the primary engine used in 'Skill Duel' mechanics?</p>
+<!-- Answer Options -->
+<div class="space-y-stack-md">
+<button class="w-full py-4 px-6 text-left rounded-lg bg-secondary-container text-on-secondary-container border border-outline-variant/50 font-bold">Unreal Velocity Engine</button>
+<button class="w-full py-4 px-6 text-left rounded-lg bg-surface-container-high text-on-surface-variant border border-outline-variant/30 font-bold">Quantum Logic Core</button>
+<button class="w-full py-4 px-6 text-left rounded-lg bg-surface-container-high text-on-surface-variant border border-outline-variant/30 font-bold">Apex Render Suite</button>
+<button class="w-full py-4 px-6 text-left rounded-lg bg-surface-container-high text-on-surface-variant border border-outline-variant/30 font-bold">Titan Simulation Unit</button>
+</div>
+</div>
+</div>
+</div>
+<!-- COACH MARKS OVERLAY -->
+<div class="fixed inset-0 z-50 flex flex-col pointer-events-none">
+<!-- Mask Layer (The Dimming) -->
+<div class="absolute inset-0 bg-black/75 pointer-events-auto">
+<!-- Skip Button -->
+<button class="absolute top-6 right-6 text-white text-sm font-bold uppercase tracking-wider hover:text-rose-500 transition-colors pointer-events-auto">
+                Skip Tutorial
+            </button>
+<!-- Spotlight 1: Timer Cutout -->
+<div class="absolute top-[80px] left-1/2 -translate-x-1/2 w-28 h-28 rounded-full bg-transparent ring-[1000px] ring-black/75 shadow-[0_0_30px_#E94560] pointer-events-none">
+<!-- Tooltip 1 -->
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-6 w-64 bg-white p-4 rounded-xl shadow-2xl pointer-events-auto">
+<p class="text-slate-900 font-bold text-sm text-center leading-tight">
+                        ⏱ You have 20 seconds per question. Answer before time runs out!
+                    </p>
+<div class="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-white"></div>
+</div>
+</div>
+<!-- Spotlight 2: Answers Cutout (Simplified representation via highlight) -->
+<div class="absolute top-[320px] left-1/2 -translate-x-1/2 w-[calc(100%-48px)] max-w-md h-[280px] rounded-2xl bg-transparent ring-[1000px] ring-black/75 shadow-[0_0_30px_#E94560] pointer-events-none">
+<!-- Tooltip 2 -->
+<div class="absolute top-1/2 left-full ml-8 -translate-y-1/2 w-56 bg-white p-4 rounded-xl shadow-2xl pointer-events-auto hidden lg:block">
+<p class="text-slate-900 font-bold text-sm leading-tight">
+                        Tap any option to lock in your answer. You can't change it after!
+                    </p>
+<div class="absolute right-full top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-r-[10px] border-r-white"></div>
+</div>
+<!-- Mobile fallback for Tooltip 2 -->
+<div class="absolute top-full left-1/2 -translate-x-1/2 mt-8 w-64 bg-white p-4 rounded-xl shadow-2xl pointer-events-auto lg:hidden">
+<p class="text-slate-900 font-bold text-sm text-center leading-tight">
+                        Tap any option to lock in your answer. You can't change it after!
+                    </p>
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[10px] border-b-white"></div>
+</div>
+</div>
+<!-- Bottom Information Card -->
+<div class="absolute bottom-32 left-1/2 -translate-x-1/2 w-[90%] max-w-xs bg-slate-900/90 border border-rose-500/50 backdrop-blur-md rounded-xl p-4 flex items-start gap-3 shadow-[0_0_20px_rgba(233,69,96,0.2)] pointer-events-auto">
+<span class="material-symbols-outlined text-rose-500" data-weight="fill">lock</span>
+<p class="text-xs font-medium text-white leading-snug">
+                    Your opponent answers separately — no one can copy. Results revealed when both finish.
+                </p>
+</div>
+<!-- Footer Navigation -->
+<div class="absolute bottom-0 left-0 w-full px-8 py-10 flex justify-between items-center pointer-events-auto">
+<!-- Spacing placeholder for symmetry -->
+<div class="w-24"></div>
+<!-- Progress Dots -->
+<div class="flex flex-col items-center gap-2">
+<span class="font-label-caps text-[10px] text-slate-400">Tip 1 of 3</span>
+<div class="flex gap-2">
+<div class="w-2 h-2 rounded-full bg-white"></div>
+<div class="w-2 h-2 rounded-full border border-white"></div>
+<div class="w-2 h-2 rounded-full border border-white"></div>
+</div>
+</div>
+<!-- Next Button -->
+<button class="flex items-center gap-2 text-white font-bold text-sm hover:text-rose-400 transition-all active:scale-95">
+                    Next
+                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Nav (Shared Component Mockup) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 pb-6 bg-slate-950/90 backdrop-blur-lg border-t border-indigo-900/40 z-40">
+<div class="flex flex-col items-center justify-center text-indigo-300/50">
+<span class="material-symbols-outlined">sports_esports</span>
+<span class="font-inter text-[10px] font-bold uppercase">Arena</span>
+</div>
+<div class="flex flex-col items-center justify-center text-rose-500 shadow-[0_0_10px_rgba(233,69,96,0.3)] bg-slate-900/50 rounded-xl px-4 py-1">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="font-inter text-[10px] font-bold uppercase">Rankings</span>
+</div>
+<div class="flex flex-col items-center justify-center text-indigo-300/50">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="font-inter text-[10px] font-bold uppercase">Training</span>
+</div>
+<div class="flex flex-col items-center justify-center text-indigo-300/50">
+<span class="material-symbols-outlined">person</span>
+<span class="font-inter text-[10px] font-bold uppercase">Profile</span>
+</div>
+</nav>
+</body></html>

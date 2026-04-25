@@ -1,0 +1,32 @@
+abstract class RouteNames {
+  static const splash = 'splash';
+  static const onboarding = 'onboarding';
+  static const avatarSetup = 'avatar-setup';
+  static const login = 'login';
+  static const signup = 'signup';
+  static const home = 'home';
+  static const categoryDetail = 'category-detail';
+  static const matchmaking = 'matchmaking';
+  static const directChallenge = 'direct-challenge';
+  static const activeQuestion = 'active-question';
+  static const waiting = 'waiting';
+  static const duelCancelled = 'duel-cancelled';
+  static const results = 'results';
+  static const answerReview = 'answer-review';
+  static const shareResult = 'share-result';
+  static const daily = 'daily';
+  static const dailyComplete = 'daily-complete';
+  static const friends = 'friends';
+  static const addFriend = 'add-friend';
+  static const notifications = 'notifications';
+  static const duelHistory = 'duel-history';
+  static const myProfile = 'my-profile';
+  static const opponentProfile = 'opponent-profile';
+  static const leaderboard = 'leaderboard';
+  static const settings = 'settings';
+  static const upgradePro = 'upgrade-pro';
+  static const purchaseSuccess = 'purchase-success';
+  static const networkError = 'network-error';
+  static const emptyState = 'empty-state';
+  static const joinChallenge = 'join';
+}

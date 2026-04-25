@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1d1011;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-highest": "#413031",
+                      "on-primary-fixed": "#40000e",
+                      "primary": "#ffb2b7",
+                      "outline": "#a9898a",
+                      "on-secondary-container": "#afb3f8",
+                      "inverse-on-surface": "#3d2c2d",
+                      "on-background": "#f7dcdd",
+                      "error": "#ffb4ab",
+                      "surface-container-lowest": "#170b0c",
+                      "background": "#1d1011",
+                      "secondary-fixed": "#e0e0ff",
+                      "primary-fixed": "#ffdadb",
+                      "error-container": "#93000a",
+                      "surface-dim": "#1d1011",
+                      "surface-container-low": "#261819",
+                      "secondary-fixed-dim": "#bfc2ff",
+                      "surface-tint": "#ffb2b7",
+                      "primary-fixed-dim": "#ffb2b7",
+                      "tertiary-fixed-dim": "#67dc9f",
+                      "on-tertiary-container": "#00311c",
+                      "surface-bright": "#463536",
+                      "tertiary": "#67dc9f",
+                      "on-error": "#690005",
+                      "on-secondary": "#262a66",
+                      "inverse-primary": "#b71d3f",
+                      "secondary": "#bfc2ff",
+                      "on-primary": "#67001c",
+                      "surface-variant": "#413031",
+                      "on-tertiary": "#003921",
+                      "on-error-container": "#ffdad6",
+                      "secondary-container": "#3f4380",
+                      "on-tertiary-fixed": "#002111",
+                      "on-surface": "#f7dcdd",
+                      "on-secondary-fixed-variant": "#3d417e",
+                      "on-primary-container": "#5b0017",
+                      "on-secondary-fixed": "#0f1250",
+                      "surface": "#1d1011",
+                      "outline-variant": "#5a4042",
+                      "tertiary-fixed": "#84f9ba",
+                      "on-primary-fixed-variant": "#91002b",
+                      "on-tertiary-fixed-variant": "#005232",
+                      "surface-container-high": "#362627",
+                      "on-surface-variant": "#e2bebf",
+                      "tertiary-container": "#25a46d",
+                      "surface-container": "#2b1c1d",
+                      "inverse-surface": "#f7dcdd",
+                      "primary-container": "#fc536d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-lg": "32px",
+                      "unit": "8px",
+                      "stack-md": "16px",
+                      "stack-sm": "8px",
+                      "container-padding": "24px",
+                      "gutter": "16px"
+              },
+              "fontFamily": {
+                      "label-caps": ["Inter"],
+                      "stats": ["Inter"],
+                      "h3": ["Inter"],
+                      "h2": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "h1": ["Inter"],
+                      "body-md": ["Inter"]
+              },
+              "fontSize": {
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                      "stats": ["20px", {"lineHeight": "1", "fontWeight": "700"}],
+                      "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col items-center">
+<!-- Top Navigation Anchor (Manual mapping of TopAppBar from JSON) -->
+<header class="bg-slate-950/80 backdrop-blur-md text-rose-500 dark:text-rose-400 docked full-width top-0 sticky border-b border-indigo-500/30 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex items-center justify-between px-6 py-4 w-full z-50">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined active:scale-95 duration-150 cursor-pointer">arrow_back</span>
+<span class="font-inter tracking-tighter font-black uppercase text-xl italic tracking-tighter text-rose-500">PRO SETUP</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-400 hover:text-rose-400 transition-colors cursor-pointer">settings</span>
+</div>
+</header>
+<main class="w-full max-w-[1200px] px-container-padding py-stack-lg flex flex-col items-center">
+<!-- Progress Section -->
+<div class="w-full max-w-md mb-stack-lg">
+<div class="flex justify-between items-end mb-unit">
+<span class="font-label-caps text-label-caps text-on-surface-variant/70">Step 2 of 2</span>
+<span class="font-label-caps text-label-caps text-primary">50% COMPLETE</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-1/2 shadow-[0_0_10px_rgba(252,83,109,0.5)]"></div>
+</div>
+</div>
+<!-- Heading Cluster -->
+<div class="text-center mb-stack-lg">
+<h1 class="font-h3 text-h3 text-on-surface mb-unit">Choose Your Avatar</h1>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80">This is how rivals will see you.</p>
+</div>
+<!-- Preview Section -->
+<div class="flex flex-col items-center mb-stack-lg">
+<div class="relative group">
+<div class="w-24 h-24 rounded-full border-4 border-primary-container flex items-center justify-center bg-surface-container-high shadow-[0_0_20px_rgba(252,83,109,0.4)] transition-transform group-hover:scale-105 duration-300">
+<span class="text-h2 font-h2 text-primary">K</span>
+</div>
+<div class="absolute -bottom-2 -right-2 bg-primary-container text-on-primary-container w-8 h-8 rounded-full flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">edit</span>
+</div>
+</div>
+<div class="mt-stack-md text-center">
+<h2 class="font-h3 text-h3 text-on-surface">@kofi_duel</h2>
+<p class="font-label-caps text-label-caps text-tertiary flex items-center justify-center gap-2 mt-1">
+<span class="material-symbols-outlined text-[14px]">military_tech</span>
+                    UNRANKED CHALLENGER
+                </p>
+</div>
+</div>
+<!-- Avatar Grid Selection -->
+<section class="w-full max-w-md bg-surface-container-low border border-outline-variant p-stack-md rounded-xl mb-stack-lg">
+<div class="grid grid-cols-4 gap-gutter justify-items-center">
+<!-- Selected Avatar -->
+<button class="w-14 h-14 rounded-full border-2 border-primary-container bg-surface-container-highest flex items-center justify-center ring-4 ring-primary-container/20 transition-all">
+<img alt="Avatar option" class="w-full h-full rounded-full object-cover" data-alt="Cyberpunk style male character portrait with neon red accents and high-tech visor, digital art style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQYDc4LD5k_fSbrhPWUh4TyyDahnmFjY7UF5djyRp9XRW9HrMdukDMvgsHl_KK1S4dUS7kyKXLKIWV-DTolhfAyf_Yl9GXP5sanV3m36_ntbEOJf2Vuhj-JccE9zMKZYXR3nk1OLprnY2YSh2BBPLj3niCAEPKFLYzoooNtqbJ7g7it3RN-M-9D339YAK3tkrOC1Xf4vTxYUWl1azgNWdSC_VtbkYK12Cbr-mGQRGcpvbKV9liANYgAEvXw4FTlzz7SDMul0K_dBUS"/>
+</button>
+<!-- Other Avatars -->
+<button class="w-14 h-14 rounded-full border-2 border-outline/30 bg-surface-container flex items-center justify-center hover:border-on-surface transition-all active:scale-95">
+<img alt="Avatar option" class="w-full h-full rounded-full object-cover grayscale" data-alt="Grayscale portrait of a fierce female warrior with tactical markings on her face, cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJOICPP-wssqT641aYtsrulfebp6kX7oc0-53f6mmbhs9zU7rUf4ESUfc4HY2CrP3-xsCdybY42uNzdubfy15QVHed2cT_gWAfq5Wd8pK1AiV3n29qoPM0cTS92E7OFPPy8FAlYpXovhO5wYLR3gVxQbE988tl7qUnkdf2dE9BAwqro8brR5Kj2aMFJl3tKNvwzdzoTPCQE5qXgSmPPRHFdOv8yTz0-ybW7Nv5xTpT0XtvyxWktEFXAoEelsXRFc4vJRO1FzsozoGT"/>
+</button>
+<button class="w-14 h-14 rounded-full border-2 border-outline/30 bg-surface-container flex items-center justify-center hover:border-on-surface transition-all active:scale-95">
+<img alt="Avatar option" class="w-full h-full rounded-full object-cover grayscale" data-alt="Stylized portrait of a futuristic pilot with a glowing oxygen mask, deep shadows and technical aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDc5XAZKUenD39JgKWVI0jv9x-0a8IOXVgS364DQLC0sD8_pXywPr1L6NnCKeZYvZJtw5oWgNECCyjkAQ94JjHhCVBlng44BMA3vrV_Tf5IOb4dHUt8xwC12SdSrFUd0aGPtB0SAXh2kQkbZXWqVDpBq1ZgjtprhsarUUMUBBM2ju14zoETiHLV5eEpeydXuyLpB3FSzf-OwwnQg4n05nJSsoTDR5SPw2xvgBn5RC-s3wzYaT4E3HLNnRL2KLKmWz7Km0n3m9gxQcq"/>
+</button>
+<button class="w-14 h-14 rounded-full border-2 border-outline/30 bg-surface-container flex items-center justify-center hover:border-on-surface transition-all active:scale-95">
+<img alt="Avatar option" class="w-full h-full rounded-full object-cover grayscale" data-alt="Portrait of a cybernetic hacker with glowing blue eye implants, dark background with binary code reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHqu5xKZy7x24ddbIndvH3tmWSYwnq1LfRsbUqJYiO__Ly3NpnqFVh9jRys6ygtWcbLTTLSfcHa0Zc1jVuc88JtdVgYur_cDAbUUNnMgf4ibG4tr8VkmMvVlfQu4M8id9vfUqCWWD3E1MKf_XYzKJTkAahdXuBvpFK1R7qZ1us_Xmf9YN3-MO6575HexiyUPSZ_n80fNhnJxjp78TcAYA15K2bBSxi2RAapJj6aytWfQDARbxDVsgeU3n1np8x2MJfJcDm54vM6EMJ"/>
+</button>
+<!-- Row 2 -->
+<button class="w-14 h-14 rounded-full border-2 border-outline/30 bg-surface-container flex items-center justify-center hover:border-on-surface transition-all active:scale-95">
+<span class="material-symbols-outlined text-outline">smart_toy</span>
+</button>
+<button class="w-14 h-14 rounded-full border-2 border-outline/30 bg-surface-container flex items-center justify-center hover:border-on-surface transition-all active:scale-95">
+<span class="material-symbols-outlined text-outline">skull</span>
+</button>
+<button class="w-14 h-14 rounded-full border-2 border-outline/30 bg-surface-container flex items-center justify-center hover:border-on-surface transition-all active:scale-95">
+<span class="material-symbols-outlined text-outline">swords</span>
+</button>
+<button class="w-14 h-14 rounded-full border-2 border-outline/30 bg-surface-container flex items-center justify-center hover:border-on-surface transition-all active:scale-95">
+<span class="material-symbols-outlined text-outline">bolt</span>
+</button>
+<!-- Row 3 -->
+<button class="w-14 h-14 rounded-full border-2 border-outline/30 bg-surface-container flex items-center justify-center hover:border-on-surface transition-all active:scale-95">
+<span class="material-symbols-outlined text-outline">target</span>
+</button>
+<button class="w-14 h-14 rounded-full border-2 border-outline/30 bg-surface-container flex items-center justify-center hover:border-on-surface transition-all active:scale-95">
+<span class="material-symbols-outlined text-outline">shield</span>
+</button>
+<button class="w-14 h-14 rounded-full border-2 border-outline/30 bg-surface-container flex items-center justify-center hover:border-on-surface transition-all active:scale-95">
+<span class="material-symbols-outlined text-outline">visibility</span>
+</button>
+<button class="w-14 h-14 rounded-full border-2 border-outline/30 bg-surface-container flex items-center justify-center hover:border-on-surface transition-all active:scale-95 border-dashed">
+<span class="material-symbols-outlined text-outline">add</span>
+</button>
+</div>
+</section>
+<!-- Action Button -->
+<div class="w-full max-w-md">
+<button class="w-full bg-primary-container text-on-primary-container py-stack-md rounded-lg font-h3 flex items-center justify-center gap-unit shadow-[0_4px_15px_rgba(252,83,109,0.4)] hover:shadow-[0_6px_20px_rgba(252,83,109,0.6)] hover:scale-[1.02] active:scale-[0.98] transition-all">
+                Let's Duel
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<p class="text-center mt-stack-md font-label-caps text-label-caps text-on-surface-variant opacity-50">
+                BY PROCEEDING, YOU AGREE TO THE COMPETITIVE FAIR PLAY RULES.
+            </p>
+</div>
+</main>
+<!-- Bottom Navigation Anchor (Manual mapping from JSON) -->
+<nav class="bg-slate-900/90 backdrop-blur-xl text-rose-500 fixed bottom-0 w-full z-50 rounded-t-2xl border-t border-indigo-500/20 shadow-[0_-8px_24px_rgba(0,0,0,0.6)] flex justify-around items-center h-20 px-4 md:hidden">
+<div class="flex flex-col items-center justify-center text-indigo-300/50 hover:text-rose-400 transition-all active:scale-90 cursor-pointer">
+<span class="material-symbols-outlined">sports_esports</span>
+</div>
+<div class="flex flex-col items-center justify-center text-indigo-300/50 hover:text-rose-400 transition-all active:scale-90 cursor-pointer">
+<span class="material-symbols-outlined">leaderboard</span>
+</div>
+<div class="flex flex-col items-center justify-center text-indigo-300/50 hover:text-rose-400 transition-all active:scale-90 cursor-pointer">
+<span class="material-symbols-outlined">settings</span>
+</div>
+<div class="flex flex-col items-center justify-center text-rose-500 drop-shadow-[0_0_8px_rgba(233,69,96,0.6)] active:scale-90 cursor-pointer">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+</div>
+</nav>
+<!-- Visual Accents for Gamer Aesthetic -->
+<div class="fixed top-20 left-10 w-64 h-64 bg-primary-container/10 blur-[100px] -z-10 pointer-events-none"></div>
+<div class="fixed bottom-20 right-10 w-80 h-80 bg-tertiary-container/10 blur-[120px] -z-10 pointer-events-none"></div>
+</body></html>

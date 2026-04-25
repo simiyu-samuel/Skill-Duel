@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#ffb2b7",
+                    "surface-container-high": "#362627",
+                    "on-tertiary": "#003921",
+                    "surface-variant": "#413031",
+                    "surface-container-lowest": "#170b0c",
+                    "on-secondary-fixed-variant": "#3d417e",
+                    "outline": "#a9898a",
+                    "inverse-on-surface": "#3d2c2d",
+                    "on-surface": "#f7dcdd",
+                    "tertiary-fixed": "#84f9ba",
+                    "surface-dim": "#1d1011",
+                    "on-primary": "#67001c",
+                    "inverse-surface": "#f7dcdd",
+                    "inverse-primary": "#b71d3f",
+                    "error": "#ffb4ab",
+                    "tertiary-fixed-dim": "#67dc9f",
+                    "on-primary-fixed": "#40000e",
+                    "secondary-container": "#3f4380",
+                    "tertiary": "#67dc9f",
+                    "error-container": "#93000a",
+                    "surface-container-highest": "#413031",
+                    "secondary-fixed-dim": "#bfc2ff",
+                    "primary-fixed-dim": "#ffb2b7",
+                    "secondary": "#bfc2ff",
+                    "surface-container": "#2b1c1d",
+                    "on-tertiary-fixed": "#002111",
+                    "on-surface-variant": "#e2bebf",
+                    "on-error": "#690005",
+                    "background": "#1d1011",
+                    "on-tertiary-fixed-variant": "#005232",
+                    "on-secondary-container": "#afb3f8",
+                    "tertiary-container": "#25a46d",
+                    "on-primary-fixed-variant": "#91002b",
+                    "on-background": "#f7dcdd",
+                    "surface-bright": "#463536",
+                    "surface": "#1d1011",
+                    "on-secondary": "#262a66",
+                    "surface-container-low": "#261819",
+                    "primary-fixed": "#ffdadb",
+                    "on-secondary-fixed": "#0f1250",
+                    "outline-variant": "#5a4042",
+                    "secondary-fixed": "#e0e0ff",
+                    "primary-container": "#fc536d",
+                    "surface-tint": "#ffb2b7",
+                    "on-tertiary-container": "#00311c",
+                    "on-primary-container": "#5b0017",
+                    "on-error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "32px",
+                    "gutter": "16px",
+                    "stack-md": "16px",
+                    "unit": "8px",
+                    "stack-sm": "8px",
+                    "container-padding": "24px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Inter"],
+                    "stats": ["Inter"],
+                    "h3": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h1": ["Inter"],
+                    "body-md": ["Inter"],
+                    "h2": ["Inter"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "stats": ["20px", {"lineHeight": "1", "fontWeight": "700"}],
+                    "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .match-card-glow {
+            box-shadow: 0 0 20px rgba(233, 69, 96, 0.15);
+        }
+        .swords-glow {
+            box-shadow: 0 0 40px rgba(233, 69, 96, 0.4);
+        }
+        .pulse-dots span {
+            animation: pulse-loading 1.4s infinite ease-in-out both;
+        }
+        .pulse-dots span:nth-child(1) { animation-delay: -0.32s; }
+        .pulse-dots span:nth-child(2) { animation-delay: -0.16s; }
+        @keyframes pulse-loading {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1.0); }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#1d1011] text-on-background font-body-md min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Bar Component -->
+<header class="flex items-center justify-between px-6 py-4 w-full bg-[#16213E] border-b border-[#4A4E8C]/30 sticky top-0 z-50">
+<button class="active:scale-95 duration-150 text-slate-400 hover:text-rose-400 transition-colors">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Inter'] font-bold tracking-tight uppercase text-white text-lg">Finding Opponent</h1>
+<div class="w-6"></div> <!-- Spacer for centering -->
+</header>
+<main class="flex-grow flex flex-col items-center justify-center px-container-padding py-stack-lg max-w-[500px] mx-auto w-full">
+<!-- Matchmaking Visual Section -->
+<div class="relative w-full flex flex-col items-center justify-center gap-stack-lg my-auto">
+<div class="flex items-center justify-between w-full relative">
+<!-- User Player Card -->
+<div class="flex flex-col items-center space-y-stack-sm w-1/3">
+<div class="relative">
+<div class="w-[72px] h-[72px] rounded-full p-1 bg-gradient-to-tr from-tertiary to-tertiary-container shadow-[0_0_15px_rgba(103,220,159,0.3)]">
+<img alt="" class="w-full h-full object-cover rounded-full" data-alt="Close up portrait of a young man with sharp features and a focused expression for a gaming profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDop_MBUfC-BHq_VD1ylyh9e2kPCzLjF34cpLWBzjaIJMoLbRhgkR5-GIrgvd8PJh1dhAvILT3vK-MEndm4Lta1QELy_FcNNfx1M4QWmHj71i9HJclA93NPJNTsuFlC3RZN6fHeHPTaEBR8y7TwlaeVgEPfHcxgoT1dgPbqAFlol95peXnaM7UgZqTMwBg8H8dToEodwcM125meuO6j6zPh-xoWrNmVSqAifQZAlYRNv8ES5llWiBfNFmtAsZ5-rEKu9_e1E_llr3bg"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-tertiary w-4 h-4 rounded-full border-2 border-[#16213E] shadow-[0_0_8px_rgba(103,220,159,0.6)]"></div>
+</div>
+<div class="text-center">
+<span class="bg-[#3f4380] text-secondary text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-widest mb-1 inline-block">YOU</span>
+<p class="font-stats text-white text-sm block">@kofi_duel</p>
+<p class="font-h3 text-white text-stats tracking-tighter">1,240</p>
+</div>
+</div>
+<!-- VS Divider -->
+<div class="flex flex-col items-center justify-center relative z-10">
+<div class="relative flex items-center justify-center">
+<!-- Pulsing Rings -->
+<div class="absolute w-24 h-24 bg-primary-container/20 rounded-full animate-ping opacity-30"></div>
+<div class="absolute w-16 h-16 bg-primary-container/40 rounded-full animate-pulse"></div>
+<div class="relative z-10 bg-primary-container p-4 rounded-full border border-primary text-white flex items-center justify-center swords-glow">
+<span class="material-symbols-outlined text-4xl" data-icon="crossed_swords">swords</span>
+</div>
+</div>
+</div>
+<!-- Searching Opponent Card -->
+<div class="flex flex-col items-center space-y-stack-sm w-1/3">
+<div class="w-[72px] h-[72px] rounded-full bg-surface-container-high border-2 border-dashed border-outline-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-outline-variant text-4xl" data-icon="question_mark">question_mark</span>
+</div>
+<div class="text-center">
+<span class="bg-transparent text-transparent text-[10px] px-2 py-0.5 mb-1 inline-block">HIDDEN</span>
+<p class="font-stats text-outline block text-sm italic">Searching...</p>
+<p class="font-h3 text-outline text-stats tracking-tighter">~1,200</p>
+</div>
+</div>
+</div>
+<!-- Loading & Info Section -->
+<div class="flex flex-col items-center space-y-stack-md pt-stack-lg">
+<div class="pulse-dots flex space-x-2">
+<span class="w-3 h-3 bg-primary-container rounded-full"></span>
+<span class="w-3 h-3 bg-primary-container rounded-full"></span>
+<span class="w-3 h-3 bg-primary-container rounded-full"></span>
+</div>
+<div class="text-center space-y-unit">
+<p class="text-on-surface-variant font-body-md text-[14px]">
+                        Looking for an opponent in <span class="text-white font-bold">Football · Medium</span>
+</p>
+<p class="text-outline text-xs uppercase font-label-caps tracking-widest opacity-80">
+                        Matching within ±150 ELO
+                    </p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Actions -->
+<footer class="p-container-padding space-y-stack-md bg-gradient-to-t from-background via-background to-transparent">
+<button class="w-full h-[52px] border border-on-surface-variant text-white font-bold rounded-xl flex items-center justify-center gap-unit hover:bg-white/5 active:scale-95 transition-all duration-150">
+<span class="material-symbols-outlined text-xl" data-icon="group_add">group_add</span>
+            Challenge a Friend Instead
+        </button>
+<button class="w-full text-outline font-label-caps uppercase hover:text-white transition-colors py-unit">
+            Cancel
+        </button>
+</footer>
+<!-- Bottom Nav Mirror for context (suppressed if not top-level, but here keeping consistent shell style) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-20 bg-[#16213E] px-2 pb-safe border-t border-[#4A4E8C]/30 shadow-[0_-4px_20px_rgba(0,0,0,0.5)]">
+<div class="flex flex-col items-center justify-center text-rose-500 drop-shadow-[0_0_5px_rgba(233,69,96,0.5)]">
+<span class="material-symbols-outlined" data-icon="sports_esports">sports_esports</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-tighter">Arena</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-tighter">Rankings</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500">
+<span class="material-symbols-outlined" data-icon="military_tech">military_tech</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-tighter">Quests</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-tighter">Profile</span>
+</div>
+</nav>
+</body></html>

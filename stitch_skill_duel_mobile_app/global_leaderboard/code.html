@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#e0e0ff",
+                        "on-secondary": "#262a66",
+                        "surface-tint": "#ffb2b7",
+                        "on-tertiary-fixed": "#002111",
+                        "on-tertiary-container": "#00311c",
+                        "error-container": "#93000a",
+                        "on-secondary-container": "#afb3f8",
+                        "surface-container-highest": "#413031",
+                        "inverse-surface": "#f7dcdd",
+                        "outline-variant": "#5a4042",
+                        "on-surface": "#f7dcdd",
+                        "on-error": "#690005",
+                        "surface-container-lowest": "#170b0c",
+                        "primary-fixed": "#ffdadb",
+                        "inverse-on-surface": "#3d2c2d",
+                        "secondary-container": "#3f4380",
+                        "surface-variant": "#413031",
+                        "on-primary": "#67001c",
+                        "inverse-primary": "#b71d3f",
+                        "surface-container-high": "#362627",
+                        "secondary-fixed-dim": "#bfc2ff",
+                        "on-primary-fixed": "#40000e",
+                        "on-background": "#f7dcdd",
+                        "on-primary-container": "#5b0017",
+                        "tertiary-fixed": "#84f9ba",
+                        "surface-dim": "#1d1011",
+                        "surface-container-low": "#261819",
+                        "surface": "#16213E",
+                        "primary-container": "#fc536d",
+                        "secondary": "#bfc2ff",
+                        "primary": "#ffb2b7",
+                        "background": "#1A1A2E",
+                        "on-primary-fixed-variant": "#91002b",
+                        "tertiary": "#67dc9f",
+                        "tertiary-fixed-dim": "#67dc9f",
+                        "on-tertiary": "#003921",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed": "#0f1250",
+                        "outline": "#a9898a",
+                        "surface-bright": "#463536",
+                        "on-tertiary-fixed-variant": "#005232",
+                        "on-error-container": "#ffdad6",
+                        "surface-container": "#2b1c1d",
+                        "tertiary-container": "#25a46d",
+                        "on-secondary-fixed-variant": "#3d417e",
+                        "primary-fixed-dim": "#ffb2b7",
+                        "on-surface-variant": "#e2bebf"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "container-padding": "24px",
+                        "stack-lg": "32px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "stats": ["Inter"],
+                        "h2": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "h3": ["Inter"],
+                        "h1": ["Inter"]
+                    },
+                    "fontSize": {
+                        "stats": ["20px", {"lineHeight": "1", "fontWeight": "700"}],
+                        "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen pb-24">
+<!-- Top Navigation Shell -->
+<nav class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-lg border-b border-slate-800 dark:border-[#4A4E8C]/30 flex justify-between items-center w-full px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-rose-500" data-icon="military_tech">military_tech</span>
+<h1 class="font-inter font-black uppercase tracking-widest text-xl italic text-rose-500">LEADERBOARDS</h1>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-[#E94560] overflow-hidden">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" data-alt="close-up portrait of a professional gamer with neon lighting highlights on their face in a dark studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1ARgQPejtqjGu9wtUTeKzs6AQBNBSZ3ucFGzmQDuuImZFkiOi6KW8b1mK4-x3O5qmo-HbIQ-Ut2zBrGb6eFE0Rhk2enkcBWkIQ_bKCdih_6JKlVLtQ-FEs6h9fB-HAJ3s7MuADo7LcB3VsJseoYXrUQCKZGiuUQnBWWcSCcGDiaNSoNzWoK_0T_RHn1NeYgzDJligTti-vWUuBANdIkdEB7IRvEXYv7nZA6lsjyhv29EHtXh2XZiSB65j9B5d8ivYn5Gnbge0tQhR"/>
+</div>
+</nav>
+<main class="px-container-padding pt-stack-md">
+<!-- Category Tabs -->
+<div class="flex overflow-x-auto no-scrollbar gap-gutter pb-stack-sm border-b border-[#4A4E8C]/20 mb-stack-md">
+<button class="flex-shrink-0 font-label-caps text-rose-500 border-b-2 border-rose-500 pb-2">Football</button>
+<button class="flex-shrink-0 font-label-caps text-on-surface-variant/60 hover:text-rose-400 transition-all pb-2">Chess</button>
+<button class="flex-shrink-0 font-label-caps text-on-surface-variant/60 hover:text-rose-400 transition-all pb-2">COD</button>
+<button class="flex-shrink-0 font-label-caps text-on-surface-variant/60 hover:text-rose-400 transition-all pb-2">Gaming</button>
+</div>
+<!-- Period Toggle -->
+<div class="flex bg-surface-container-low rounded-lg p-1 w-fit mb-stack-lg border border-[#4A4E8C]/20">
+<button class="px-6 py-1.5 rounded-md font-label-caps bg-rose-500 text-white shadow-[0_0_15px_rgba(233,69,96,0.3)]">Weekly</button>
+<button class="px-6 py-1.5 rounded-md font-label-caps text-on-surface-variant/50 hover:text-on-surface-variant">All-Time</button>
+</div>
+<!-- Top 3 Podium Section -->
+<div class="grid grid-cols-3 items-end gap-2 mb-stack-lg relative pt-12">
+<!-- Rank #2 -->
+<div class="flex flex-col items-center">
+<div class="relative mb-2">
+<div class="w-16 h-16 rounded-full border-2 border-slate-400 overflow-hidden">
+<img alt="Rank 2" class="w-full h-full object-cover" data-alt="portrait of a focused young man with glasses playing chess in a moody architectural setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqKcBluKm27IhOX4Btp6T9rHqgFkBF-BO0joIoHPlfD8GZJW903MY8JVSLBc9Yd8_PJKA4gugB_nWlBfDagKscf8eYhnITxYqOfv-xpl-LwqmQeg0132tGbTya99X8DsD33Ad9imfPXNtajHMmu5TlCxTTybopLqw084Z1CiQ-UqmQUXqyHVIwtbI5DBPzjKUMbkahsvSjUBKfLEl7cUJjfo5cyuzpuEI-mC6ojPsdvHtllXdWuUv5uMRniRJwfv7IZ7XoSDS3YgeZ"/>
+</div>
+<div class="absolute -top-2 -right-1 bg-slate-400 text-slate-950 font-black text-[10px] w-5 h-5 flex items-center justify-center rounded-full border border-background">2</div>
+</div>
+<p class="font-label-caps text-[10px] text-slate-400 truncate w-full text-center">@chess_master</p>
+<p class="font-stats text-sm text-on-background">2,310</p>
+</div>
+<!-- Rank #1 -->
+<div class="flex flex-col items-center -translate-y-4">
+<div class="relative mb-2">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2">
+<span class="material-symbols-outlined text-yellow-500 text-3xl animate-pulse" data-icon="workspace_premium" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<div class="w-24 h-24 rounded-full border-4 border-yellow-500 shadow-[0_0_30px_rgba(234,179,8,0.3)] overflow-hidden">
+<img alt="Rank 1" class="w-full h-full object-cover" data-alt="dynamic close-up of a professional athlete looking intense against a dark background with orange rim light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK5wswZ4LlAfzwvOU7Z5TJcO-ODdJ_Bvv_F0ABjEE2a64ElemdC-xUzR3hqusztEkZabTB41zfbQNruTqZuFQVWMcro2m2oCPOqKuXbb2BQJ82BIwMruubWjL5AdEFYfvl5F-fEaXjezd-rUU3TnSloQUPr3kYPEG8Zay1Fu1gDouTdq0tErQ0q3ehFD0iLQ34e_SG7uRxlTezTJdR_21MdL_1eXcRFRlSXFADf8P_tpqfs-75fy9agi0eJMpFOiRI8dhL8WVTwzcm"/>
+</div>
+<div class="absolute -top-1 -right-1 bg-yellow-500 text-slate-950 font-black text-xs w-7 h-7 flex items-center justify-center rounded-full border-2 border-background">1</div>
+</div>
+<p class="font-label-caps text-xs text-yellow-500 truncate w-full text-center">@pro_striker</p>
+<p class="font-stats text-xl text-on-background">2,450</p>
+</div>
+<!-- Rank #3 -->
+<div class="flex flex-col items-center">
+<div class="relative mb-2">
+<div class="w-16 h-16 rounded-full border-2 border-orange-600 overflow-hidden">
+<img alt="Rank 3" class="w-full h-full object-cover" data-alt="portrait of a gamer wearing high-end headphones with purple and blue glowing lights in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxBb49GpY-27yU0Ia_PXxCVMeKVt1wADLmvquyXdu3H7c7EXZDKcJ11q1XkuO6iBmdA0D3vYqT3ADfD4ZGSOERqz9NU_5pH6A_kWv6pFvnzJVz1cCr6hhgUaCjA7jAKg1NUBYbw94GrMKhS0vFHv-18jjdpaC4M53_aWKSBDPpgfnpA39uUGZQmHawtfsBf4UyAlMGDTRmZtRX6pBZnHdBRKCDRI24Bz5hkvTOuNT6LnBrxxAYWjLZ8s72j1kBJdzeZsB_lF0nvaZ7"/>
+</div>
+<div class="absolute -top-2 -right-1 bg-orange-600 text-slate-950 font-black text-[10px] w-5 h-5 flex items-center justify-center rounded-full border border-background">3</div>
+</div>
+<p class="font-label-caps text-[10px] text-orange-600 truncate w-full text-center">@cod_god</p>
+<p class="font-stats text-sm text-on-background">2,280</p>
+</div>
+</div>
+<!-- User Profile Highlight Card -->
+<div class="bg-surface border-l-4 border-rose-500 rounded-xl p-4 shadow-xl flex items-center justify-between mb-stack-lg ring-1 ring-white/5">
+<div class="flex items-center gap-stack-md">
+<span class="font-black text-rose-500 italic text-xl">#48</span>
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center font-black text-white text-lg">K</div>
+<div>
+<h4 class="font-label-caps text-on-surface">@kofi_duel</h4>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-tertiary" data-icon="trending_up">trending_up</span>
+<p class="text-[10px] font-bold text-tertiary uppercase">+3 positions</p>
+</div>
+</div>
+</div>
+<div class="text-right">
+<p class="font-label-caps text-[10px] text-on-surface-variant/60">ELO SCORE</p>
+<p class="font-stats text-rose-500">1,264</p>
+</div>
+</div>
+<!-- Leaderboard List -->
+<div class="space-y-1">
+<!-- Header -->
+<div class="grid grid-cols-[40px_1fr_80px_60px] items-center px-4 py-2 text-[10px] font-black text-on-surface-variant/40 uppercase tracking-widest">
+<span>Rank</span>
+<span>User</span>
+<span class="text-right">ELO</span>
+<span class="text-right">Week</span>
+</div>
+<!-- List Item 4 -->
+<div class="grid grid-cols-[40px_1fr_80px_60px] items-center bg-surface/40 px-4 py-3 rounded-lg border border-[#4A4E8C]/10">
+<span class="font-stats text-sm opacity-50">4</span>
+<div class="flex items-center gap-3">
+<img alt="p4" class="w-8 h-8 rounded-full border border-[#4A4E8C]/30" data-alt="professional corporate headshot of a smiling man with a clean look and neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp5DNzrxmWjsZKPVIOidCRDJaxJT3ccJNFzQ_YOK_s65ZXu88xuLgWelvu4khUgz7nyGd2AC8PTk4rLgMtKObeYnahSAXlWe8iEDXFTAFpfcyMsBbHJZHzSYK5hosuZGz4n-7_m1u86ppZYKt4vtqaGnqTiEER5ILHpnYOs1q2iZ7btPZAeEPmNSmCMpjrBEjrbgN0Hg-c00jVT-W8d44oHsHmjorIhq58zSoNVZSVSnUw5YVxYbLJex8nSIvyehDWEreNFmAebxng"/>
+<span class="font-label-caps text-[11px] truncate">@titan_fall</span>
+</div>
+<span class="text-right font-stats text-sm">2,150</span>
+<span class="text-right text-[10px] text-tertiary font-bold">+12</span>
+</div>
+<!-- List Item 5 -->
+<div class="grid grid-cols-[40px_1fr_80px_60px] items-center px-4 py-3 rounded-lg border border-transparent">
+<span class="font-stats text-sm opacity-50">5</span>
+<div class="flex items-center gap-3">
+<img alt="p5" class="w-8 h-8 rounded-full border border-[#4A4E8C]/30" data-alt="artistic portrait of a woman with colorful hair lighting in a dark room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoayzUPAvWlhP7-pYv-I-GFPsDOZ7QdLn-UlQz3wpn0QCuRhcTYUAYuWr1aAXdXG8_HLqCVYr2Mec92bL_0NrDh6JTJiTMhpAOGB66rxzzt9-VQfgHpbW4OhHB6_gasQEGLFmcVDU61VliRLKxppkqxM4RCWIQ9-B8E33yXuy6H3FY00JGuP1rjYUgARl8dtWtGqrG73B_ScTfNoTG7Bp5xuNBXL5lbVhYyRGqpSAmBdQhTRGnwLqFxsSiH10gILcUhldunqjS1x3l"/>
+<span class="font-label-caps text-[11px] truncate">@pixel_queen</span>
+</div>
+<span class="text-right font-stats text-sm">2,110</span>
+<span class="text-right text-[10px] text-on-surface-variant/40 font-bold">--</span>
+</div>
+<!-- List Item 6 -->
+<div class="grid grid-cols-[40px_1fr_80px_60px] items-center bg-surface/40 px-4 py-3 rounded-lg border border-[#4A4E8C]/10">
+<span class="font-stats text-sm opacity-50">6</span>
+<div class="flex items-center gap-3">
+<img alt="p6" class="w-8 h-8 rounded-full border border-[#4A4E8C]/30" data-alt="close-up portrait of a rugged man with a beard and intense eyes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4DBNaqLadxMbrnoX1dFhoJeaf4OZOG7bXWXYmCZwqHeTdYnCV22IijDf80lhh-18HRvPsmyu-EEqh93Q-Gn5aqRM38Kkujyf6Qtb4bqCNxOheHK8JOPS7hsYJ0ORcTuU7BzNeGxY2fBQhcUWgRh6F6-OD2fh2OhFErwpkZLoyVWjLF4rAtIe2zjtkjnDo0h_2HbTPX-OYpm1V8SlJQ0sYrsUcXhv-U7TxCCGrpME3H0-JH7xCd0TnAlbIdTHUFyXgva7SCOpBuFfQ"/>
+<span class="font-label-caps text-[11px] truncate">@iron_clad</span>
+</div>
+<span class="text-right font-stats text-sm">2,095</span>
+<span class="text-right text-[10px] text-rose-500 font-bold">-4</span>
+</div>
+<!-- List Item 7 -->
+<div class="grid grid-cols-[40px_1fr_80px_60px] items-center px-4 py-3 rounded-lg border border-transparent">
+<span class="font-stats text-sm opacity-50">7</span>
+<div class="flex items-center gap-3">
+<img alt="p7" class="w-8 h-8 rounded-full border border-[#4A4E8C]/30" data-alt="cheerful woman with curly hair smiling in a bright airy studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtKQenIiVWjTgcZLdyq34006iRaE4nM198Z8G1MOA7wcwGSotrqUEidn7FmaVqRGShG5NpYC0IVXXBSNPnvo5pF5WV5M0taB__noOy7Weopfh4ogR2RTCCcTYvAwQ7DVT0Lr_14tRDfulWUdINC2q9HMPnRH7OJaxWNciMuYLEQ-mRV8hGy47aB9YR9UJ2vJCrGND5jPhsXDHQaaBUqViTWM8DllSdlU6is-16VkcF_iPwSGiNMY4isZQdibC6kG6yoJsorr7v86-a"/>
+<span class="font-label-caps text-[11px] truncate">@nova_strike</span>
+</div>
+<span class="text-right font-stats text-sm">2,080</span>
+<span class="text-right text-[10px] text-tertiary font-bold">+2</span>
+</div>
+<!-- List Item 8 -->
+<div class="grid grid-cols-[40px_1fr_80px_60px] items-center bg-surface/40 px-4 py-3 rounded-lg border border-[#4A4E8C]/10">
+<span class="font-stats text-sm opacity-50">8</span>
+<div class="flex items-center gap-3">
+<img alt="p8" class="w-8 h-8 rounded-full border border-[#4A4E8C]/30" data-alt="man with a friendly expression wearing casual clothing against a grey background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcrOHkYDkOg1GPLs-xiXFsnySoiHID4nRUMKlL5yE3_di-zH1jQNU06WMsmCO3gu91ck6ruDPu29Whfn9QkXuFrVAxA5pP4oBsWbqJMNUbptSqqE4cifrc1gO-JKgNm_8rvlaXPJjffvq_SHQrCg-ZIrM_O3JbfbCqKAjO_SlZhpzJyBTU1c_Q7d-90af2gvHrxCTeL5FB8WCq-INKD-ZM2_VFvi1woW6YU7jwpfO30U9EIX0Vy0AERn7Mx_ixM7YZ2-nvuHbRcgmi"/>
+<span class="font-label-caps text-[11px] truncate">@shadow_ops</span>
+</div>
+<span class="text-right font-stats text-sm">2,045</span>
+<span class="text-right text-[10px] text-tertiary font-bold">+8</span>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Shell -->
+<footer class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 bg-slate-950/95 dark:bg-[#16213E]/95 backdrop-blur-md border-t border-slate-800 dark:border-[#4A4E8C]/40 shadow-[0_-4px_20px_rgba(0,0,0,0.5)] z-50 rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-[#4A4E8C] p-2 hover:text-rose-400 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-inter text-[10px] font-bold uppercase tracking-tighter">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-[#4A4E8C] p-2 hover:text-rose-400 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="sports_esports">sports_esports</span>
+<span class="font-inter text-[10px] font-bold uppercase tracking-tighter">Arena</span>
+</a>
+<!-- ACTIVE TAB: Rankings -->
+<a class="flex flex-col items-center justify-center text-rose-500 dark:text-[#E94560] bg-rose-500/10 dark:bg-[#E94560]/10 rounded-lg p-2 shadow-[0_0_15px_rgba(233,69,96,0.2)]" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard" style="font-variation-settings: 'FILL' 1;">leaderboard</span>
+<span class="font-inter text-[10px] font-bold uppercase tracking-tighter">Rankings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-[#4A4E8C] p-2 hover:text-rose-400 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="local_fire_department">local_fire_department</span>
+<span class="font-inter text-[10px] font-bold uppercase tracking-tighter">Market</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-[#4A4E8C] p-2 hover:text-rose-400 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-inter text-[10px] font-bold uppercase tracking-tighter">Profile</span>
+</a>
+</footer>
+</body></html>

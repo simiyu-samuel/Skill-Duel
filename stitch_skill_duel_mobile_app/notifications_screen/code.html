@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Skill Duel - Notifications</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#261819",
+                    "primary-fixed": "#ffdadb",
+                    "on-secondary-fixed": "#0f1250",
+                    "outline-variant": "#5a4042",
+                    "secondary-fixed": "#e0e0ff",
+                    "primary-container": "#fc536d",
+                    "surface-tint": "#ffb2b7",
+                    "on-tertiary-container": "#00311c",
+                    "on-primary-container": "#5b0017",
+                    "on-error-container": "#ffdad6",
+                    "surface-container": "#2b1c1d",
+                    "on-tertiary-fixed": "#002111",
+                    "on-surface-variant": "#e2bebf",
+                    "surface-container-highest": "#413031",
+                    "secondary-fixed-dim": "#bfc2ff",
+                    "primary-fixed-dim": "#ffb2b7",
+                    "secondary": "#bfc2ff",
+                    "on-tertiary-fixed-variant": "#005232",
+                    "on-secondary-container": "#afb3f8",
+                    "tertiary-container": "#25a46d",
+                    "on-primary-fixed-variant": "#91002b",
+                    "on-background": "#f7dcdd",
+                    "surface-bright": "#463536",
+                    "surface": "#1d1011",
+                    "on-secondary": "#262a66",
+                    "on-error": "#690005",
+                    "background": "#1d1011",
+                    "error": "#ffb4ab",
+                    "surface-dim": "#1d1011",
+                    "on-primary": "#67001c",
+                    "inverse-surface": "#f7dcdd",
+                    "inverse-primary": "#b71d3f",
+                    "secondary-container": "#3f4380",
+                    "tertiary": "#67dc9f",
+                    "error-container": "#93000a",
+                    "tertiary-fixed-dim": "#67dc9f",
+                    "on-primary-fixed": "#40000e",
+                    "surface-variant": "#413031",
+                    "surface-container-lowest": "#170b0c",
+                    "primary": "#ffb2b7",
+                    "surface-container-high": "#362627",
+                    "on-tertiary": "#003921",
+                    "inverse-on-surface": "#3d2c2d",
+                    "on-surface": "#f7dcdd",
+                    "tertiary-fixed": "#84f9ba",
+                    "on-secondary-fixed-variant": "#3d417e",
+                    "outline": "#a9898a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-md": "16px",
+                    "unit": "8px",
+                    "stack-sm": "8px",
+                    "container-padding": "24px",
+                    "stack-lg": "32px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "stats": ["Inter"],
+                    "h3": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "h2": ["Inter"],
+                    "h1": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "stats": ["20px", {"lineHeight": "1", "fontWeight": "700"}],
+                    "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #1A1A2E;
+            color: #f7dcdd;
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .unread-glow {
+            box-shadow: inset 4px 0 0 0 #E94560;
+        }
+        .notification-card {
+            background-color: #16213E;
+            border: 1px solid rgba(74, 78, 140, 0.3);
+        }
+        .bloom-accent {
+            filter: drop-shadow(0 0 8px rgba(233, 69, 96, 0.4));
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full bg-slate-950/80 backdrop-blur-md border-b border-indigo-900/30 flex justify-between items-center h-16 px-6 w-full z-50">
+<div class="flex items-center gap-4">
+<button class="hover:scale-105 transition-transform active:scale-95 text-white">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="text-white font-inter font-bold tracking-tight text-xl">Notifications</h1>
+</div>
+<button class="text-rose-500 font-inter font-bold tracking-tight text-sm hover:scale-105 hover:text-rose-400 transition-transform active:scale-95">
+            Mark all read
+        </button>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-20 px-container-padding max-w-[1200px] mx-auto space-y-stack-md">
+<!-- Notification 1 (Unread) -->
+<div class="notification-card unread-glow p-4 rounded-xl flex items-start gap-gutter transition-all active:scale-[0.98]">
+<img alt="Chess King profile" class="w-12 h-12 rounded-full border-2 border-primary-container object-cover" data-alt="Close-up portrait of a competitive gamer in a dark room with purple neon backlighting, focused expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASdNdF2b7iQtgKMgYMipqGGtWkgqtBFg-LdlipfvxRwT41ccOd6gCOH72Au470T2Qz4b8jaKraOxYCkknNjqc1DXj_BaOoKRl4SP6FFOipV-DyB1mIYQHKdpKabebSdcwsK4wqmqrgto7NI0DT4AJ1F4jrr0hw3lMoO9tdOkSNJ0XnvQ0HVHCQ3SrqIvDA-h5luqI8r_BI8K97MOd-mXnCH_6FvP6ymWsH2aQHARbL0Ed2nZ0rLKvs3xFlXwg0IlkMasynBE1YNhiS"/>
+<div class="flex-1 space-y-unit">
+<div class="flex justify-between items-start">
+<p class="text-body-md font-body-md"><span class="font-bold text-white">@chess_king</span> challenged you to a Chess duel</p>
+<span class="text-[10px] text-slate-400 uppercase font-bold tracking-widest whitespace-nowrap">5 MIN AGO</span>
+</div>
+<div class="flex gap-stack-sm pt-2">
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-caps text-label-caps hover:scale-105 bloom-accent transition-transform">ACCEPT</button>
+</div>
+</div>
+</div>
+<!-- Notification 2 (Unread) -->
+<div class="notification-card unread-glow p-4 rounded-xl flex items-start gap-gutter transition-all active:scale-[0.98]">
+<img alt="Rival 88 profile" class="w-12 h-12 rounded-full border-2 border-primary-container object-cover" data-alt="Sleek esports profile icon with a stylized silver helmet on a dark blue geometric background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcyLP8zqqP4ea6hynbSgot_A2Ebwyxcgom2MTPV0WUJ4igmSpROvCnqpNdUGQ68kjQyOLuDv2pV7_SAXt8t2u6Vgtp_0_nM4XwKKJn9AM9B8ySHe28T8ZpXjicyJeqAgj0k5nZ5RcuGVhS4RP30TLQY3eshjmq0JILJesN5KXmHz25w3mXdioAC5DvCJjfRO5e_bLpyJCm6X749BdJ_5WAI_d-q5AYhN1jozJXZbpxfouVGu7uU-zDSpZ8QKusvHmtn-H46khGYbfN"/>
+<div class="flex-1 space-y-unit">
+<div class="flex justify-between items-start">
+<p class="text-body-md font-body-md"><span class="font-bold text-white">@rival_88</span> submitted their answers. View results!</p>
+<span class="text-[10px] text-slate-400 uppercase font-bold tracking-widest whitespace-nowrap">22 MIN AGO</span>
+</div>
+<div class="flex gap-stack-sm pt-2">
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-caps text-label-caps hover:scale-105 bloom-accent transition-transform">VIEW</button>
+</div>
+</div>
+</div>
+<!-- Notification 3 (Read) -->
+<div class="notification-card p-4 rounded-xl flex items-start gap-gutter opacity-80 transition-all active:scale-[0.98]">
+<img alt="Speedster 22 profile" class="w-12 h-12 rounded-full border border-indigo-900/30 object-cover grayscale" data-alt="Cinematic shot of a player's hands on a glowing mechanical keyboard in a dark high-tech gaming setup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkxuRIyQaRS0CTaqBve7bpYVtw_aLIwg7-tx-2QJDkWYCdSdE8XQyPOhjqQp-EB6ECO1KyEMqVM6IqxPU1UyntDYGbt4wlxgKmuzFTOwW2oDyawwNZA4H9vHGM4gvL9ooMNCZiCk-fPzph5ZG74wTPoLljQhKzAql8v1ukwTyItGz1M6p01_QJDXHpCV3ZV7GCf8gPrVKJKqjV0-4508P02cxV0u96OmFiqOLr664wHFZgsnNRa-mbn5047MhVzXgMSyoE0Qa5iAcK"/>
+<div class="flex-1 space-y-unit">
+<div class="flex justify-between items-start">
+<p class="text-body-md font-body-md">You beat <span class="font-bold text-white">@speedster_22</span> and gained <span class="text-tertiary font-bold">+24 ELO</span></p>
+<span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest whitespace-nowrap">2 HRS AGO</span>
+</div>
+</div>
+</div>
+<!-- Notification 4 (Read) -->
+<div class="notification-card p-4 rounded-xl flex items-start gap-gutter transition-all active:scale-[0.98]">
+<div class="w-12 h-12 rounded-full bg-slate-900 flex items-center justify-center border border-indigo-900/30">
+<span class="material-symbols-outlined text-rose-500 text-2xl" data-icon="bolt" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<div class="flex-1 space-y-unit">
+<div class="flex justify-between items-start">
+<p class="text-body-md font-body-md">⚡ <span class="font-bold text-white">Your daily challenge is ready!</span></p>
+<span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest whitespace-nowrap">TODAY</span>
+</div>
+<div class="flex gap-stack-sm pt-2">
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-caps text-label-caps hover:scale-105 bloom-accent transition-transform">PLAY</button>
+</div>
+</div>
+</div>
+<!-- Notification 5 (Read) -->
+<div class="notification-card p-4 rounded-xl flex items-start gap-gutter opacity-80 transition-all active:scale-[0.98]">
+<img alt="Football God profile" class="w-12 h-12 rounded-full border border-indigo-900/30 object-cover grayscale" data-alt="Artistic 3D rendering of a futuristic football helmet with glowing red visor and carbon fiber texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp_FVubtj1QQ3kszkDpV4my6xpfOV1QER1PC5cmMq0115c9DRuoJjSsXRzsH-xgzH1endh57oTKvFzLMiFtvEJNpzPboRX3Lm683TqHIsoNt-vY0hNqG5twYztYMWZdaf4AOvnFOaFMDuzoXBu3RfvfrhES0KWRDwb7wOjogsoyZJ8fU17S02mGGfvTvhgZr2kGXILpTkz3EQSLzXg80eCiZYKeQ0W4X9tI-z8BtgQOfet7f-W6JD7I4FdXADDTihA4l5QgL5pBEyb"/>
+<div class="flex-1 space-y-unit">
+<div class="flex justify-between items-start">
+<p class="text-body-md font-body-md"><span class="font-bold text-white">@football_god</span> accepted your challenge</p>
+<span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest whitespace-nowrap">YESTERDAY</span>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 pb-safe bg-slate-950/90 backdrop-blur-xl border-t border-indigo-900/30 shadow-[0_-4px_20px_rgba(233,69,96,0.15)]">
+<!-- Arena -->
+<button class="flex flex-col items-center justify-center text-slate-500 hover:text-rose-400 transition-colors active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="sports_esports">sports_esports</span>
+<span class="text-[10px] font-bold uppercase tracking-widest mt-1">Arena</span>
+</button>
+<!-- Leagues -->
+<button class="flex flex-col items-center justify-center text-slate-500 hover:text-rose-400 transition-colors active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="emoji_events">emoji_events</span>
+<span class="text-[10px] font-bold uppercase tracking-widest mt-1">Leagues</span>
+</button>
+<!-- Social -->
+<button class="flex flex-col items-center justify-center text-slate-500 hover:text-rose-400 transition-colors active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="text-[10px] font-bold uppercase tracking-widest mt-1">Social</span>
+</button>
+<!-- Stats/Rankings (Semantic mapping) -->
+<button class="flex flex-col items-center justify-center text-slate-500 hover:text-rose-400 transition-colors active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="text-[10px] font-bold uppercase tracking-widest mt-1">Stats</span>
+</button>
+<!-- Profile (Active State Logic applied) -->
+<button class="flex flex-col items-center justify-center text-rose-500 drop-shadow-[0_0_8px_rgba(233,69,96,0.6)] active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="text-[10px] font-bold uppercase tracking-widest mt-1">Profile</span>
+</button>
+</nav>
+</body></html>

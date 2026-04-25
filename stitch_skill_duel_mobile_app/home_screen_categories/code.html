@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Skill Duel - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#e0e0ff",
+                    "surface-container-lowest": "#170b0c",
+                    "primary-container": "#fc536d",
+                    "surface-container": "#2b1c1d",
+                    "secondary-fixed-dim": "#bfc2ff",
+                    "primary-fixed-dim": "#ffb2b7",
+                    "inverse-surface": "#f7dcdd",
+                    "error-container": "#93000a",
+                    "on-tertiary-fixed": "#002111",
+                    "error": "#ffb4ab",
+                    "surface-container-high": "#362627",
+                    "on-secondary": "#262a66",
+                    "inverse-on-surface": "#3d2c2d",
+                    "on-error": "#690005",
+                    "surface": "#1d1011",
+                    "surface-tint": "#ffb2b7",
+                    "outline": "#a9898a",
+                    "on-tertiary-fixed-variant": "#005232",
+                    "on-background": "#f7dcdd",
+                    "outline-variant": "#5a4042",
+                    "primary-fixed": "#ffdadb",
+                    "surface-bright": "#463536",
+                    "on-error-container": "#ffdad6",
+                    "tertiary": "#67dc9f",
+                    "secondary": "#bfc2ff",
+                    "surface-container-highest": "#413031",
+                    "on-tertiary-container": "#00311c",
+                    "inverse-primary": "#b71d3f",
+                    "on-secondary-container": "#afb3f8",
+                    "on-primary": "#67001c",
+                    "on-primary-container": "#5b0017",
+                    "on-surface": "#f7dcdd",
+                    "on-secondary-fixed-variant": "#3d417e",
+                    "background": "#1d1011",
+                    "tertiary-fixed-dim": "#67dc9f",
+                    "surface-dim": "#1d1011",
+                    "on-secondary-fixed": "#0f1250",
+                    "surface-variant": "#413031",
+                    "surface-container-low": "#261819",
+                    "tertiary-container": "#25a46d",
+                    "on-tertiary": "#003921",
+                    "on-surface-variant": "#e2bebf",
+                    "tertiary-fixed": "#84f9ba",
+                    "on-primary-fixed-variant": "#91002b",
+                    "secondary-container": "#3f4380",
+                    "on-primary-fixed": "#40000e",
+                    "primary": "#ffb2b7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "16px",
+                    "stack-sm": "8px",
+                    "stack-md": "16px",
+                    "container-padding": "24px",
+                    "unit": "8px",
+                    "stack-lg": "32px"
+            },
+            "fontFamily": {
+                    "h2": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "h3": ["Inter"],
+                    "stats": ["Inter"],
+                    "h1": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "stats": ["20px", {"lineHeight": "1", "fontWeight": "700"}],
+                    "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0F172A;
+            color: #f7dcdd;
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-card {
+            background: #16213E;
+            border: 1px solid rgba(74, 78, 140, 0.3);
+        }
+        .primary-accent-glow {
+            box-shadow: 0 0 15px rgba(233, 69, 96, 0.4);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="dark overflow-x-hidden pb-24">
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-[#0F172A] border-b border-[#4A4E8C]/30">
+<div class="flex items-center gap-stack-md">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-[#E94560] active:scale-95 transition-transform duration-150">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a young man with a friendly expression, soft lighting, professional photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-KIuFiElOtJwM_eA4mRalSkbV4PAuq4yj2Q4Rnjs9OpgNVy6VWtpdnvtgcDVJSCvxMydvlYhp95ThUGpZfbgzxtjrTqKcHBbkR90hZW8_tFab3QovOGaixlYrmT4dpXCayGEvBJiwO1epA13VQQmS0JvKNMBLNL_gAOWJ-zse16EVl2cF82wIWtgROkJ9QtieUngubctc7pXZY2Ck5T-uVuenCnOGSpjlfLssdQqEVMZzntMhIVcvzYd0Mg83pRPvnc0xJE341ubA"/>
+</div>
+<h1 class="font-inter font-black uppercase tracking-tighter text-sm text-[#E94560]">Good evening, Kofi ⚡</h1>
+</div>
+<div class="relative group cursor-pointer active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined text-[#4A4E8C] group-hover:text-white transition-all duration-200" data-icon="notifications">notifications</span>
+<div class="absolute top-0 right-0 w-2.5 h-2.5 bg-[#E94560] rounded-full border-2 border-[#0F172A]"></div>
+</div>
+</header>
+<main class="mt-20 px-gutter space-y-stack-lg max-w-[1200px] mx-auto">
+<!-- ELO Card -->
+<section class="glass-card rounded-xl p-stack-md relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-[#E94560]"></div>
+<div class="flex flex-col space-y-1">
+<span class="font-label-caps text-label-caps text-[#4A4E8C]">Your Best ELO</span>
+<div class="flex items-center justify-between">
+<span class="font-h1 text-h2 text-white">1,240 <span class="text-[#E94560]">⚔️</span></span>
+<span class="bg-[#E94560] text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-[0_0_10px_rgba(233,69,96,0.3)]">
+                        Football · Top 12%
+                    </span>
+</div>
+</div>
+<div class="mt-4 w-full h-1 bg-[#0F172A] rounded-full overflow-hidden">
+<div class="h-full bg-[#E94560] w-[75%]"></div>
+</div>
+</section>
+<!-- Category Grid -->
+<section class="grid grid-cols-2 gap-stack-md">
+<!-- Football -->
+<div class="glass-card rounded-xl p-stack-md border-b-4 border-green-500 hover:scale-[1.02] transition-transform duration-200">
+<span class="text-3xl mb-2 block">⚽</span>
+<h3 class="font-h3 text-body-md text-white">Football</h3>
+<p class="font-stats text-stats text-[#4A4E8C]">1,240 <span class="text-xs">ELO</span></p>
+</div>
+<!-- Chess -->
+<div class="glass-card rounded-xl p-stack-md border-b-4 border-yellow-500 hover:scale-[1.02] transition-transform duration-200">
+<span class="text-3xl mb-2 block">♟️</span>
+<h3 class="font-h3 text-body-md text-white">Chess</h3>
+<p class="font-stats text-stats text-[#4A4E8C]">980 <span class="text-xs">ELO</span></p>
+</div>
+<!-- COD -->
+<div class="glass-card rounded-xl p-stack-md border-b-4 border-red-500 hover:scale-[1.02] transition-transform duration-200">
+<span class="text-3xl mb-2 block">🎮</span>
+<h3 class="font-h3 text-body-md text-white">COD</h3>
+<p class="font-stats text-stats text-[#4A4E8C]">1,150 <span class="text-xs">ELO</span></p>
+</div>
+<!-- Gaming -->
+<div class="glass-card rounded-xl p-stack-md border-b-4 border-indigo-500 hover:scale-[1.02] transition-transform duration-200">
+<span class="text-3xl mb-2 block">🕹️</span>
+<h3 class="font-h3 text-body-md text-white">Gaming</h3>
+<p class="font-stats text-stats text-[#4A4E8C]">2,100 <span class="text-xs">ELO</span></p>
+</div>
+</section>
+<!-- Active Duels Section -->
+<section class="space-y-stack-md">
+<h2 class="font-label-caps text-label-caps text-[#4A4E8C] uppercase tracking-[0.2em]">Active Duels</h2>
+<div class="glass-card rounded-xl p-4 flex items-center justify-between border-l-4 border-amber-500">
+<div class="flex items-center gap-stack-md">
+<div class="w-12 h-12 rounded-lg bg-[#0F172A] border border-[#4A4E8C]/30 overflow-hidden">
+<img alt="Opponent" class="w-full h-full object-cover" data-alt="Portrait of a young gamer with headphones, vibrant neon lighting, technical aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF3-yBhQ4TiOjL_BpKbJZYelhpWufTnEFWJ1GvMm9nCPCTqCHm-wOftmPqv3gD9sUiIda3USjFaoa0hvhc8-BwTiEPHPHTRc6nTpzMabdL3y2WZ12o7fNILULq7kSp4oBCBy4rSfq4D7tkBPTYF9bMAA0ytOKfGziKPt7uASKZ_eZU8CRyHnx-OYLJpvbAemSNl7VboRsJGzLQqM-B-YtDdzsq_rm_niap2Yp_gpbNx88tFyg3E1hr7hdL0-7MwwOoBojG9qiQpa3t"/>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h4 class="font-h3 text-body-md text-white">GhostRider_99</h4>
+<span class="bg-[#4A4E8C]/20 text-[#bfc2ff] text-[9px] px-1.5 py-0.5 rounded font-bold">PRO</span>
+</div>
+<p class="font-body-md text-[12px] text-amber-500 italic">Waiting for opponent...</p>
+</div>
+</div>
+<button class="px-5 py-2 border-2 border-[#4A4E8C] text-white rounded-lg font-label-caps text-[10px] hover:bg-[#4A4E8C]/20 transition-all duration-200 active:scale-95">
+                    VIEW
+                </button>
+</div>
+</section>
+<!-- Bento Style Stats (Bonus Section) -->
+<section class="grid grid-cols-3 gap-stack-sm">
+<div class="col-span-2 glass-card rounded-xl p-4 flex flex-col justify-center">
+<span class="font-label-caps text-[10px] text-[#4A4E8C]">WIN RATE</span>
+<span class="font-h2 text-h3 text-tertiary">68.4%</span>
+</div>
+<div class="glass-card rounded-xl p-4 flex flex-col items-center justify-center bg-gradient-to-br from-[#16213E] to-[#E94560]/10">
+<span class="material-symbols-outlined text-[#E94560]" data-icon="military_tech">military_tech</span>
+<span class="font-stats text-stats text-white">12</span>
+</div>
+</section>
+</main>
+<!-- BottomNavBar Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 pb-safe h-20 bg-[#16213E] border-t border-[#4A4E8C]/30 shadow-[0_-4px_20px_rgba(0,0,0,0.5)] rounded-t-lg">
+<!-- Home Active -->
+<button class="flex flex-col items-center justify-center text-[#E94560] bg-[#E94560]/10 rounded-lg px-3 py-1 shadow-[inset_0_0_10px_rgba(233,69,96,0.2)] active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-inter font-bold text-[10px] uppercase tracking-widest mt-1">Home</span>
+</button>
+<!-- Leaderboard Inactive -->
+<button class="flex flex-col items-center justify-center text-[#4A4E8C] hover:text-white transition-colors duration-200 active:scale-90">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="font-inter font-bold text-[10px] uppercase tracking-widest mt-1">Leaderboard</span>
+</button>
+<!-- History Inactive -->
+<button class="flex flex-col items-center justify-center text-[#4A4E8C] hover:text-white transition-colors duration-200 active:scale-90">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-inter font-bold text-[10px] uppercase tracking-widest mt-1">History</span>
+</button>
+<!-- Friends Inactive -->
+<button class="flex flex-col items-center justify-center text-[#4A4E8C] hover:text-white transition-colors duration-200 active:scale-90">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-inter font-bold text-[10px] uppercase tracking-widest mt-1">Friends</span>
+</button>
+<!-- Profile Inactive -->
+<button class="flex flex-col items-center justify-center text-[#4A4E8C] hover:text-white transition-colors duration-200 active:scale-90">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-inter font-bold text-[10px] uppercase tracking-widest mt-1">Profile</span>
+</button>
+</nav>
+</body></html>

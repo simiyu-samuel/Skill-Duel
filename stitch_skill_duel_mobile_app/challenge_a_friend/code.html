@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;family=JetBrains+Mono:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1A1A2E;
+        }
+        .duel-code {
+            font-family: 'JetBrains Mono', monospace;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#0f1250",
+                        "primary-container": "#fc536d",
+                        "inverse-primary": "#b71d3f",
+                        "inverse-surface": "#f7dcdd",
+                        "error": "#ffb4ab",
+                        "on-background": "#f7dcdd",
+                        "primary-fixed": "#ffdadb",
+                        "error-container": "#93000a",
+                        "surface-dim": "#1d1011",
+                        "surface-bright": "#463536",
+                        "on-secondary-container": "#afb3f8",
+                        "surface-container-low": "#261819",
+                        "surface-container-high": "#362627",
+                        "secondary-fixed": "#e0e0ff",
+                        "surface": "#1d1011",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#67dc9f",
+                        "surface-container-lowest": "#170b0c",
+                        "on-tertiary": "#003921",
+                        "on-primary": "#67001c",
+                        "background": "#1D1011",
+                        "surface-tint": "#ffb2b7",
+                        "tertiary-container": "#25a46d",
+                        "surface-container": "#2b1c1d",
+                        "on-surface-variant": "#e2bebf",
+                        "on-primary-fixed-variant": "#91002b",
+                        "on-primary-fixed": "#40000e",
+                        "on-surface": "#f7dcdd",
+                        "outline": "#a9898a",
+                        "on-tertiary-fixed": "#002111",
+                        "tertiary": "#67dc9f",
+                        "on-error": "#690005",
+                        "tertiary-fixed": "#84f9ba",
+                        "primary-fixed-dim": "#ffb2b7",
+                        "on-primary-container": "#5b0017",
+                        "on-tertiary-fixed-variant": "#005232",
+                        "surface-variant": "#413031",
+                        "on-tertiary-container": "#00311c",
+                        "primary": "#ffb2b7",
+                        "secondary": "#bfc2ff",
+                        "on-secondary": "#262a66",
+                        "inverse-on-surface": "#3d2c2d",
+                        "surface-container-highest": "#413031",
+                        "outline-variant": "#5a4042",
+                        "on-secondary-fixed-variant": "#3d417e",
+                        "secondary-fixed-dim": "#bfc2ff",
+                        "secondary-container": "#3f4380",
+                        "accent-pink": "#E94560",
+                        "dark-blue": "#16213E",
+                        "deep-bg": "#1A1A2E"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "container-padding": "24px",
+                        "stack-lg": "32px",
+                        "stack-md": "16px",
+                        "gutter": "16px",
+                        "stack-sm": "8px"
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-deep-bg text-on-surface min-h-screen flex flex-col items-center">
+<!-- TopAppBar -->
+<header class="dark:bg-[#1A1A2E] docked full-width top-0 border-b border-indigo-900/30 shadow-none flex items-center justify-between px-6 h-16 w-full z-50 fixed">
+<div class="flex items-center">
+<button class="material-symbols-outlined dark:text-rose-500 hover:scale-110 transition-transform duration-200 active:scale-95 transition-all" data-icon="arrow_back">arrow_back</button>
+</div>
+<h1 class="font-inter font-bold tracking-tight uppercase text-white">Challenge a Friend</h1>
+<div class="w-6"></div> <!-- Spacer for centering -->
+</header>
+<!-- Main Content Canvas -->
+<main class="w-full max-w-[1200px] px-container-padding pt-24 pb-32 flex flex-col items-center">
+<!-- Section 1: Your Duel Code -->
+<section class="w-full max-w-md mb-stack-lg">
+<h2 class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-stack-sm ml-1">Your Duel Code</h2>
+<div class="bg-dark-blue rounded-xl p-stack-lg border border-[#4A4E8C]/30 flex flex-col items-center shadow-lg relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent-pink to-secondary-container"></div>
+<span class="duel-code text-[36px] font-black tracking-[0.2em] text-white my-stack-sm selection:bg-accent-pink/40">DUEL-4X9K</span>
+<p class="text-on-surface-variant text-center text-sm opacity-60 mb-stack-md">Share this code with anyone. Expires in 24 hours.</p>
+<button class="flex items-center gap-2 border-2 border-accent-pink text-accent-pink px-6 py-2 rounded-lg font-bold hover:bg-accent-pink hover:text-white transition-all active:scale-95 group">
+<span class="material-symbols-outlined text-[20px]" data-icon="content_copy">content_copy</span>
+<span>COPY CODE</span>
+</button>
+</div>
+</section>
+<!-- Divider -->
+<div class="w-full max-w-md flex items-center gap-4 mb-stack-lg">
+<div class="h-[1px] flex-1 bg-indigo-900/40"></div>
+<span class="font-label-caps text-on-surface-variant/40">OR</span>
+<div class="h-[1px] flex-1 bg-indigo-900/40"></div>
+</div>
+<!-- Section 2: Enter a Code -->
+<section class="w-full max-w-md mb-stack-lg">
+<h2 class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-stack-sm ml-1">Enter a Code</h2>
+<div class="flex flex-col gap-stack-sm">
+<input class="w-full h-14 bg-[#0F172A] border border-indigo-900/40 rounded-xl duel-code text-center text-xl text-white tracking-widest focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all placeholder:text-on-surface-variant/20 uppercase" placeholder="PASTE DUEL CODE" type="text"/>
+<button class="w-full h-14 bg-accent-pink text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-95 transition-all shadow-[0_0_15px_rgba(233,69,96,0.4)]">
+<span>JOIN DUEL</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Section 3: Share Actions -->
+<section class="w-full max-w-md mb-stack-lg flex flex-col items-center">
+<span class="font-label-caps text-on-surface-variant/60 mb-stack-sm">Share via:</span>
+<div class="flex gap-stack-md">
+<button class="w-12 h-12 rounded-full bg-dark-blue border border-indigo-900/30 flex items-center justify-center text-on-surface-variant hover:text-accent-pink hover:border-accent-pink/50 transition-all">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+</button>
+<button class="w-12 h-12 rounded-full bg-dark-blue border border-indigo-900/30 flex items-center justify-center text-on-surface-variant hover:text-accent-pink hover:border-accent-pink/50 transition-all">
+<span class="material-symbols-outlined" data-icon="camera">camera</span>
+</button>
+<button class="w-12 h-12 rounded-full bg-dark-blue border border-indigo-900/30 flex items-center justify-center text-on-surface-variant hover:text-accent-pink hover:border-accent-pink/50 transition-all">
+<span class="material-symbols-outlined" data-icon="link">link</span>
+</button>
+</div>
+</section>
+<!-- Category Tag -->
+<div class="mt-auto">
+<div class="bg-indigo-900/20 px-4 py-2 rounded-full border border-indigo-500/20 flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-accent-pink" data-icon="sports_soccer" style="font-variation-settings: 'FILL' 1;">sports_soccer</span>
+<span class="font-label-caps text-on-surface/80">Category: Football · Medium</span>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="dark:bg-[#16213E] fixed bottom-0 w-full z-50 rounded-t-xl border-t border-indigo-900/40 shadow-[0_-4px_20px_rgba(0,0,0,0.5)] flex justify-around items-center h-20 px-4 pb-safe w-full">
+<a class="flex flex-col items-center justify-center dark:text-indigo-400/60 hover:dark:text-rose-400 transition-colors active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-inter text-[10px] font-bold uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center dark:bg-rose-500/10 dark:text-rose-500 rounded-lg py-1 px-3 shadow-[inset_0_0_8px_rgba(233,69,96,0.3)] active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="swords" style="font-variation-settings: 'FILL' 1;">swords</span>
+<span class="font-inter text-[10px] font-bold uppercase tracking-widest mt-1">Duels</span>
+</a>
+<a class="flex flex-col items-center justify-center dark:text-indigo-400/60 hover:dark:text-rose-400 transition-colors active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="font-inter text-[10px] font-bold uppercase tracking-widest mt-1">Ranks</span>
+</a>
+<a class="flex flex-col items-center justify-center dark:text-indigo-400/60 hover:dark:text-rose-400 transition-colors active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-inter text-[10px] font-bold uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

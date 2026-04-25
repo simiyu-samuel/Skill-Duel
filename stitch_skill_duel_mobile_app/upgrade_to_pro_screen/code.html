@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Skill Duel Pro Upgrade</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#84f9ba",
+                        "surface-bright": "#463536",
+                        "primary-fixed-dim": "#ffb2b7",
+                        "on-secondary-container": "#afb3f8",
+                        "tertiary-fixed-dim": "#67dc9f",
+                        "on-secondary-fixed-variant": "#3d417e",
+                        "on-primary": "#67001c",
+                        "secondary": "#bfc2ff",
+                        "outline": "#a9898a",
+                        "on-surface-variant": "#e2bebf",
+                        "tertiary-container": "#25a46d",
+                        "surface-container": "#2b1c1d",
+                        "surface-tint": "#ffb2b7",
+                        "surface-variant": "#413031",
+                        "surface-container-highest": "#413031",
+                        "primary-fixed": "#ffdadb",
+                        "on-error": "#690005",
+                        "on-surface": "#f7dcdd",
+                        "on-tertiary-fixed": "#002111",
+                        "inverse-on-surface": "#3d2c2d",
+                        "secondary-fixed": "#e0e0ff",
+                        "inverse-surface": "#f7dcdd",
+                        "secondary-container": "#3f4380",
+                        "surface": "#1d1011",
+                        "on-primary-container": "#5b0017",
+                        "surface-container-lowest": "#170b0c",
+                        "on-primary-fixed": "#40000e",
+                        "secondary-fixed-dim": "#bfc2ff",
+                        "error-container": "#93000a",
+                        "surface-container-low": "#261819",
+                        "tertiary": "#67dc9f",
+                        "surface-container-high": "#362627",
+                        "primary-container": "#fc536d",
+                        "primary": "#ffb2b7",
+                        "inverse-primary": "#b71d3f",
+                        "error": "#ffb4ab",
+                        "on-background": "#f7dcdd",
+                        "on-tertiary": "#003921",
+                        "on-secondary": "#262a66",
+                        "background": "#1d1011",
+                        "outline-variant": "#5a4042",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#91002b",
+                        "surface-dim": "#1d1011",
+                        "on-tertiary-container": "#00311c",
+                        "on-tertiary-fixed-variant": "#005232",
+                        "on-secondary-fixed": "#0f1250"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "stack-sm": "8px",
+                        "unit": "8px",
+                        "stack-md": "16px",
+                        "stack-lg": "32px",
+                        "container-padding": "24px"
+                    },
+                    "fontFamily": {
+                        "h3": ["Inter"],
+                        "h2": ["Inter"],
+                        "h1": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "stats": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "stats": ["20px", {"lineHeight": "1", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .gold-glow {
+            text-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+        }
+        .bg-gold-gradient {
+            background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+        }
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .pro-card-border {
+            border: 1px solid rgba(74, 78, 140, 0.3);
+        }
+        .inner-glow-pro {
+            box-shadow: inset 0 0 10px rgba(245, 158, 11, 0.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#1A1A2E] text-on-surface font-body-md antialiased min-h-screen flex flex-col items-center justify-center p-4">
+<!-- Modal Container -->
+<div class="relative w-full max-w-[480px] bg-[#16213E] rounded-[24px] pro-card-border overflow-hidden shadow-2xl">
+<!-- Top App Bar (Close Action) -->
+<header class="flex justify-end items-center w-full px-6 py-4">
+<button class="bg-slate-800/50 hover:scale-105 transition-transform p-2 rounded-full Active:scale-95 duration-150">
+<span class="material-symbols-outlined text-slate-100 dark:text-slate-50" data-icon="close">close</span>
+</button>
+</header>
+<!-- Main Content Area -->
+<div class="flex flex-col items-center px-container-padding pb-stack-lg space-y-stack-lg">
+<!-- Hero Section -->
+<div class="text-center space-y-4">
+<div class="relative inline-flex items-center justify-center">
+<div class="absolute inset-0 bg-[#F59E0B] blur-[40px] opacity-20 rounded-full"></div>
+<span class="material-symbols-outlined text-[64px] text-[#F59E0B] gold-glow" data-icon="swords" style="font-variation-settings: 'FILL' 1;">swords</span>
+</div>
+<div class="space-y-2">
+<h1 class="font-h1 text-h2 uppercase tracking-tighter text-gold-gradient">SKILL DUEL PRO</h1>
+<p class="font-body-lg text-body-lg text-white">Outrank Everyone. No Limits.</p>
+</div>
+</div>
+<!-- Benefits List -->
+<div class="w-full space-y-stack-md bg-[#1d1011]/40 p-6 rounded-xl inner-glow-pro">
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-[#E94560]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface text-body-md font-medium">Unlimited duels per day <span class="text-slate-500 text-sm">(Free = 10)</span></span>
+</div>
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-[#F59E0B]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface text-body-md font-medium">Advanced ELO stats &amp; charts</span>
+</div>
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-[#E94560]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface text-body-md font-medium">No ads, ever</span>
+</div>
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-[#F59E0B]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface text-body-md font-medium">Exclusive Pro avatar frames &amp; cards</span>
+</div>
+</div>
+<!-- Pricing Toggle Section -->
+<div class="w-full flex flex-col items-center space-y-stack-md">
+<div class="bg-[#1A1A2E] p-1 rounded-full flex w-full max-w-[320px] pro-card-border">
+<button class="flex-1 py-3 px-4 rounded-full text-slate-400 font-label-caps text-label-caps transition-colors">Monthly</button>
+<button class="flex-1 py-3 px-4 rounded-full bg-gold-gradient text-[#0F172A] font-label-caps text-label-caps font-black shadow-lg">Yearly (Save 40%)</button>
+</div>
+<div class="text-center">
+<div class="flex items-baseline justify-center space-x-1">
+<span class="font-h2 text-h2 text-white">$3.99</span>
+<span class="font-body-md text-slate-400">/ month</span>
+</div>
+<p class="text-slate-500 text-sm mt-1 font-medium">Billed yearly · Cancel anytime</p>
+</div>
+</div>
+<!-- Call to Action -->
+<div class="w-full space-y-stack-md">
+<button class="w-full h-[60px] bg-gold-gradient rounded-[14px] flex items-center justify-center space-x-2 shadow-[0_4px_20px_rgba(245,158,11,0.3)] hover:scale-[1.02] active:scale-95 transition-all duration-200">
+<span class="text-[#0F172A] font-h3 text-stats uppercase">Upgrade to Pro ⚡</span>
+</button>
+<div class="flex flex-col items-center space-y-stack-sm">
+<div class="flex items-center space-x-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<p class="text-tertiary text-sm font-bold uppercase tracking-widest">3-day free trial included</p>
+</div>
+<button class="text-slate-500 text-xs font-label-caps hover:text-slate-300 transition-colors pt-2">Restore Purchase</button>
+</div>
+</div>
+</div>
+<!-- Visual Flavour: Background Image (Decorative) -->
+<div class="absolute -bottom-10 -right-10 opacity-10 pointer-events-none">
+<img alt="Gaming decorative element" class="w-64 h-64 object-contain" data-alt="abstract gaming circuitry and sword silhouette on dark tech background with amber neon lines, sleek metallic surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdcX1XrFpBabQ_i_wDvJpUfBSnO1WmJ7QSHg_D-n3b9FFqy5mquIryFSn5TMU4Kn47YTFTcGcq5bwS5OPKjf5-IWHNAzfAQFI24kXmQujlNx25e_UD-LBeIhbkDQG9-uT0Izu4V0SYEjAtGRx1LEEHT43Vsc4Gt6cFQqBEAW_P161hR2gURNwfcfY9zJbUZbWYJkYwZg6Ghdy9PIHoH8LgLpAT8mVYMG275cDlQoR1ShwKE4JXnriafpUoxFBHMnZ2pum7gUvKCFUp"/>
+</div>
+</div>
+<!-- Hidden Logic: Nav Suppression (Linear Transactional Screen) -->
+<nav class="hidden">
+<!-- BottomNavBar and SideNav are suppressed because this is a Transactional/Upgrade screen -->
+</nav>
+</body></html>

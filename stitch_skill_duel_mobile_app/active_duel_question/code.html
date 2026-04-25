@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Skill Duel - Active Question</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#3d417e",
+                    "on-secondary": "#262a66",
+                    "secondary": "#bfc2ff",
+                    "on-background": "#f7dcdd",
+                    "surface-tint": "#ffb2b7",
+                    "surface-container-high": "#362627",
+                    "surface-container-lowest": "#170b0c",
+                    "surface-container": "#2b1c1d",
+                    "on-primary-fixed-variant": "#91002b",
+                    "on-secondary-fixed": "#0f1250",
+                    "on-error": "#690005",
+                    "surface-variant": "#413031",
+                    "secondary-container": "#3f4380",
+                    "on-tertiary-fixed": "#002111",
+                    "outline-variant": "#5a4042",
+                    "on-secondary-container": "#afb3f8",
+                    "primary-fixed-dim": "#ffb2b7",
+                    "on-primary-container": "#5b0017",
+                    "inverse-primary": "#b71d3f",
+                    "background": "#1d1011",
+                    "error-container": "#93000a",
+                    "primary-container": "#fc536d",
+                    "on-surface-variant": "#e2bebf",
+                    "on-surface": "#f7dcdd",
+                    "on-primary-fixed": "#40000e",
+                    "tertiary-container": "#25a46d",
+                    "secondary-fixed-dim": "#bfc2ff",
+                    "outline": "#a9898a",
+                    "on-error-container": "#ffdad6",
+                    "error": "#ffb4ab",
+                    "surface-container-low": "#261819",
+                    "primary": "#ffb2b7",
+                    "surface-container-highest": "#413031",
+                    "on-tertiary-fixed-variant": "#005232",
+                    "surface-dim": "#1d1011",
+                    "inverse-on-surface": "#3d2c2d",
+                    "surface-bright": "#463536",
+                    "tertiary": "#67dc9f",
+                    "on-tertiary-container": "#00311c",
+                    "inverse-surface": "#f7dcdd",
+                    "primary-fixed": "#ffdadb",
+                    "tertiary-fixed-dim": "#67dc9f",
+                    "on-tertiary": "#003921",
+                    "tertiary-fixed": "#84f9ba",
+                    "secondary-fixed": "#e0e0ff",
+                    "on-primary": "#67001c",
+                    "surface": "#1d1011"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-md": "16px",
+                    "container-padding": "24px",
+                    "gutter": "16px",
+                    "unit": "8px",
+                    "stack-sm": "8px",
+                    "stack-lg": "32px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "h1": ["Inter"],
+                    "body-md": ["Inter"],
+                    "stats": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "h3": ["Inter"],
+                    "h2": ["Inter"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "stats": ["20px", {"lineHeight": "1", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0F172A; /* Using the specific background from the TopAppBar JSON style for deep dark vibe */
+            color: #f7dcdd;
+            font-family: 'Inter', sans-serif;
+        }
+        .timer-ring {
+            transition: stroke-dashoffset 0.35s;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+        .glass-panel {
+            background: rgba(22, 33, 62, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(74, 78, 140, 0.3);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen flex flex-col items-center">
+<!-- Top Navigation Header (Mapped from JSON) -->
+<header class="bg-[#0F172A] dark:bg-[#0F172A] border-b border-[#4A4E8C]/30 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] w-full fixed top-0 z-50">
+<div class="flex justify-between items-center w-full px-6 h-16 max-w-[1200px] mx-auto">
+<!-- Opponent Side -->
+<div class="flex items-center gap-stack-sm">
+<div class="relative">
+<img alt="Opponent" class="w-10 h-10 rounded-full border-2 border-[#4A4E8C]/30 object-cover" data-alt="close-up portrait of a competitive young man with focused expression, dark cinematic lighting with red rim light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDamQ1xiKi3HSY9on6wRvXObTJiLpZCGpC4hzVNcz-3WA6fJWVR0kRHrOyJj8CsCH50MNte8gyT3bHqvZ7FivEjkci6aZtAYKt56EOZa_pTmmUwbtEZvB5hsQoDLe1Mcq09loL0niuNcSHhkqOJ7xHzpKr_IG8jd-S0IkD8nGRzIcRvl4Y5W33f3UqQ9yB0LrjnqUdrHiu1KEbpH_6zJQLLqwMqCxgEjeRYLPk2OJjQIIrKQ1KJIZfrkEANWEEaEvkrX21cpT3dsEAx"/>
+<div class="absolute -bottom-1 -right-1 w-3 h-3 bg-red-500 rounded-full border-2 border-[#0F172A]"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-white">@rival_88</span>
+<span class="font-stats text-[10px] text-[#4A4E8C]">ELO 1,190</span>
+</div>
+</div>
+<!-- Central Category Pill -->
+<div class="bg-[#E94560]/10 border border-[#E94560]/40 px-4 py-1.5 rounded-full shadow-[0_0_10px_rgba(233,69,96,0.2)]">
+<span class="font-label-caps text-[10px] text-[#E94560] tracking-widest font-black italic">FOOTBALL</span>
+</div>
+<!-- User Side -->
+<div class="flex items-center gap-stack-sm text-right">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-white">YOU</span>
+<span class="font-stats text-[10px] text-[#E94560]">ELO 1,240</span>
+</div>
+<div class="relative">
+<img alt="User Avatar" class="w-10 h-10 rounded-full border-2 border-[#E94560] object-cover shadow-[0_0_10px_rgba(233,69,96,0.4)]" data-alt="sharp portrait of a professional gamer with neon blue backlight, intense focus, high-end photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmq1jqNZ-nnbozOU-qGtEtTFTaki3lYZOGB1Zd_uiB16QBf-mwB9IqbWPFYyqMFsn-eLDIRM3Ye_PMNl5qH2IfCEPT4vXxst8QszUwLsO3tq9Fa4FcvIZUOQBUrhB4EdV-1ZHv1cUmT6VOEX17v4wwiuxOn0eGzymT9DparVZXI8z2SoRmMxhFZ-198XjG4SCZ4V23sxWtqwx3WXuGX4SjQa9-R24SMldBTXDv1lRIiF2iBqU8i2a2Udw9P6UgPkheykE_VpIwK_Zl"/>
+</div>
+</div>
+</div>
+</header>
+<main class="mt-16 w-full max-w-[600px] flex flex-col items-center px-container-padding pt-stack-lg">
+<!-- Progress Bar Section -->
+<div class="w-full mb-stack-lg">
+<div class="flex justify-between items-center mb-2">
+<span class="font-label-caps text-[10px] text-[#4A4E8C]">MATCH PROGRESS</span>
+<span class="font-stats text-label-caps text-[#E94560]">4 / 10</span>
+</div>
+<div class="w-full h-[6px] bg-[#16213E] rounded-full overflow-hidden border border-[#4A4E8C]/20">
+<div class="h-full bg-[#E94560] shadow-[0_0_10px_rgba(233,69,96,0.6)]" style="width: 40%"></div>
+</div>
+</div>
+<!-- Timer Section -->
+<div class="relative flex items-center justify-center mb-stack-lg">
+<svg class="w-32 h-32">
+<circle cx="64" cy="64" fill="transparent" r="58" stroke="#16213E" stroke-width="6"></circle>
+<circle class="timer-ring shadow-[0_0_15px_rgba(233,69,96,0.5)]" cx="64" cy="64" fill="transparent" r="58" stroke="#E94560" stroke-dasharray="364.4" stroke-dashoffset="120" stroke-linecap="round" stroke-width="6"></circle>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="text-h2 font-h2 text-white leading-none">14</span>
+<span class="font-label-caps text-[10px] text-[#4A4E8C]">SEC</span>
+</div>
+</div>
+<!-- Question Card -->
+<div class="w-full bg-[#16213E] border-t-4 border-[#E94560] rounded-xl p-stack-lg mb-stack-lg shadow-[0_10px_30px_rgba(0,0,0,0.3)] text-center">
+<p class="font-h3 text-body-lg text-white font-bold">
+                Which player has scored the most goals in a single Premier League season?
+            </p>
+</div>
+<!-- Answer Options -->
+<div class="w-full space-y-stack-sm mb-stack-lg">
+<!-- Option A -->
+<button class="w-full h-14 bg-[#16213E] hover:bg-[#E94560]/10 border border-[#4A4E8C]/30 hover:border-[#E94560]/50 rounded-xl flex items-center px-stack-md transition-all active:scale-[0.98] group">
+<div class="w-8 h-8 rounded-full bg-[#0F172A] border border-[#4A4E8C]/50 flex items-center justify-center group-hover:border-[#E94560]/50 transition-colors">
+<span class="font-label-caps text-white">A</span>
+</div>
+<span class="ml-stack-md font-body-md text-white">Erling Haaland</span>
+</button>
+<!-- Option B -->
+<button class="w-full h-14 bg-[#16213E] hover:bg-[#E94560]/10 border border-[#4A4E8C]/30 hover:border-[#E94560]/50 rounded-xl flex items-center px-stack-md transition-all active:scale-[0.98] group">
+<div class="w-8 h-8 rounded-full bg-[#0F172A] border border-[#4A4E8C]/50 flex items-center justify-center group-hover:border-[#E94560]/50 transition-colors">
+<span class="font-label-caps text-white">B</span>
+</div>
+<span class="ml-stack-md font-body-md text-white">Mohamed Salah</span>
+</button>
+<!-- Option C -->
+<button class="w-full h-14 bg-[#16213E] hover:bg-[#E94560]/10 border border-[#4A4E8C]/30 hover:border-[#E94560]/50 rounded-xl flex items-center px-stack-md transition-all active:scale-[0.98] group">
+<div class="w-8 h-8 rounded-full bg-[#0F172A] border border-[#4A4E8C]/50 flex items-center justify-center group-hover:border-[#E94560]/50 transition-colors">
+<span class="font-label-caps text-white">C</span>
+</div>
+<span class="ml-stack-md font-body-md text-white">Alan Shearer</span>
+</button>
+<!-- Option D -->
+<button class="w-full h-14 bg-[#16213E] hover:bg-[#E94560]/10 border border-[#4A4E8C]/30 hover:border-[#E94560]/50 rounded-xl flex items-center px-stack-md transition-all active:scale-[0.98] group">
+<div class="w-8 h-8 rounded-full bg-[#0F172A] border border-[#4A4E8C]/50 flex items-center justify-center group-hover:border-[#E94560]/50 transition-colors">
+<span class="font-label-caps text-white">D</span>
+</div>
+<span class="ml-stack-md font-body-md text-white">Andy Cole</span>
+</button>
+</div>
+<!-- Footer Note -->
+<div class="text-center px-stack-lg opacity-60">
+<p class="font-label-caps text-[10px] text-[#4A4E8C] leading-relaxed">
+                Take your time — opponent sees results only after both submit.
+            </p>
+</div>
+</main>
+<!-- Bottom Nav Suppression (Not needed for active duel per Shell Visibility Rule) -->
+<!-- However, we keep a subtle placeholder for structural consistency if needed in other screens -->
+<div class="fixed bottom-8 w-full flex justify-center pointer-events-none">
+<div class="px-6 py-2 bg-black/40 backdrop-blur-xl border border-white/5 rounded-full flex items-center gap-4 animate-pulse">
+<span class="material-symbols-outlined text-[#E94560] text-sm" data-icon="bolt">bolt</span>
+<span class="font-label-caps text-[9px] text-[#E94560]">HYPER-FOCUS MODE ACTIVE</span>
+</div>
+</div>
+</body></html>

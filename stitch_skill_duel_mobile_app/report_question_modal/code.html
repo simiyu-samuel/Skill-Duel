@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Skill Duel - Report Question</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#170b0c",
+                        "surface-container": "#2b1c1d",
+                        "on-primary-fixed-variant": "#91002b",
+                        "on-secondary-fixed": "#0f1250",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed": "#002111",
+                        "surface-variant": "#413031",
+                        "secondary-container": "#3f4380",
+                        "outline-variant": "#5a4042",
+                        "on-secondary-fixed-variant": "#3d417e",
+                        "on-secondary": "#262a66",
+                        "secondary": "#bfc2ff",
+                        "surface-tint": "#ffb2b7",
+                        "surface-container-high": "#362627",
+                        "on-background": "#f7dcdd",
+                        "primary-container": "#fc536d",
+                        "on-surface": "#f7dcdd",
+                        "on-surface-variant": "#e2bebf",
+                        "tertiary-container": "#25a46d",
+                        "secondary-fixed-dim": "#bfc2ff",
+                        "on-primary-fixed": "#40000e",
+                        "on-error-container": "#ffdad6",
+                        "error": "#ffb4ab",
+                        "outline": "#a9898a",
+                        "primary-fixed-dim": "#ffb2b7",
+                        "on-primary-container": "#5b0017",
+                        "inverse-primary": "#b71d3f",
+                        "on-secondary-container": "#afb3f8",
+                        "background": "#1d1011",
+                        "error-container": "#93000a",
+                        "surface-bright": "#463536",
+                        "tertiary": "#67dc9f",
+                        "surface-container-low": "#261819",
+                        "primary": "#ffb2b7",
+                        "surface-container-highest": "#413031",
+                        "on-tertiary-fixed-variant": "#005232",
+                        "surface-dim": "#1d1011",
+                        "inverse-on-surface": "#3d2c2d",
+                        "on-tertiary": "#003921",
+                        "surface": "#1d1011",
+                        "tertiary-fixed": "#84f9ba",
+                        "secondary-fixed": "#e0e0ff",
+                        "on-primary": "#67001c",
+                        "on-tertiary-container": "#00311c",
+                        "primary-fixed": "#ffdadb",
+                        "inverse-surface": "#f7dcdd",
+                        "tertiary-fixed-dim": "#67dc9f",
+                        "brand-accent": "#E94560",
+                        "brand-surface": "#16213E",
+                        "brand-card": "#1A1A2E"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "sheet": "24px"
+                    },
+                    "spacing": {
+                        "stack-sm": "8px",
+                        "stack-lg": "32px",
+                        "gutter": "16px",
+                        "stack-md": "16px",
+                        "container-padding": "24px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "stats": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "h3": ["Inter"],
+                        "h2": ["Inter"],
+                        "h1": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "stats": ["20px", {"lineHeight": "1", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .bottom-sheet-gradient {
+            background: linear-gradient(180deg, rgba(22, 33, 62, 1) 0%, rgba(15, 23, 42, 1) 100%);
+        }
+        .modal-overlay {
+            background-color: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+        }
+        .custom-radio:checked {
+            background-color: #E94560;
+            border-color: #E94560;
+            box-shadow: 0 0 10px rgba(233, 69, 96, 0.5);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body-md text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen overflow-hidden">
+<!-- Background Content (Dimmed Active Question Screen) -->
+<div class="fixed inset-0 z-0 flex flex-col pointer-events-none opacity-30">
+<!-- TopAppBar Placeholder -->
+<header class="bg-slate-950/80 backdrop-blur-md border-b border-slate-800/50 flex justify-between items-center w-full px-6 py-4 z-50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-rose-500">sports_esports</span>
+<span class="font-inter uppercase tracking-widest font-black text-rose-500 italic text-xl">ELITE QUIZ</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-slate-800 border border-slate-700"></div>
+</header>
+<main class="flex-1 p-container-padding flex flex-col items-center justify-center max-w-[1200px] mx-auto w-full">
+<div class="w-full max-w-2xl bg-brand-surface border border-white/5 rounded-xl p-8 mb-stack-lg">
+<div class="flex justify-between items-center mb-6">
+<span class="font-label-caps text-label-caps text-secondary-fixed">ROUND 4/10</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-rose-500">timer</span>
+<span class="font-stats text-stats text-rose-500">14s</span>
+</div>
+</div>
+<h2 class="font-h2 text-h2 mb-stack-lg leading-tight">Which player has scored the most goals in a single Premier League season?</h2>
+<div class="grid grid-cols-1 gap-4">
+<div class="p-5 border border-white/10 rounded-lg bg-surface-container-high">Erling Haaland</div>
+<div class="p-5 border border-rose-500/50 rounded-lg bg-brand-accent/10">Alan Shearer</div>
+<div class="p-5 border border-white/10 rounded-lg bg-surface-container-high">Mohamed Salah</div>
+<div class="p-5 border border-white/10 rounded-lg bg-surface-container-high">Andy Cole</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Modal Overlay -->
+<div class="fixed inset-0 z-[60] modal-overlay flex items-end justify-center">
+<!-- Bottom Sheet -->
+<div class="w-full max-w-xl bg-brand-surface rounded-t-sheet bottom-sheet-gradient border-t border-white/10 shadow-2xl flex flex-col overflow-hidden">
+<!-- Drag Handle -->
+<div class="w-full flex justify-center py-4">
+<div class="w-12 h-1.5 bg-white/20 rounded-full"></div>
+</div>
+<!-- Modal Content -->
+<div class="px-container-padding pb-10 flex flex-col">
+<!-- Header -->
+<div class="flex justify-between items-center mb-stack-md">
+<h1 class="text-[18px] font-bold text-white">Report This Question</h1>
+<button class="text-on-surface-variant hover:text-white transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Question Preview Card -->
+<div class="bg-brand-card p-4 rounded-xl border border-white/5 mb-stack-lg">
+<p class="text-[14px] italic text-white/90 truncate">
+                        "Which player has scored the most goals in a single Premier League season?"
+                    </p>
+</div>
+<!-- Form Section -->
+<div class="space-y-stack-md">
+<h3 class="font-label-caps text-[14px] text-on-surface-variant uppercase tracking-wider">Why are you reporting this?</h3>
+<!-- Radio Options -->
+<div class="space-y-3">
+<label class="flex items-center group cursor-pointer">
+<input checked="" class="custom-radio w-5 h-5 bg-brand-card border-white/20 text-brand-accent focus:ring-0 focus:ring-offset-0 transition-all rounded-full" name="report_reason" type="radio"/>
+<span class="ml-3 text-white text-[15px] group-hover:text-brand-accent transition-colors">Wrong answer marked as correct</span>
+</label>
+<label class="flex items-center group cursor-pointer">
+<input class="custom-radio w-5 h-5 bg-brand-card border-white/20 text-brand-accent focus:ring-0 focus:ring-offset-0 transition-all rounded-full" name="report_reason" type="radio"/>
+<span class="ml-3 text-white text-[15px] group-hover:text-brand-accent transition-colors">Outdated or inaccurate information</span>
+</label>
+<label class="flex items-center group cursor-pointer">
+<input class="custom-radio w-5 h-5 bg-brand-card border-white/20 text-brand-accent focus:ring-0 focus:ring-offset-0 transition-all rounded-full" name="report_reason" type="radio"/>
+<span class="ml-3 text-white text-[15px] group-hover:text-brand-accent transition-colors">Poorly worded question</span>
+</label>
+<label class="flex items-center group cursor-pointer">
+<input class="custom-radio w-5 h-5 bg-brand-card border-white/20 text-brand-accent focus:ring-0 focus:ring-offset-0 transition-all rounded-full" name="report_reason" type="radio"/>
+<span class="ml-3 text-white text-[15px] group-hover:text-brand-accent transition-colors">Duplicate question</span>
+</label>
+<label class="flex items-center group cursor-pointer">
+<input class="custom-radio w-5 h-5 bg-brand-card border-white/20 text-brand-accent focus:ring-0 focus:ring-offset-0 transition-all rounded-full" name="report_reason" type="radio"/>
+<span class="ml-3 text-white text-[15px] group-hover:text-brand-accent transition-colors">Other</span>
+</label>
+</div>
+<!-- Detailed Description -->
+<div class="pt-2">
+<textarea class="w-full h-20 bg-brand-card border border-white/10 rounded-xl p-4 text-on-surface placeholder:text-on-surface-variant/40 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all resize-none" placeholder="Add details (optional)..."></textarea>
+</div>
+</div>
+<!-- Actions -->
+<div class="mt-stack-lg flex flex-col gap-3">
+<button class="w-full bg-brand-accent hover:brightness-110 active:scale-[0.98] transition-all py-4 rounded-xl text-white font-bold text-md shadow-lg shadow-brand-accent/20">
+                        Submit Report
+                    </button>
+<button class="w-full py-2 text-on-surface-variant hover:text-white transition-colors font-medium">
+                        Cancel
+                    </button>
+</div>
+<!-- Disclaimer -->
+<p class="mt-6 text-center text-[12px] italic text-on-surface-variant/60">
+                    Reports are reviewed by our moderation team within 24-48 hours. Thank you for keeping Skill Duel accurate.
+                </p>
+</div>
+</div>
+</div>
+<!-- Hidden BottomNavBar for structure alignment -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-16 bg-[#16213E] px-4 border-t border-slate-700 opacity-20 pointer-events-none z-10">
+<div class="flex flex-col items-center justify-center text-slate-500 opacity-60">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Arena</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 opacity-60">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Rankings</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 opacity-60">
+<span class="material-symbols-outlined">shield</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Armory</span>
+</div>
+<div class="flex flex-col items-center justify-center text-rose-500 brightness-125">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Profile</span>
+</div>
+</nav>
+</body></html>

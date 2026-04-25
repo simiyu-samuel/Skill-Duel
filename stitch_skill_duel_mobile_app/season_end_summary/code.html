@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Skill Duel - Season Summary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-dim": "#1d1011",
+                      "surface-container": "#2b1c1d",
+                      "tertiary": "#67dc9f",
+                      "secondary-fixed-dim": "#bfc2ff",
+                      "secondary-fixed": "#e0e0ff",
+                      "primary-fixed-dim": "#ffb2b7",
+                      "on-primary-fixed-variant": "#91002b",
+                      "on-primary-container": "#5b0017",
+                      "on-background": "#f7dcdd",
+                      "on-error": "#690005",
+                      "on-surface": "#f7dcdd",
+                      "error": "#ffb4ab",
+                      "on-primary-fixed": "#40000e",
+                      "on-secondary": "#262a66",
+                      "outline-variant": "#5a4042",
+                      "on-error-container": "#ffdad6",
+                      "inverse-surface": "#f7dcdd",
+                      "inverse-on-surface": "#3d2c2d",
+                      "surface-tint": "#ffb2b7",
+                      "on-surface-variant": "#e2bebf",
+                      "primary-fixed": "#ffdadb",
+                      "tertiary-fixed-dim": "#67dc9f",
+                      "tertiary-container": "#25a46d",
+                      "primary-container": "#fc536d",
+                      "tertiary-fixed": "#84f9ba",
+                      "on-tertiary-fixed-variant": "#005232",
+                      "on-tertiary-fixed": "#002111",
+                      "surface-bright": "#463536",
+                      "on-secondary-fixed-variant": "#3d417e",
+                      "inverse-primary": "#b71d3f",
+                      "on-tertiary-container": "#00311c",
+                      "surface": "#1d1011",
+                      "outline": "#a9898a",
+                      "background": "#1d1011",
+                      "error-container": "#93000a",
+                      "surface-container-highest": "#413031",
+                      "on-secondary-fixed": "#0f1250",
+                      "surface-container-low": "#261819",
+                      "on-primary": "#67001c",
+                      "secondary-container": "#3f4380",
+                      "primary": "#ffb2b7",
+                      "surface-variant": "#413031",
+                      "surface-container-high": "#362627",
+                      "on-tertiary": "#003921",
+                      "surface-container-lowest": "#170b0c",
+                      "on-secondary-container": "#afb3f8",
+                      "secondary": "#bfc2ff",
+                      "accent": "#E94560",
+                      "gaming-surface": "#16213E",
+                      "gaming-bg": "#1A1A2E"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-padding": "24px",
+                      "stack-sm": "8px",
+                      "stack-md": "16px",
+                      "gutter": "16px",
+                      "stack-lg": "32px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "label-caps": ["Inter"],
+                      "h1": ["Inter"],
+                      "h2": ["Inter"],
+                      "h3": ["Inter"],
+                      "stats": ["Inter"],
+                      "body-md": ["Inter"],
+                      "body-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                      "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "stats": ["20px", {"lineHeight": "1", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #1A1A2E;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(233, 69, 96, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(64, 78, 140, 0.1) 0%, transparent 40%);
+        }
+        .confetti-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10h2v2h-2zM50 40h2v2h-2zM90 10h2v2h-2zM20 70h2v2h-2zM70 80h2v2h-2z' fill='%23F59E0B' fill-opacity='0.2'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            opacity: 0.5;
+        }
+        .shield-glow {
+            box-shadow: 0 0 30px rgba(245, 158, 11, 0.3);
+        }
+        .accent-glow {
+            box-shadow: 0 0 20px rgba(233, 69, 96, 0.4);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-background font-body-md min-h-screen flex flex-col overflow-x-hidden">
+<div class="confetti-overlay"></div>
+<!-- Top Navigation Anchor (Shared Component) -->
+<header class="flex justify-between items-center w-full px-6 py-4 fixed top-0 bg-transparent z-50">
+<button class="hover:scale-110 transition-transform duration-200 active:scale-95 text-rose-500 dark:text-rose-400">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+<div class="font-inter uppercase tracking-widest font-black text-sm text-rose-500 dark:text-rose-400">
+            SEASON SUMMARY
+        </div>
+<div class="w-8"></div> <!-- Spacer for center alignment -->
+</header>
+<main class="flex-1 w-full max-w-[500px] mx-auto px-6 pt-24 pb-32 flex flex-col items-center gap-stack-lg">
+<!-- Header Section -->
+<section class="text-center">
+<div class="inline-block bg-amber-500/20 text-amber-500 font-label-caps px-3 py-1 rounded mb-2">
+                APRIL 2026
+            </div>
+<h1 class="font-h1 text-white uppercase tracking-tighter leading-none">
+                SEASON 1<br/>COMPLETE
+            </h1>
+</section>
+<!-- Center Hero Badge -->
+<section class="relative py-4 flex flex-col items-center">
+<div class="w-[120px] h-[140px] bg-gradient-to-b from-amber-300 to-amber-600 rounded-b-lg rounded-t-3xl flex items-center justify-center shield-glow relative group">
+<span class="text-5xl font-black text-gaming-bg italic tracking-tighter">S1</span>
+<!-- Decorative wings or details -->
+<div class="absolute -bottom-2 w-full flex justify-center">
+<div class="h-1 w-12 bg-amber-200/50 rounded-full"></div>
+</div>
+</div>
+<p class="mt-stack-md text-outline font-label-caps opacity-70">
+                Season 1 · Football
+            </p>
+</section>
+<!-- Rank Card -->
+<section class="w-full bg-gaming-surface rounded-xl p-stack-lg border border-white/5 relative overflow-hidden">
+<div class="text-center relative z-10">
+<p class="font-label-caps text-outline uppercase mb-2">Your Final Rank</p>
+<div class="flex items-center justify-center gap-2">
+<span class="text-[72px] font-black text-white leading-none tracking-tighter">#48</span>
+</div>
+<p class="font-body-md text-outline opacity-80 mt-1">out of 3,241 players</p>
+</div>
+<!-- Stats Grid -->
+<div class="mt-stack-lg pt-stack-lg border-t border-white/10 grid grid-cols-3 gap-2">
+<div class="text-center">
+<p class="font-label-caps text-outline text-[10px] uppercase mb-1">Peak ELO</p>
+<p class="font-stats text-white">1,290</p>
+</div>
+<div class="text-center border-x border-white/10">
+<p class="font-label-caps text-outline text-[10px] uppercase mb-1">Total Duels</p>
+<p class="font-stats text-white">47</p>
+</div>
+<div class="text-center">
+<p class="font-label-caps text-outline text-[10px] uppercase mb-1">Win Rate</p>
+<p class="font-stats text-white">68%</p>
+</div>
+</div>
+<!-- Technical Accent -->
+<div class="absolute top-0 right-0 p-2 opacity-10">
+<span class="material-symbols-outlined text-4xl">analytics</span>
+</div>
+</section>
+<!-- Progress Trend -->
+<section class="flex items-center gap-2 text-tertiary font-bold animate-pulse">
+<span class="text-body-md">You climbed 312 positions this season</span>
+<span class="material-symbols-outlined text-xl">trending_up</span>
+</section>
+<!-- Rewards Section -->
+<section class="w-full space-y-stack-md">
+<h3 class="font-label-caps text-outline uppercase tracking-widest text-center">Season Rewards Earned</h3>
+<div class="space-y-stack-sm">
+<!-- Reward Item 1 -->
+<div class="flex items-center gap-stack-md bg-white/5 p-4 rounded-lg border-l-4 border-amber-500">
+<div class="w-10 h-10 flex items-center justify-center bg-amber-500/20 rounded-full text-amber-500">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+<div>
+<p class="font-stats text-sm text-white">Season 1 Veteran Badge</p>
+<p class="text-[12px] text-outline opacity-70 italic">Permanently on your profile</p>
+</div>
+</div>
+<!-- Reward Item 2 -->
+<div class="flex items-center gap-stack-md bg-white/5 p-4 rounded-lg border-l-4 border-tertiary">
+<div class="w-10 h-10 flex items-center justify-center bg-tertiary/20 rounded-full text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">grade</span>
+</div>
+<div>
+<p class="font-stats text-sm text-white">150 bonus XP</p>
+<p class="text-[12px] text-outline opacity-70">Applied to Season 2 start</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Buttons (Sticky Container) -->
+<footer class="fixed bottom-0 left-0 w-full p-6 bg-gradient-to-t from-gaming-bg via-gaming-bg/90 to-transparent">
+<div class="max-w-[500px] mx-auto flex flex-col gap-3">
+<button class="w-full h-14 bg-accent text-white font-stats uppercase rounded-lg accent-glow flex items-center justify-center gap-2 active:scale-95 transition-transform">
+                Start Season 2 
+                <span class="material-symbols-outlined text-xl">swords</span>
+</button>
+<button class="w-full h-14 border-2 border-accent text-accent font-stats uppercase rounded-lg flex items-center justify-center gap-2 hover:bg-accent/5 transition-colors">
+                Share My Season
+                <span class="material-symbols-outlined text-xl">share</span>
+</button>
+</div>
+</footer>
+<!-- Image for Context (Visual Backdrop) -->
+<div class="fixed inset-0 -z-10 opacity-20 pointer-events-none">
+<img alt="" class="w-full h-full object-cover grayscale" data-alt="Abstract cinematic background with digital particles and dramatic red and blue lighting in a dark gaming arena aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcMtqmSv_0H_Hb7-O5bV2FFPuERz7_uw-lYvf7hmaIeewv-z6hPt2zoE-iZb480gpQvP2XLaaZIRcahQyGPHy9EndFRJwG042ePK0hTjsWjgJFlO-yCEoPInXgVuG4LG0QzAuhbX06IGU2bM1RNXHZOjsWdf_FYbwIFnrLPtvhtp_rzByFGHTCLpK4Em_66rrMCHRZg0qCJM6iVfK1K0kdNPenNYONUUcl3FJa5NKbsQVrnlWCYht7i3PgU0HuQavm6QOzyuQJ4Urk"/>
+</div>
+</body></html>

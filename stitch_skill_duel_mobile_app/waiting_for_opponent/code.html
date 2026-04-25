@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#93000a",
+                        "primary-fixed": "#ffdadb",
+                        "on-background": "#f7dcdd",
+                        "error": "#ffb4ab",
+                        "inverse-surface": "#f7dcdd",
+                        "inverse-primary": "#b71d3f",
+                        "primary-container": "#fc536d",
+                        "on-secondary-fixed": "#0f1250",
+                        "on-tertiary": "#003921",
+                        "on-primary": "#67001c",
+                        "background": "#1d1011",
+                        "surface-container-lowest": "#170b0c",
+                        "tertiary-fixed-dim": "#67dc9f",
+                        "surface": "#1d1011",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed": "#e0e0ff",
+                        "surface-container-high": "#362627",
+                        "surface-container-low": "#261819",
+                        "on-secondary-container": "#afb3f8",
+                        "surface-dim": "#1d1011",
+                        "surface-bright": "#463536",
+                        "primary-fixed-dim": "#ffb2b7",
+                        "on-primary-container": "#5b0017",
+                        "tertiary-fixed": "#84f9ba",
+                        "on-error": "#690005",
+                        "tertiary": "#67dc9f",
+                        "outline": "#a9898a",
+                        "on-tertiary-fixed": "#002111",
+                        "on-surface": "#f7dcdd",
+                        "on-primary-fixed-variant": "#91002b",
+                        "on-primary-fixed": "#40000e",
+                        "on-surface-variant": "#e2bebf",
+                        "surface-container": "#2b1c1d",
+                        "tertiary-container": "#25a46d",
+                        "surface-tint": "#ffb2b7",
+                        "secondary-fixed-dim": "#bfc2ff",
+                        "secondary-container": "#3f4380",
+                        "outline-variant": "#5a4042",
+                        "surface-container-highest": "#413031",
+                        "inverse-on-surface": "#3d2c2d",
+                        "secondary": "#bfc2ff",
+                        "on-secondary": "#262a66",
+                        "primary": "#ffb2b7",
+                        "surface-variant": "#413031",
+                        "on-tertiary-container": "#00311c",
+                        "on-tertiary-fixed-variant": "#005232"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "gutter": "16px",
+                        "stack-lg": "32px",
+                        "unit": "8px",
+                        "container-padding": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "h3": ["Inter"],
+                        "stats": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "body-md": ["Inter"],
+                        "h1": ["Inter"],
+                        "h2": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "stats": ["20px", {"lineHeight": "1", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-metal {
+            background: linear-gradient(145deg, #16213E, #0F172A);
+            border: 1px solid rgba(74, 78, 140, 0.3);
+        }
+        .bloom-accent {
+            box-shadow: 0 0 15px rgba(233, 69, 96, 0.4);
+        }
+        .pulse-accent {
+            animation: pulse-accent 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-accent {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: .7; transform: scale(1.05); }
+        }
+        .shimmer {
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite linear;
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-slate-950 dark:bg-[#16213E] docked full-width top-0 z-50 border-b border-slate-700/30 flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-rose-500 dark:text-[#E94560] active:scale-95 cursor-pointer" data-icon="close">close</span>
+<h1 class="font-inter tracking-tight font-bold uppercase text-on-background text-lg">Duel in Progress</h1>
+</div>
+<div class="text-lg font-black tracking-widest text-white uppercase">
+            SKILL DUEL
+        </div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col px-container-padding pt-stack-lg pb-stack-lg gap-stack-lg items-center max-w-[1200px] mx-auto w-full">
+<!-- Comparison Section -->
+<section class="w-full flex flex-col items-center gap-stack-md py-stack-md">
+<div class="flex items-center justify-between w-full max-w-sm">
+<!-- User Avatar -->
+<div class="flex flex-col items-center gap-stack-sm">
+<div class="relative">
+<div class="w-24 h-24 rounded-full border-2 border-tertiary p-1">
+<img alt="user profile" class="w-full h-full rounded-full object-cover" data-alt="Close up portrait of a young man with a confident expression, professional lighting, modern minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCazNcddtxP3u0OP5ldsepnpmjhL3dByQTl9CxJz7x6q-VHaTLjDg-lod_2zRFMy-r1ht1dcDcUuG7C2-VyZCsShBVrqp9jdTqrUC0vxN1T1xljZaNs471ZxGNDRTRdWbcrXOHUxTfB83_Re1WPkgAoVlOxharAXcZul3eE1EC0E7hOmlYtxQSEbsyv8-2V3TsCt6EfSWQulch1aRj451lcQyc98XmswS8yFzO065Ocy0tGe-3z-ECQLg7orADMP_CqFuJ8PWbGFhNE"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-tertiary text-on-tertiary rounded-full w-8 h-8 flex items-center justify-center border-4 border-background shadow-lg">
+<span class="material-symbols-outlined text-sm font-bold" data-icon="check" data-weight="fill">check</span>
+</div>
+</div>
+<div class="text-center">
+<p class="font-label-caps text-on-surface-variant">@kofi_duel</p>
+<p class="text-[12px] font-bold text-[#22C55E] uppercase tracking-wider">You're done!</p>
+</div>
+</div>
+<!-- Center Icon -->
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 flex items-center justify-center rounded-full glass-metal bloom-accent pulse-accent">
+<span class="material-symbols-outlined text-[#E94560]" data-icon="hourglass_empty" data-weight="fill">hourglass_empty</span>
+</div>
+</div>
+<!-- Opponent Avatar -->
+<div class="flex flex-col items-center gap-stack-sm">
+<div class="relative">
+<div class="w-24 h-24 rounded-full border-2 border-outline-variant p-1 opacity-80">
+<img alt="opponent profile" class="w-full h-full rounded-full object-cover grayscale" data-alt="Moody cinematic portrait of a gamer in low light with purple and blue neon reflections on their face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyYKS8ba-u0DR5hqtambyCvgRDmGvc_fo1zRunfWoM27WyrHtYK0N8hcDsmzp2lnVpvHQlpPkDhuD9yS3r0hyKwFRGJs7sjVe-2LEidIdX2pLLdwC7mNO7TXjrJfy7LSQGQlAvBdyVuvjqcNJ0Nz0ISBrFxVnzCX7yChNmihoTWTdVD_7iGbAUhO7n-VIcfhyddg1ZM0AnPCZmqd_KSCSxlK6sXiH2zmqw_khgX7j8bRlppkdRzASs-PVb48kY5wlKY09iE1x0iPXJ"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-surface-container-highest text-on-surface rounded-full px-2 py-1 flex items-center justify-center border-4 border-background shadow-lg">
+<span class="text-[10px] font-black animate-pulse">...</span>
+</div>
+</div>
+<div class="text-center">
+<p class="font-label-caps text-on-surface-variant">@rival_88</p>
+<p class="text-[12px] font-medium text-[#A0A0B0] tracking-wide italic">Still answering...</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Score Preview Card -->
+<div class="w-full max-w-sm glass-metal rounded-xl p-stack-md flex flex-col items-center gap-stack-sm relative overflow-hidden">
+<div class="shimmer absolute inset-0 pointer-events-none"></div>
+<p class="font-label-caps text-on-surface-variant">YOUR SCORE</p>
+<div class="flex flex-col items-center justify-center py-stack-md relative">
+<span class="text-h1 text-white blur-md select-none">842</span>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-primary-container/20 backdrop-blur-sm rounded-full p-4 border border-primary-container/40">
+<span class="material-symbols-outlined text-primary-container text-4xl" data-icon="lock" data-weight="fill">lock</span>
+</div>
+</div>
+</div>
+<p class="text-[14px] text-on-surface-variant text-center">Revealed when opponent finishes</p>
+</div>
+<!-- Progress Area -->
+<div class="w-full max-w-sm flex flex-col gap-stack-sm mt-stack-md">
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-[#E94560] bloom-accent pulse-accent w-[65%] rounded-full"></div>
+</div>
+<p class="text-[12px] text-[#A0A0B0] text-center font-medium">
+                Average opponent response time: <span class="text-on-surface">~8 min</span>
+</p>
+</div>
+<!-- Spacer for push actions to bottom -->
+<div class="flex-grow"></div>
+<!-- Actions -->
+<div class="w-full max-w-sm flex flex-col gap-stack-md pb-stack-lg">
+<button class="w-full h-14 rounded-xl border-2 border-white text-white font-bold flex items-center justify-center gap-2 hover:bg-white/10 active:scale-95 transition-all duration-200 uppercase tracking-widest text-[14px]">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                Start Another Duel
+            </button>
+<button class="w-full text-on-surface-variant font-label-caps text-center hover:text-white transition-colors active:scale-95">
+                Go Home
+            </button>
+</div>
+</main>
+<!-- Background Decoration -->
+<div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+<div class="absolute top-1/4 -left-20 w-80 h-80 bg-primary-container/5 rounded-full blur-[100px]"></div>
+<div class="absolute bottom-1/4 -right-20 w-80 h-80 bg-secondary-container/10 rounded-full blur-[100px]"></div>
+</div>
+</body></html>

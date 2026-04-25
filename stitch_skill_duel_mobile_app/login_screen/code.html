@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#00311c",
+                        "inverse-surface": "#f7dcdd",
+                        "primary": "#ffb2b7",
+                        "on-secondary-fixed-variant": "#3d417e",
+                        "on-error": "#690005",
+                        "on-background": "#f7dcdd",
+                        "surface-container-highest": "#413031",
+                        "on-tertiary": "#003921",
+                        "surface-bright": "#463536",
+                        "on-primary-container": "#5b0017",
+                        "secondary-fixed": "#e0e0ff",
+                        "on-secondary-container": "#afb3f8",
+                        "secondary-fixed-dim": "#bfc2ff",
+                        "surface-container-high": "#362627",
+                        "primary-fixed-dim": "#ffb2b7",
+                        "surface-variant": "#413031",
+                        "on-primary-fixed-variant": "#91002b",
+                        "tertiary-fixed-dim": "#67dc9f",
+                        "on-error-container": "#ffdad6",
+                        "secondary-container": "#3f4380",
+                        "surface": "#1d1011",
+                        "on-secondary": "#262a66",
+                        "surface-tint": "#ffb2b7",
+                        "outline-variant": "#5a4042",
+                        "tertiary-container": "#25a46d",
+                        "primary-fixed": "#ffdadb",
+                        "on-surface": "#f7dcdd",
+                        "on-tertiary-fixed": "#002111",
+                        "on-surface-variant": "#e2bebf",
+                        "on-primary": "#67001c",
+                        "error-container": "#93000a",
+                        "surface-container": "#2b1c1d",
+                        "surface-container-low": "#261819",
+                        "inverse-primary": "#b71d3f",
+                        "on-secondary-fixed": "#0f1250",
+                        "surface-container-lowest": "#170b0c",
+                        "tertiary-fixed": "#84f9ba",
+                        "outline": "#a9898a",
+                        "error": "#ffb4ab",
+                        "secondary": "#bfc2ff",
+                        "primary-container": "#fc536d",
+                        "on-primary-fixed": "#40000e",
+                        "background": "#1d1011",
+                        "on-tertiary-fixed-variant": "#005232",
+                        "tertiary": "#67dc9f",
+                        "inverse-on-surface": "#3d2c2d",
+                        "surface-dim": "#1d1011"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "16px",
+                        "gutter": "16px",
+                        "stack-lg": "32px",
+                        "container-padding": "24px",
+                        "stack-sm": "8px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "h3": ["Inter"],
+                        "h2": ["Inter"],
+                        "stats": ["Inter"],
+                        "body-md": ["Inter"],
+                        "h1": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "stats": ["20px", {"lineHeight": "1", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #1A1A2E; /* Deep Navy as requested */
+            color: #f7dcdd;
+            font-family: 'Inter', sans-serif;
+        }
+        .gaming-card {
+            background-color: #16213E;
+            border: 1px solid rgba(74, 78, 140, 0.3);
+        }
+        .accent-glow {
+            box-shadow: 0 0 15px rgba(233, 69, 96, 0.3);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="flex flex-col min-h-screen">
+<!-- Top Navigation Anchor (Suppressing BottomNav for Login Flow) -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-slate-950/80 backdrop-blur-md border-b border-indigo-500/30 shadow-[0_0_15px_rgba(233,69,96,0.2)]">
+<div class="flex items-center gap-2 mx-auto">
+<span class="material-symbols-outlined text-rose-500 text-2xl" data-weight="fill">sports_esports</span>
+<span class="font-inter font-black tracking-widest uppercase text-rose-500 italic text-xl">SKILL DUEL</span>
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center justify-center px-container-padding pt-24 pb-12 w-full max-w-md mx-auto">
+<!-- Hero Section -->
+<div class="w-full text-center mb-stack-lg">
+<h1 class="font-h2 text-h2 text-white mb-stack-sm">Welcome Back</h1>
+<p class="font-body-md text-body-md text-[#A0A0B0]">Log in to defend your rank.</p>
+</div>
+<!-- Social Auth -->
+<button class="w-full bg-white text-slate-900 font-bold py-4 px-6 rounded-xl flex items-center justify-center gap-3 active:scale-[0.98] transition-transform duration-150 mb-stack-md">
+<svg class="w-5 h-5" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path>
+</svg>
+<span class="text-sm uppercase tracking-wider">Continue with Google</span>
+</button>
+<!-- Divider -->
+<div class="flex items-center w-full mb-stack-md gap-4">
+<div class="h-[1px] flex-grow bg-indigo-500/30"></div>
+<span class="text-[#A0A0B0] text-xs font-bold uppercase tracking-widest">or</span>
+<div class="h-[1px] flex-grow bg-indigo-500/30"></div>
+</div>
+<!-- Form Inputs -->
+<form class="w-full space-y-stack-md">
+<div class="space-y-stack-sm">
+<label class="font-label-caps text-label-caps text-indigo-400/70 ml-1">EMAIL ADDRESS</label>
+<div class="relative">
+<input class="w-full gaming-card text-white px-4 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary/50 placeholder-indigo-400/30 transition-all" placeholder="Email address" type="email"/>
+</div>
+</div>
+<div class="space-y-stack-sm">
+<label class="font-label-caps text-label-caps text-indigo-400/70 ml-1">PASSWORD</label>
+<div class="relative">
+<input class="w-full gaming-card text-white px-4 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary/50 placeholder-indigo-400/30 transition-all" placeholder="Password" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-indigo-400/50" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+<div class="text-right">
+<a class="text-[12px] font-bold text-rose-500 hover:text-rose-400 transition-colors uppercase tracking-tight" href="#">Forgot Password?</a>
+</div>
+</div>
+<button class="w-full bg-rose-500 text-white font-bold py-5 rounded-xl accent-glow uppercase tracking-widest active:scale-95 transition-all duration-150 mt-stack-md" type="submit">
+                Log In
+            </button>
+</form>
+<!-- Dynamic Content Background Decor -->
+<div class="fixed inset-0 -z-10 pointer-events-none opacity-20">
+<div class="absolute top-[20%] left-[10%] w-64 h-64 bg-rose-500/20 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[20%] right-[10%] w-80 h-80 bg-indigo-500/20 rounded-full blur-[150px]"></div>
+</div>
+<!-- Visual Asset -->
+<div class="mt-stack-lg w-full rounded-2xl overflow-hidden gaming-card p-1">
+<img alt="Gaming Aesthetic" class="w-full h-32 object-cover rounded-xl" data-alt="cinematic close up of a high-end gaming keyboard with neon pink and blue backlighting in a dark room with technical atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaNTqAFVbj6lsyo0w3YZJ-JWnfj5RKeaItqS9FDq8z3Qt1iLLCxjkAwRDYJBUNg3LuNVZ8VMdVEoghT_cVHH4cyjUOpbemwp-mzbDBD8G5OLfgH5I36_KZVJAr7UTsqb0SXJc98qtIOhzxbmUj-VYHAvAAjgnh4NZZehd0z5BtMo6fPx2gx8IH1lAi8pYL88O4Qu9zks5mV4bVnjo_fjKXrLFSQTgmH_6JB462OBin8EonFHNHBPY60oHiYsWKroI0yXkqN910q6oR"/>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full pb-10 px-container-padding text-center mt-auto">
+<p class="font-body-md text-body-md text-indigo-400/60">
+            Don't have an account? 
+            <a class="text-rose-500 font-bold hover:underline ml-1" href="#">Sign Up</a>
+</p>
+</footer>
+</body></html>

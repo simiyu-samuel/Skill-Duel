@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "outline": "#a9898a",
+                "inverse-primary": "#b71d3f",
+                "on-tertiary-fixed-variant": "#005232",
+                "surface-bright": "#463536",
+                "on-primary-fixed": "#40000e",
+                "secondary": "#bfc2ff",
+                "on-secondary-fixed": "#0f1250",
+                "surface-container-highest": "#413031",
+                "on-surface-variant": "#e2bebf",
+                "background": "#1d1011",
+                "secondary-fixed": "#e0e0ff",
+                "surface-tint": "#ffb2b7",
+                "primary": "#ffb2b7",
+                "error": "#ffb4ab",
+                "primary-fixed": "#ffdadb",
+                "surface-container-high": "#362627",
+                "secondary-fixed-dim": "#bfc2ff",
+                "on-surface": "#f7dcdd",
+                "on-primary": "#67001c",
+                "tertiary-fixed": "#84f9ba",
+                "on-error": "#690005",
+                "tertiary-container": "#25a46d",
+                "inverse-on-surface": "#3d2c2d",
+                "on-tertiary-container": "#00311c",
+                "primary-container": "#fc536d",
+                "surface": "#1d1011",
+                "surface-variant": "#413031",
+                "on-secondary-fixed-variant": "#3d417e",
+                "on-background": "#f7dcdd",
+                "secondary-container": "#3f4380",
+                "surface-dim": "#1d1011",
+                "error-container": "#93000a",
+                "tertiary-fixed-dim": "#67dc9f",
+                "outline-variant": "#5a4042",
+                "on-secondary": "#262a66",
+                "tertiary": "#67dc9f",
+                "surface-container": "#2b1c1d",
+                "on-error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "stack-sm": "8px",
+                "unit": "8px",
+                "gutter": "16px",
+                "container-padding": "24px",
+                "stack-lg": "32px",
+                "stack-md": "16px"
+            },
+            "fontFamily": {
+                "label-caps": ["Inter"],
+                "h2": ["Inter"],
+                "stats": ["Inter"],
+                "body-lg": ["Inter"],
+                "body-md": ["Inter"],
+                "h3": ["Inter"],
+                "h1": ["Inter"]
+            },
+            "fontSize": {
+                "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "stats": ["20px", {"lineHeight": "1", "fontWeight": "700"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-metal {
+            background: rgba(22, 33, 62, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(74, 78, 140, 0.3);
+        }
+        .active-glow {
+            box-shadow: 0 0 15px rgba(233, 69, 96, 0.4);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-white antialiased">
+<header class="bg-slate-950 dark:bg-slate-950 border-b border-indigo-900/30 flex justify-between items-center px-6 py-4 w-full z-50 fixed top-0 left-0">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transform transition-transform text-pink-500">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="text-xl font-black text-pink-600 dark:text-pink-500 italic tracking-widest font-inter uppercase">FRIENDS</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transform transition-transform text-pink-500">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-container-padding pt-24 pb-32">
+<div class="mb-stack-lg">
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</div>
+<input class="w-full bg-[#16213E] border-outline-variant/30 rounded-xl py-4 pl-12 pr-4 text-on-surface focus:ring-2 focus:ring-secondary focus:border-transparent transition-all font-label-caps placeholder:opacity-50" placeholder="SEARCH PLAYERS..." type="text"/>
+</div>
+</div>
+<section class="mb-stack-lg">
+<h2 class="font-label-caps text-label-caps text-primary mb-stack-md uppercase tracking-[0.2em]">Pending Challenges</h2>
+<div class="glass-metal rounded-xl p-stack-md relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary-container"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-gutter">
+<div class="flex items-center gap-stack-md">
+<div class="relative h-14 w-14 rounded-full border-2 border-primary-container p-0.5">
+<img alt="Profile avatar" class="rounded-full bg-surface-container" data-alt="Cyberpunk style character avatar with glowing accessories and neon highlights on a dark technical background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEmYSCmwKrdkozBNBqiK9lLH5IQ3GSMTtUjwGzaVYzmUX5w1aR01AVo0j6VR3Ybr7zq9F77cifey22w0uzmVtOGi7X0i-4Geq9U8v86BgSZCjIXIn3k-PTIUvxkWyW-5igJSqtBKx_-NEepLBeO9sTfDXDlfK6Co531LcjDVlbi8A1B-BE2He_KFPEWC6zJieBPjVM68T2BMS1vwBU6wvrRdrE5bYf5W7BpxmnstYy24gv453i6cB710pEe-p4jgScFgWULvPAO64T"/>
+<div class="absolute bottom-0 right-0 h-4 w-4 bg-tertiary rounded-full border-2 border-background" title="Online"></div>
+</div>
+<div>
+<p class="font-h3 text-body-lg text-on-surface">@chess_master_99</p>
+<p class="text-sm text-outline">Challenged you to a <span class="text-secondary font-bold">Chess Duel</span></p>
+</div>
+</div>
+<div class="flex gap-stack-sm">
+<button class="px-6 py-2 bg-primary-container text-on-primary-container rounded-lg font-label-caps active:scale-95 transition-transform hover:brightness-110">ACCEPT</button>
+<button class="px-6 py-2 bg-surface-variant text-on-surface-variant border border-outline-variant rounded-lg font-label-caps active:scale-95 transition-transform hover:bg-surface-container-highest">DECLINE</button>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="flex justify-between items-end mb-stack-md">
+<h2 class="font-label-caps text-label-caps text-primary uppercase tracking-[0.2em]">Your Friends</h2>
+<span class="text-[10px] font-bold text-outline uppercase tracking-widest">Active Now: 3</span>
+</div>
+<div class="space-y-stack-sm">
+<div class="glass-metal rounded-xl p-4 flex items-center justify-between group hover:bg-indigo-900/10 transition-colors">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img alt="Friend avatar" class="h-12 w-12 rounded-lg bg-surface-container-low" data-alt="Aggressive gamer portrait with neon lighting and high contrast shadows, futuristic aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5hq13lanNZW_-UdqWmT6tG8HJjPATWU04aOLSR0vK6o2zx2VfRsphssYfFarqPjon-THQKERPtmGPhIXebzZn9Bh8XRAi3hnwHQta8tRRXDTaxYTf9Ppy6jDa0RGEwnkAWwndtpSGiDkXqqT9h7rvKkYZYPVX8MZpWcNP-4PtvysUwR7m4eRJ8ALWxPpLKF4rdavW5uexlfdz1gaC7ulrrJd3HTiAddVpaQ5P3RuQ_Wv8rSj8HSZCOtc5EUw8esclAIzd118USXhp"/>
+<div class="absolute -top-1 -right-1 h-3 w-3 bg-tertiary rounded-full border-2 border-background"></div>
+</div>
+<div>
+<p class="font-h3 text-body-md text-on-surface">@velocity_striker</p>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-black text-tertiary-fixed-dim uppercase tracking-tighter">ELO: 2450</span>
+<span class="h-1 w-1 bg-outline rounded-full"></span>
+<span class="text-[10px] font-bold text-outline uppercase">Reflex Ops</span>
+</div>
+</div>
+</div>
+<button class="border-2 border-primary-container text-primary-container px-4 py-1.5 rounded-lg font-label-caps text-[10px] hover:bg-primary-container hover:text-white transition-all active:scale-90">CHALLENGE</button>
+</div>
+<div class="glass-metal rounded-xl p-4 flex items-center justify-between group border-l-4 border-amber-500">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img alt="Friend avatar" class="h-12 w-12 rounded-lg bg-surface-container-low" data-alt="Woman gamer avatar with tactical headset and glowing interface elements in a dark room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxuFilhR1V_Fkf2HAoF9z7j61eAh_pWQsRrMv0FI5NNYyK6JZLJ7kLFEpkAU4q7cAC52d16UY25boj68Xqdaq9lsFNeuJkFamKzCnJ1yuPFjqAsRgD_QZ4Uf23LHvDURjsfvP8FOUzj2eVF5--ky7j4LAnz5a8STSCHiXXX4A7qbLqHII_dbJ9cu7IyJKV9pqxcKBpha4m6DRIWwEDwTgbnmsc4SncwUhUWBwVwRrUGuib9uaZZah81nM04mRcQ2hvIv1EYyukXKo0"/>
+<div class="absolute -top-1 -right-1 h-3 w-3 bg-primary-container rounded-full border-2 border-background"></div>
+</div>
+<div>
+<p class="font-h3 text-body-md text-on-surface">@nova_queen</p>
+<div class="flex items-center gap-2 text-amber-400">
+<span class="material-symbols-outlined text-sm" data-icon="bolt" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">In Match</span>
+</div>
+</div>
+</div>
+<button class="bg-amber-500/10 text-amber-500 border border-amber-500/30 px-4 py-1.5 rounded-lg font-label-caps text-[10px] active:scale-90 transition-transform">VIEW DUEL</button>
+</div>
+<div class="glass-metal rounded-xl p-4 flex items-center justify-between group opacity-60 grayscale-[0.5]">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img alt="Friend avatar" class="h-12 w-12 rounded-lg bg-surface-container-low" data-alt="Stoic male portrait with technical details and dark aesthetic for competitive gaming profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJKhNFcfsO5rx_QpiavU28aqJpHB4xzrjmVHPkvPR6WFCK2hgeyE7NVOiHBeU8bZj_6lImrQIMgO6mOc-9pjRY589wVLI0FHam2dJD9SxK8R0KNCmT7YBD8VhMP-Q7oduATThDg7jHp6oa0FDAfFXSbxJJB7yVxWY37en1-Pwxh60QgtzjQfyTJC3l36BIBbmtBqNLRfyXYpi6BqdNOgiOQy6kLqR_W2Pq_CBZ3DVSQqOEd-g8GI_0eNmp6_zYi6KFlbV0qNm4NLgO"/>
+<div class="absolute -top-1 -right-1 h-3 w-3 bg-outline rounded-full border-2 border-background"></div>
+</div>
+<div>
+<p class="font-h3 text-body-md text-on-surface">@shadow_ops</p>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-black text-outline uppercase tracking-tighter">ELO: 1890</span>
+<span class="h-1 w-1 bg-outline rounded-full"></span>
+<span class="text-[10px] font-bold text-outline uppercase">Tactics</span>
+</div>
+</div>
+</div>
+<button class="border-2 border-outline text-outline px-4 py-1.5 rounded-lg font-label-caps text-[10px] cursor-not-allowed">OFFLINE</button>
+</div>
+<div class="glass-metal rounded-xl p-4 flex items-center justify-between group hover:bg-indigo-900/10 transition-colors">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img alt="Friend avatar" class="h-12 w-12 rounded-lg bg-surface-container-low" data-alt="Sleek female gamer avatar with colorful highlights and modern tech accessories" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbGyWDc4EJb004gfTf8nboE9i9kmV7OYmX-HHRoFF_LVvokyNvgfVeUz9uRlxYNfXhHGzu23Mom_16zp672I2wO3f0Xgi1Zet-D_PeVcNel9iwiTC8nVFhhA2egpEXjrCSWNOZznwpqKQ-L3LqL5oyBf1T9qMAJkQqGgFAd_x6Xek-TlbK5NfuL22hIk54YW_iGTlFRp07Y8IheRyRdTVPNkexW7D39duI_lCwuksw24TG46LhoPfQUCJd_dJd-8UG8BRg56ekHY-C"/>
+<div class="absolute -top-1 -right-1 h-3 w-3 bg-tertiary rounded-full border-2 border-background"></div>
+</div>
+<div>
+<p class="font-h3 text-body-md text-on-surface">@zenith_pro</p>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-black text-tertiary-fixed-dim uppercase tracking-tighter">ELO: 3100</span>
+<span class="h-1 w-1 bg-outline rounded-full"></span>
+<span class="text-[10px] font-bold text-outline uppercase">Global Trivia</span>
+</div>
+</div>
+</div>
+<button class="border-2 border-primary-container text-primary-container px-4 py-1.5 rounded-lg font-label-caps text-[10px] hover:bg-primary-container hover:text-white transition-all active:scale-90">CHALLENGE</button>
+</div>
+</div>
+</section>
+</main>
+<button class="fixed bottom-24 right-6 w-14 h-14 bg-pink-600 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(233,69,96,0.5)] active:scale-90 transition-transform z-50">
+<span class="material-symbols-outlined text-3xl" data-icon="add">add</span>
+</button>
+<nav class="bg-slate-900/90 dark:bg-slate-900/90 backdrop-blur-md fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 border-t border-indigo-500/20 shadow-[0_-4px_20px_rgba(233,69,96,0.15)] rounded-t-2xl">
+<a class="flex flex-col items-center justify-center text-slate-500 opacity-70 hover:text-pink-400 hover:bg-white/5 transition-colors active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="swords">swords</span>
+<span class="font-inter text-[10px] font-bold uppercase tracking-widest mt-1">Battle</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 opacity-70 hover:text-pink-400 hover:bg-white/5 transition-colors active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="font-inter text-[10px] font-bold uppercase tracking-widest mt-1">Ranks</span>
+</a>
+<a class="flex flex-col items-center justify-center text-pink-500 bg-pink-500/10 rounded-xl px-4 py-1 border-t-2 border-pink-500" href="#">
+<span class="material-symbols-outlined" data-icon="group" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="font-inter text-[10px] font-bold uppercase tracking-widest mt-1">Friends</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 opacity-70 hover:text-pink-400 hover:bg-white/5 transition-colors active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-inter text-[10px] font-bold uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

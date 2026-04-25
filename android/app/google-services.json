@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1068999731069",
+    "project_id": "skill-build-21375",
+    "storage_bucket": "skill-build-21375.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1068999731069:android:ab1c76a71794b9df7fce14",
+        "android_client_info": {
+          "package_name": "com.skillduel.skill_duel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZk_adVPH8ZoaO-r0ZIpZnUUPajZwJZV4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

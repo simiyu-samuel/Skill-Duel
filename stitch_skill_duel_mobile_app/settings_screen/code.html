@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #1a1a2e; /* Overriding with the requested main background */
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#bfc2ff",
+                        "on-error-container": "#ffdad6",
+                        "secondary-container": "#3f4380",
+                        "primary-container": "#fc536d",
+                        "primary-fixed-dim": "#ffb2b7",
+                        "inverse-surface": "#f7dcdd",
+                        "secondary-fixed": "#e0e0ff",
+                        "error-container": "#93000a",
+                        "surface-variant": "#413031",
+                        "surface-bright": "#463536",
+                        "on-tertiary": "#003921",
+                        "tertiary": "#67dc9f",
+                        "surface-container-lowest": "#170b0c",
+                        "on-secondary-fixed-variant": "#3d417e",
+                        "on-primary-fixed": "#40000e",
+                        "tertiary-fixed-dim": "#67dc9f",
+                        "on-background": "#f7dcdd",
+                        "on-tertiary-container": "#00311c",
+                        "surface": "#1d1011",
+                        "primary-fixed": "#ffdadb",
+                        "outline": "#a9898a",
+                        "on-secondary": "#262a66",
+                        "outline-variant": "#5a4042",
+                        "on-secondary-fixed": "#001250",
+                        "on-primary-container": "#5b0017",
+                        "inverse-on-surface": "#3d2c2d",
+                        "surface-container-low": "#261819",
+                        "on-primary-fixed-variant": "#91002b",
+                        "secondary-fixed-dim": "#bfc2ff",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed": "#84f9ba",
+                        "primary": "#ffb2b7",
+                        "surface-container-highest": "#413031",
+                        "tertiary-container": "#25a46d",
+                        "on-tertiary-fixed": "#002111",
+                        "inverse-primary": "#b71d3f",
+                        "on-tertiary-fixed-variant": "#005232",
+                        "on-primary": "#67001c",
+                        "on-secondary-container": "#afb3f8",
+                        "surface-dim": "#1d1011",
+                        "on-error": "#690005",
+                        "surface-container": "#2b1c1d",
+                        "on-surface-variant": "#e2bebf",
+                        "background": "#1d1011",
+                        "surface-container-high": "#362627",
+                        "surface-tint": "#ffb2b7",
+                        "on-surface": "#f7dcdd",
+                        "gaming-red": "#E94560",
+                        "gaming-card": "#16213E",
+                        "gaming-bg": "#1A1A2E"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "gutter": "16px",
+                        "stack-lg": "32px",
+                        "container-padding": "24px",
+                        "stack-md": "16px",
+                        "stack-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "h3": ["Inter"],
+                        "h2": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h1": ["Inter"],
+                        "stats": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "stats": ["20px", {"lineHeight": "1", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-gaming-bg text-on-surface font-body-md min-h-screen pb-24 selection:bg-gaming-red selection:text-white">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-md dark:bg-slate-950/80 border-b border-indigo-900/30 flex justify-between items-center w-full px-6 py-4">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 duration-150 transition-transform text-rose-500">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-inter font-black uppercase tracking-widest text-rose-500 dark:text-rose-400 text-lg">SETTINGS</h1>
+</div>
+<div class="w-6"></div> <!-- Balance for flex-between -->
+</header>
+<main class="max-w-md mx-auto px-container-padding pt-stack-md space-y-stack-lg">
+<!-- User Card -->
+<section class="bg-gaming-card border border-indigo-900/30 rounded-xl p-4 flex items-center justify-between shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
+<div class="flex items-center gap-stack-md">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-gaming-red/50">
+<img alt="User Avatar" class="w-full h-full object-cover bg-secondary-container" data-alt="Stylized 3D avatar of a young male gamer with cool headphones and a confident expression on a neon background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuAZA3Bq9W10tj8Fw1wLnFTQ-c1UQjRVBaTaSXqRWmPQxHhY2tjhu3QlSFt5xvu88WcCU14X8Hd7J0nUgq-F8BMkPJKkHGOg532p3JY51RBTT1ilyk4DqTW5x_KJLnjUCS6sKFzSi3MmeDi8ICtmv5xTiNkpzA35xCfIVViu9kjpcMlcqouNUljk3p40X_KjejDKpaPOCTRJQP1R5ne3kLalpDgV3D8ZUNRCFujm7s781LeIVPpsL9N5yJG94LzDRkVrNYN-G5iq4z"/>
+</div>
+<div>
+<p class="font-stats text-white">@kofi_duel</p>
+<p class="text-[10px] text-indigo-300/60 uppercase tracking-widest">Active Player</p>
+</div>
+</div>
+<button class="text-gaming-red font-label-caps hover:brightness-125 transition-all text-[11px] border border-gaming-red/30 px-3 py-1.5 rounded-full">EDIT PROFILE</button>
+</section>
+<!-- ACCOUNT Section -->
+<div class="space-y-stack-sm">
+<h2 class="font-label-caps text-indigo-300/50 px-2 uppercase text-[11px]">ACCOUNT</h2>
+<div class="bg-gaming-card rounded-xl overflow-hidden border border-indigo-900/30">
+<button class="w-full px-4 py-4 flex items-center justify-between text-white active:bg-white/5 transition-colors group">
+<span class="font-body-md group-hover:translate-x-1 transition-transform">Edit Profile</span>
+<span class="material-symbols-outlined text-indigo-300/40" data-icon="chevron_right">chevron_right</span>
+</button>
+<div class="h-px bg-indigo-900/30 mx-4"></div>
+<button class="w-full px-4 py-4 flex items-center justify-between text-white active:bg-white/5 transition-colors group">
+<span class="font-body-md group-hover:translate-x-1 transition-transform">Change Password</span>
+<span class="material-symbols-outlined text-indigo-300/40" data-icon="chevron_right">chevron_right</span>
+</button>
+<div class="h-px bg-indigo-900/30 mx-4"></div>
+<div class="w-full px-4 py-4 flex items-center justify-between text-white active:bg-white/5 transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="google">google</span>
+<span class="font-body-md">Linked Accounts</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-tertiary text-xs font-bold uppercase tracking-tighter">Connected</span>
+<span class="material-symbols-outlined text-indigo-300/40" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<!-- NOTIFICATIONS Section -->
+<div class="space-y-stack-sm">
+<h2 class="font-label-caps text-indigo-300/50 px-2 uppercase text-[11px]">NOTIFICATIONS</h2>
+<div class="bg-gaming-card rounded-xl overflow-hidden border border-indigo-900/30">
+<div class="px-4 py-4 flex items-center justify-between text-white">
+<span class="font-body-md">Duel Challenges</span>
+<div class="w-10 h-6 bg-gaming-red rounded-full relative shadow-[0_0_8px_rgba(233,69,96,0.4)]">
+<div class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full"></div>
+</div>
+</div>
+<div class="h-px bg-indigo-900/30 mx-4"></div>
+<div class="px-4 py-4 flex items-center justify-between text-white">
+<span class="font-body-md">Opponent Submitted</span>
+<div class="w-10 h-6 bg-gaming-red rounded-full relative shadow-[0_0_8px_rgba(233,69,96,0.4)]">
+<div class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full"></div>
+</div>
+</div>
+<div class="h-px bg-indigo-900/30 mx-4"></div>
+<div class="px-4 py-4 flex items-center justify-between text-white">
+<span class="font-body-md">Daily Challenge</span>
+<div class="w-10 h-6 bg-gaming-red rounded-full relative shadow-[0_0_8px_rgba(233,69,96,0.4)]">
+<div class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full"></div>
+</div>
+</div>
+<div class="h-px bg-indigo-900/30 mx-4"></div>
+<div class="px-4 py-4 flex items-center justify-between text-white">
+<span class="font-body-md">Marketing &amp; Updates</span>
+<div class="w-10 h-6 bg-slate-700 rounded-full relative">
+<div class="absolute left-1 top-1 w-4 h-4 bg-slate-400 rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- APPEARANCE Section -->
+<div class="space-y-stack-sm">
+<h2 class="font-label-caps text-indigo-300/50 px-2 uppercase text-[11px]">APPEARANCE</h2>
+<div class="bg-gaming-card rounded-xl p-4 border border-indigo-900/30">
+<div class="flex items-center justify-between mb-2">
+<span class="font-body-md text-white">Dark Mode</span>
+<div class="w-10 h-6 bg-gaming-red/50 cursor-not-allowed rounded-full relative">
+<div class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full opacity-60"></div>
+</div>
+</div>
+<div class="flex items-start gap-2 bg-slate-900/50 p-3 rounded-lg border border-indigo-900/20">
+<span class="material-symbols-outlined text-indigo-300/40 text-sm" data-icon="lock">lock</span>
+<p class="text-[10px] leading-tight text-indigo-300/50">Always on · Part of Skill Duel identity. The high-contrast dark theme is optimized for gaming performance and eye comfort.</p>
+</div>
+</div>
+</div>
+<!-- ABOUT Section -->
+<div class="space-y-stack-sm">
+<h2 class="font-label-caps text-indigo-300/50 px-2 uppercase text-[11px]">ABOUT</h2>
+<div class="bg-gaming-card rounded-xl overflow-hidden border border-indigo-900/30">
+<button class="w-full px-4 py-4 flex items-center justify-between text-white active:bg-white/5 transition-colors">
+<span class="font-body-md">Terms of Service</span>
+<span class="material-symbols-outlined text-indigo-300/40" data-icon="chevron_right">chevron_right</span>
+</button>
+<div class="h-px bg-indigo-900/30 mx-4"></div>
+<button class="w-full px-4 py-4 flex items-center justify-between text-white active:bg-white/5 transition-colors">
+<span class="font-body-md">Privacy Policy</span>
+<span class="material-symbols-outlined text-indigo-300/40" data-icon="chevron_right">chevron_right</span>
+</button>
+<div class="h-px bg-indigo-900/30 mx-4"></div>
+<div class="w-full px-4 py-4 flex items-center justify-between text-white">
+<span class="font-body-md">App Version</span>
+<span class="text-xs font-mono text-indigo-300/40">v1.0.4</span>
+</div>
+</div>
+</div>
+<!-- DANGER ZONE Section -->
+<div class="space-y-stack-sm pb-8">
+<h2 class="font-label-caps text-gaming-red/50 px-2 uppercase text-[11px]">DANGER ZONE</h2>
+<div class="bg-gaming-card rounded-xl overflow-hidden border border-gaming-red/20">
+<button class="w-full px-4 py-4 flex items-center justify-between active:bg-gaming-red/10 transition-colors">
+<div class="flex items-center gap-3 text-gaming-red">
+<span class="material-symbols-outlined" data-icon="warning" data-weight="fill" style="font-variation-settings: 'FILL' 1;">warning</span>
+<span class="font-stats text-sm uppercase tracking-wider">Delete Account</span>
+</div>
+</button>
+</div>
+<p class="text-[10px] text-center text-indigo-300/30 mt-2 italic px-4">Deleting your account is permanent and cannot be undone. You will lose all your rankings and duel history.</p>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-[#16213E] border-t border-indigo-900/30 shadow-[0_-4px_20px_rgba(233,69,96,0.15)]">
+<a class="flex flex-col items-center justify-center text-indigo-300/50 hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="home_max">home_max</span>
+<span class="font-inter text-[10px] font-bold uppercase tracking-tighter">HOME</span>
+</a>
+<a class="flex flex-col items-center justify-center text-indigo-300/50 hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="sports_esports">sports_esports</span>
+<span class="font-inter text-[10px] font-bold uppercase tracking-tighter">ARENA</span>
+</a>
+<a class="flex flex-col items-center justify-center text-indigo-300/50 hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="font-inter text-[10px] font-bold uppercase tracking-tighter">RANKINGS</span>
+</a>
+<a class="flex flex-col items-center justify-center text-indigo-300/50 hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="font-inter text-[10px] font-bold uppercase tracking-tighter">SQUAD</span>
+</a>
+<a class="flex flex-col items-center justify-center text-rose-500 drop-shadow-[0_0_8px_rgba(233,69,96,0.6)] Active: scale-105 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="person" data-weight="fill" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-inter text-[10px] font-bold uppercase tracking-tighter">PROFILE</span>
+</a>
+</nav>
+</body></html>

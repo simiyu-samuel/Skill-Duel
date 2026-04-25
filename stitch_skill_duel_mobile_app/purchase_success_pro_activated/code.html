@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Skill Duel Pro - Purchase Success</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#bfc2ff",
+                    "tertiary-container": "#25a46d",
+                    "tertiary-fixed": "#84f9ba",
+                    "surface-variant": "#413031",
+                    "primary": "#ffb2b7",
+                    "on-primary": "#67001c",
+                    "on-error-container": "#ffdad6",
+                    "tertiary": "#67dc9f",
+                    "surface-container": "#2b1c1d",
+                    "surface": "#1d1011",
+                    "secondary-fixed": "#e0e0ff",
+                    "on-tertiary-fixed": "#002111",
+                    "error-container": "#93000a",
+                    "on-primary-fixed-variant": "#91002b",
+                    "surface-container-high": "#362627",
+                    "surface-bright": "#463536",
+                    "outline-variant": "#5a4042",
+                    "on-tertiary": "#003921",
+                    "secondary-container": "#3f4380",
+                    "surface-container-lowest": "#170b0c",
+                    "on-surface": "#f7dcdd",
+                    "outline": "#a9898a",
+                    "on-secondary-container": "#afb3f8",
+                    "primary-container": "#fc536d",
+                    "inverse-surface": "#f7dcdd",
+                    "primary-fixed-dim": "#ffb2b7",
+                    "on-surface-variant": "#e2bebf",
+                    "on-secondary-fixed-variant": "#3d417e",
+                    "inverse-on-surface": "#3d2c2d",
+                    "on-secondary-fixed": "#0f1250",
+                    "surface-tint": "#ffb2b7",
+                    "on-tertiary-fixed-variant": "#005232",
+                    "surface-container-highest": "#413031",
+                    "primary-fixed": "#ffdadb",
+                    "inverse-primary": "#b71d3f",
+                    "secondary": "#bfc2ff",
+                    "on-secondary": "#262a66",
+                    "surface-container-low": "#261819",
+                    "surface-dim": "#1d1011",
+                    "on-tertiary-container": "#00311c",
+                    "on-background": "#f7dcdd",
+                    "tertiary-fixed-dim": "#67dc9f",
+                    "on-primary-fixed": "#40000e",
+                    "background": "#1d1011",
+                    "on-primary-container": "#5b0017",
+                    "on-error": "#690005",
+                    "error": "#ffb4ab",
+                    "brand-gold": "#F59E0B",
+                    "brand-gold-dark": "#D97706"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "8px",
+                    "container-padding": "24px",
+                    "stack-lg": "32px",
+                    "stack-md": "16px",
+                    "gutter": "16px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Inter"],
+                    "h3": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "stats": ["Inter"],
+                    "h2": ["Inter"],
+                    "h1": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "stats": ["20px", {"lineHeight": "1", "fontWeight": "700"}],
+                    "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .gold-particle-bg {
+            background-color: #1A1A2E;
+            background-image: radial-gradient(circle at 2px 2px, rgba(245, 158, 11, 0.15) 1px, transparent 0);
+            background-size: 32px 32px;
+        }
+        .gold-glow {
+            box-shadow: 0 0 60px 10px rgba(245, 158, 11, 0.25);
+        }
+        .text-gradient-gold {
+            background: linear-gradient(to right, #F59E0B, #FEF3C7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="dark bg-background min-h-screen flex items-center justify-center font-inter antialiased">
+<!-- Success Screen Container -->
+<main class="gold-particle-bg w-full min-h-screen flex flex-col items-center justify-between py-12 px-container-padding relative overflow-hidden">
+<!-- Background Ambient Glows -->
+<div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-brand-gold/10 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-brand-gold/5 blur-[100px] rounded-full"></div>
+<!-- Content Wrapper -->
+<div class="w-full max-w-[480px] flex flex-col items-center text-center space-y-stack-lg z-10">
+<!-- Hero Icon Section -->
+<div class="relative mb-stack-md">
+<div class="w-24 h-24 bg-brand-gold/20 rounded-full flex items-center justify-center gold-glow">
+<span class="material-symbols-outlined text-[64px] text-brand-gold" data-icon="bolt" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<!-- Sparkle Accents -->
+<span class="material-symbols-outlined absolute -top-2 -right-2 text-brand-gold opacity-60 text-xl" data-icon="sparkles">colors_spark</span>
+<span class="material-symbols-outlined absolute bottom-0 -left-4 text-brand-gold opacity-40 text-lg" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<!-- Header -->
+<div class="space-y-stack-sm">
+<h1 class="font-h2 text-h2 text-on-background tracking-tight">You're Pro Now!</h1>
+<p class="font-body-md text-body-md text-outline">Welcome to the elite tier. No limits. No ads. Pure competition.</p>
+</div>
+<!-- Pro Badge Card -->
+<div class="w-full bg-[#16213E] border border-brand-gold/30 rounded-xl p-6 shadow-2xl space-y-4 relative overflow-hidden group">
+<!-- Inner light sweep effect -->
+<div class="absolute inset-0 bg-gradient-to-tr from-transparent via-brand-gold/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+<div class="flex justify-between items-start">
+<div class="text-left">
+<p class="font-label-caps text-label-caps text-gradient-gold mb-1">SKILL DUEL PRO</p>
+<h2 class="font-h3 text-h3 text-on-background">@kofi_duel</h2>
+</div>
+<div class="w-12 h-12 rounded-lg border border-brand-gold/40 flex items-center justify-center bg-brand-gold/10 overflow-hidden">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="Stylized 3D avatar of a young gamer with a determined expression wearing sleek technical headset and gold-rimmed glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwK43y24nN237rDAXyc9foFEPihKzBiNabh_hUAZ1R_Yvn7PLvUXpjLmiWXdU4LmQ7TJLHJCqCXgF1v0ECKGIdOtGlsY4RrTmPwJVAfWhaUqSvapPXJRUggKbkdmWHd3sCGW3BX1CNiKUxYuxlzpcl-0WeSXTT_eYteqJ6bJ3A-94fQ4XX33oiZLfFqYSFaOW6Xuvqig7QeBwxQ2_jwEpTW6HgbPeCNtOfQQ1GLujf7E4EL1o1KoOkyPZUhYJAMtA_DWAHkNUrlNfF"/>
+</div>
+</div>
+<div class="flex items-center space-x-2 text-brand-gold/80">
+<span class="material-symbols-outlined text-[18px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-body-md text-[14px]">Pro Member · Since April 2026</span>
+</div>
+</div>
+<!-- Benefits List -->
+<div class="w-full space-y-4 pt-4">
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-lg border border-outline-variant/30">
+<div class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-brand-gold" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-on-background">Unlimited duels</span>
+</div>
+<span class="bg-tertiary-container/20 text-tertiary font-label-caps px-2 py-1 rounded text-[10px]">ACTIVE</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-lg border border-outline-variant/30">
+<div class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-brand-gold" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-on-background">Ads removed</span>
+</div>
+<span class="bg-tertiary-container/20 text-tertiary font-label-caps px-2 py-1 rounded text-[10px]">ACTIVE</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-lg border border-outline-variant/30">
+<div class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-brand-gold" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-on-background">Advanced stats</span>
+</div>
+<span class="bg-tertiary-container/20 text-tertiary font-label-caps px-2 py-1 rounded text-[10px]">ACTIVE</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-lg border border-outline-variant/30">
+<div class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-brand-gold" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-on-background">Pro avatar frame</span>
+</div>
+<span class="text-outline font-label-caps text-[10px] cursor-pointer hover:text-brand-gold transition-colors">TAP TO EQUIP</span>
+</div>
+</div>
+</div>
+<!-- Bottom Action Section -->
+<div class="w-full max-w-[480px] flex flex-col items-center space-y-stack-md z-10">
+<button class="w-full py-4 bg-gradient-to-r from-brand-gold to-brand-gold-dark rounded-xl shadow-[0_8px_30px_rgba(245,158,11,0.3)] hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center space-x-2">
+<span class="text-[#0f172a] font-h3 text-body-lg font-bold">Start Dueling ⚔️</span>
+</button>
+<p class="font-body-md text-[13px] text-outline opacity-60">Receipt sent to your email</p>
+</div>
+</main>
+</body></html>

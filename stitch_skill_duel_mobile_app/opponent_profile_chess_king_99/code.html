@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Opponent Profile - Skill Duel</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#1d1011",
+                        "inverse-on-surface": "#3d2c2d",
+                        "surface-container-highest": "#413031",
+                        "on-tertiary-fixed-variant": "#005232",
+                        "primary": "#ffb2b7",
+                        "surface-container-low": "#261819",
+                        "tertiary": "#67dc9f",
+                        "surface-bright": "#463536",
+                        "tertiary-fixed-dim": "#67dc9f",
+                        "inverse-surface": "#f7dcdd",
+                        "primary-fixed": "#ffdadb",
+                        "on-tertiary-container": "#00311c",
+                        "tertiary-fixed": "#84f9ba",
+                        "secondary-fixed": "#e0e0ff",
+                        "on-primary": "#67001c",
+                        "surface": "#1d1011",
+                        "on-tertiary": "#003921",
+                        "on-background": "#f7dcdd",
+                        "surface-tint": "#ffb2b7",
+                        "surface-container-high": "#362627",
+                        "secondary": "#bfc2ff",
+                        "on-secondary": "#262a66",
+                        "on-secondary-fixed-variant": "#3d417e",
+                        "outline-variant": "#5a4042",
+                        "surface-variant": "#413031",
+                        "secondary-container": "#3f4380",
+                        "on-tertiary-fixed": "#002111",
+                        "on-secondary-fixed": "#0f1250",
+                        "on-error": "#690005",
+                        "surface-container-lowest": "#170b0c",
+                        "surface-container": "#2b1c1d",
+                        "on-primary-fixed-variant": "#91002b",
+                        "error-container": "#93000a",
+                        "background": "#1d1011",
+                        "on-secondary-container": "#afb3f8",
+                        "primary-fixed-dim": "#ffb2b7",
+                        "on-primary-container": "#5b0017",
+                        "inverse-primary": "#b71d3f",
+                        "outline": "#a9898a",
+                        "on-error-container": "#ffdad6",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed": "#40000e",
+                        "tertiary-container": "#25a46d",
+                        "secondary-fixed-dim": "#bfc2ff",
+                        "on-surface-variant": "#e2bebf",
+                        "on-surface": "#f7dcdd",
+                        "primary-container": "#fc536d",
+                        "brand-indigo": "#4A4E8C",
+                        "brand-accent": "#E94560",
+                        "brand-surface": "#16213E"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "stack-sm": "8px",
+                        "unit": "8px",
+                        "gutter": "16px",
+                        "stack-md": "16px",
+                        "container-padding": "24px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "stats": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "h3": ["Inter"],
+                        "h2": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "stats": ["20px", {"lineHeight": "1", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #1A1A2E; /* Brand Overwrite for Background */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-surface antialiased min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-slate-950/80 backdrop-blur-md border-b border-white/10 shadow-[0_0_15px_rgba(233,69,96,0.1)]">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-rose-600 cursor-pointer active:scale-95 duration-150" data-icon="arrow_back">arrow_back</span>
+<h1 class="font-inter tracking-tight uppercase font-bold text-white text-body-lg">@chess_king_99</h1>
+</div>
+<span class="material-symbols-outlined text-rose-600 cursor-pointer active:scale-95 duration-150" data-icon="more_vert">more_vert</span>
+</header>
+<main class="mt-20 px-container-padding max-w-[1200px] mx-auto space-y-stack-lg">
+<!-- Profile Header Card -->
+<section class="bg-brand-surface rounded-[16px] p-8 flex flex-col items-center text-center shadow-[0_4px_24px_rgba(0,0,0,0.4)] border border-white/5">
+<div class="relative w-24 h-24 rounded-full p-1 bg-gradient-to-tr from-brand-indigo via-brand-indigo to-rose-500 shadow-[0_0_20px_rgba(74,78,140,0.5)] mb-stack-md">
+<img alt="User Avatar" class="w-full h-full rounded-full object-cover bg-slate-800" data-alt="stylized 3D character avatar of a young male with focused expression wearing high-tech gaming headset on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhpZwpWO4sTAugfDkHjRsoKs8CqTUPb7pPEHigP_QxGzSXFVlUOqlIe6EFhG6CAdDngqaRgX_mn106CbUI6TPqAtxaYhS7X78gJZ8m5E-OFmmguasZT413au2N9-kCw6ZNStM5Pp9x9fVAKqCVzCylikdUDTnj0VHmH_NfN00RQMzuQYVfHGz7jHFVum5TKdfl9TABa4CgP_XcAbXkBPu-U4X1Y6atplI8MxQfuV-fgaUhCR85_LO0TR6mWqm26_rO2gmdSIFxjV05"/>
+</div>
+<h2 class="font-h2 text-white mb-2">@chess_king_99</h2>
+<div class="flex flex-wrap justify-center gap-2 mb-stack-lg">
+<span class="px-3 py-1 rounded-full bg-slate-900 border border-brand-indigo/30 text-[11px] font-label-caps text-secondary-fixed flex items-center gap-1">
+<span class="text-[14px]">♟️</span> CHESS SPECIALIST
+                </span>
+<span class="px-3 py-1 rounded-full bg-orange-950/50 border border-orange-500/30 text-[11px] font-label-caps text-orange-400 flex items-center gap-1">
+<span class="text-[14px]">🔥</span> 8 WIN STREAK
+                </span>
+</div>
+<div class="grid grid-cols-3 w-full border-t border-white/5 pt-stack-lg">
+<div class="flex flex-col items-center border-r border-white/5">
+<span class="font-label-caps text-slate-500 mb-1">TOTAL DUELS</span>
+<span class="font-stats text-white">203</span>
+</div>
+<div class="flex flex-col items-center border-r border-white/5">
+<span class="font-label-caps text-slate-500 mb-1">WIN RATE</span>
+<span class="font-stats text-white">71%</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-label-caps text-slate-500 mb-1">JOINED</span>
+<span class="font-stats text-white">FEB 2026</span>
+</div>
+</div>
+</section>
+<!-- ELO Rankings & Recent Form Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- ELO Rankings Section -->
+<section class="md:col-span-8 bg-brand-surface/40 rounded-xl p-stack-md border border-white/5 space-y-stack-sm">
+<h3 class="font-label-caps text-slate-400 mb-stack-md flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-indigo text-[18px]" data-icon="military_tech">military_tech</span>
+                    ELO RANKINGS
+                </h3>
+<!-- High-lighted Chess Row -->
+<div class="flex items-center justify-between p-4 bg-brand-surface rounded-lg border-l-4 border-brand-accent shadow-sm">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-white" data-icon="chess">chess</span>
+<div>
+<p class="font-bold text-white uppercase tracking-tight text-sm">Grandmaster Chess</p>
+<p class="text-xs text-slate-400">Tactical Strategy</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-stats text-brand-accent">2,410</p>
+<p class="text-[10px] font-label-caps text-tertiary-fixed">#12 GLOBALLY</p>
+</div>
+</div>
+<!-- Regular Rows -->
+<div class="flex items-center justify-between p-4 bg-brand-surface/60 rounded-lg border border-white/5">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-400" data-icon="calculate">calculate</span>
+<div>
+<p class="font-bold text-slate-200 uppercase tracking-tight text-sm">Mental Math</p>
+<p class="text-xs text-slate-500">Speed Arithmetic</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-stats text-white">1,890</p>
+<p class="text-[10px] font-label-caps text-slate-500">#452 GLOBALLY</p>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 bg-brand-surface/60 rounded-lg border border-white/5">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-400" data-icon="terminal">terminal</span>
+<div>
+<p class="font-bold text-slate-200 uppercase tracking-tight text-sm">Code Syntax</p>
+<p class="text-xs text-slate-500">Language Logic</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-stats text-white">2,105</p>
+<p class="text-[10px] font-label-caps text-slate-500">#89 GLOBALLY</p>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 bg-brand-surface/60 rounded-lg border border-white/5">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-400" data-icon="map">map</span>
+<div>
+<p class="font-bold text-slate-200 uppercase tracking-tight text-sm">Geo Guess</p>
+<p class="text-xs text-slate-500">Global Landmarks</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-stats text-white">1,620</p>
+<p class="text-[10px] font-label-caps text-slate-500">#1.2K GLOBALLY</p>
+</div>
+</div>
+</section>
+<!-- Recent Form Section -->
+<section class="md:col-span-4 space-y-stack-md">
+<div class="bg-brand-surface/40 rounded-xl p-stack-md border border-white/5">
+<h3 class="font-label-caps text-slate-400 mb-stack-md flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-indigo text-[18px]" data-icon="trending_up">trending_up</span>
+                        RECENT FORM
+                    </h3>
+<div class="flex justify-between gap-2">
+<div class="h-10 w-10 flex items-center justify-center rounded-lg bg-green-500/20 text-green-400 border border-green-500/30 font-bold text-lg">W</div>
+<div class="h-10 w-10 flex items-center justify-center rounded-lg bg-green-500/20 text-green-400 border border-green-500/30 font-bold text-lg">W</div>
+<div class="h-10 w-10 flex items-center justify-center rounded-lg bg-red-500/20 text-red-400 border border-red-500/30 font-bold text-lg">L</div>
+<div class="h-10 w-10 flex items-center justify-center rounded-lg bg-green-500/20 text-green-400 border border-green-500/30 font-bold text-lg">W</div>
+<div class="h-10 w-10 flex items-center justify-center rounded-lg bg-green-500/20 text-green-400 border border-green-500/30 font-bold text-lg">W</div>
+</div>
+</div>
+<!-- Profile Achievements (Bonus Element) -->
+<div class="bg-gradient-to-br from-brand-indigo/20 to-transparent rounded-xl p-stack-md border border-brand-indigo/30">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-caps text-brand-indigo">LEGACY LEVEL</span>
+<span class="font-stats text-white text-sm">LVL 42</span>
+</div>
+<div class="h-1.5 w-full bg-slate-900 rounded-full overflow-hidden">
+<div class="h-full bg-brand-accent w-[85%] shadow-[0_0_8px_rgba(233,69,96,0.6)]"></div>
+</div>
+</div>
+</section>
+</div>
+<!-- Recent Duels Section -->
+<section class="space-y-stack-md">
+<h3 class="font-label-caps text-slate-400 flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-indigo text-[18px]" data-icon="history">history</span>
+                RECENT DUELS
+            </h3>
+<div class="space-y-2">
+<!-- Duel Row 1 -->
+<div class="grid grid-cols-4 items-center p-4 bg-brand-surface rounded-lg border border-white/5 hover:border-brand-indigo/40 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center overflow-hidden border border-white/10">
+<img alt="Opponent" data-alt="minimalist cartoon face avatar of a gaming player with green hoody" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB0MtFbph3oN6TzHx3MKoXjchINF5SMkXvHV3CnHpRZHw0FXqptPdv8I-P06NQOMEv7_tV4m8T56CWJIMZttZL5xaLup5XK3676M6MMtULmLDSNawesPVHsCTlSgnJQPx-rGHa9nKEEkuxtMrwZxb5EYWz8SzjtCozDe9d-Zot0faRYUklBQ1_Ho_CYmHVx6HPgkxAhGZkJbsQb544AghrQnROCgERpfhIJsynyh8rN3L4zElY_kOehPEUmB-zgRhCRwyCtlU63tSF"/>
+</div>
+<span class="text-sm font-bold text-slate-300">vs Anonymous</span>
+</div>
+<div class="text-center font-stats text-white">2 - 0</div>
+<div class="text-center">
+<span class="px-2 py-0.5 rounded bg-green-500/10 text-green-400 text-[10px] font-black uppercase">WIN</span>
+</div>
+<div class="text-right text-green-400 font-bold text-sm">+24 ELO</div>
+</div>
+<!-- Duel Row 2 -->
+<div class="grid grid-cols-4 items-center p-4 bg-brand-surface rounded-lg border border-white/5 hover:border-brand-indigo/40 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center overflow-hidden border border-white/10">
+<img alt="Opponent" data-alt="minimalist cartoon face avatar of a gaming player with yellow background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFoN2UFzd1Ww0L0j8eVCHC-Sxl22hxmKz3gg8Wwi-Q6xDJ9YP7G0XYd_MqOwUNTomUzdsggQrc83vWeE9aqgB2V0quFU4I_PgV9-AEtxIcE4sbsrcu54ob-s8aYEtNB4zdxRMYRGpFe44lau24Ku-z3yrJENrgDw7cxtY2X-dD0ZZkq70wnAImAE_EzVg-ZCxDtWhicPo0bmYLsGmqu-ENxy5u27_k-Eb6JZQbHsIqrCnvWdXVr_qoSKjsxBigrKvQXesq6Vko3W7n"/>
+</div>
+<span class="text-sm font-bold text-slate-300">vs Anonymous</span>
+</div>
+<div class="text-center font-stats text-white">0 - 1</div>
+<div class="text-center">
+<span class="px-2 py-0.5 rounded bg-red-500/10 text-red-400 text-[10px] font-black uppercase">LOSS</span>
+</div>
+<div class="text-right text-red-400 font-bold text-sm">-18 ELO</div>
+</div>
+<!-- Duel Row 3 -->
+<div class="grid grid-cols-4 items-center p-4 bg-brand-surface rounded-lg border border-white/5 hover:border-brand-indigo/40 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center overflow-hidden border border-white/10">
+<img alt="Opponent" data-alt="minimalist cartoon face avatar of a gaming player with purple beanie" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBdSuzeFnnRS69jwFUOIr96Iybw-45RVfjgzFbEziLSz14SVtxdfbwa_uovjpJhA3Eicn3PsM5_n58Jq0LQoHbe5JnoKU09HZJpeUrrf-XR6V11TDuLTITaUzApHYqvzJ0g3nOZN-LmG8vVxtnPgRFOXxkAc5NhX1_8tWx9kjiYP-G20Pi7wfTWtT9wID4-ZVYKsRn-FX-pc1RGkT4Bp3H0lHr981Mk3A1hLdVgzVWXej-I_SLH6z2q4a1lZZNbUPJWufVtrTCfWvY"/>
+</div>
+<span class="text-sm font-bold text-slate-300">vs Anonymous</span>
+</div>
+<div class="text-center font-stats text-white">1 - 0</div>
+<div class="text-center">
+<span class="px-2 py-0.5 rounded bg-green-500/10 text-green-400 text-[10px] font-black uppercase">WIN</span>
+</div>
+<div class="text-right text-green-400 font-bold text-sm">+31 ELO</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Fixed Bottom Actions -->
+<footer class="fixed bottom-0 w-full z-50 bg-slate-950/90 backdrop-blur-xl border-t border-brand-accent/20 px-container-padding py-6 flex flex-col gap-3">
+<button class="w-full h-14 bg-brand-accent text-white font-bold rounded-xl active:scale-95 transition-all shadow-[0_0_20px_rgba(233,69,96,0.4)] flex items-center justify-center gap-2">
+            CHALLENGE TO DUEL ⚔️
+        </button>
+<button class="w-full h-14 bg-transparent border-2 border-white text-white font-bold rounded-xl active:scale-95 transition-all hover:bg-white/5">
+            ADD FRIEND
+        </button>
+</footer>
+</body></html>
